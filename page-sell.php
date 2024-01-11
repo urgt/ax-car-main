@@ -248,39 +248,17 @@
                 </div>
 
                 <select class="js-example-basic-single" name="sell_brand" id="sell_brand" class="sell_form_brand">
-                ``<option value="other" disabled selected>Brand</option>
-                    <?php
-                    // Array of car brands
-                    $car_brands = array(
-                        "AM General", "ASC Incorporated", "Acura", "Alfa Romeo", "American Motors Corporation",
-                        "Aston Martin", "Audi", "Aurora Cars Ltd", "Autokraft Limited", "Avanti Motor Corporation",
-                        "Azure Dynamics", "BMW", "BMW Alpina", "BYD", "Bentley", "Bertone", "Bill Dovell Motor Car Company",
-                        "Bitter Gmbh and Co. Kg", "Bugatti", "Buick", "CCC Engineering", "CODA Automotive", "CX Automotive",
-                        "Cadillac", "Chevrolet", "Chrysler", "Consulier Industries Inc", "Dabryan Coach Builders Inc",
-                        "Dacia", "Daewoo", "Daihatsu", "Dodge", "E. P. Dutton, Inc.", "Eagle", "Environmental Rsch and Devp Corp",
-                        "Evans Automobiles", "Excalibur Autos", "Federal Coach", "Ferrari", "Fiat", "Fisker", "Ford", "GMC",
-                        "General Motors", "Genesis", "Geo", "Goldacre", "Grumman Allied Industries", "Grumman Olson", "Honda",
-                        "Hummer", "Hyundai", "Import Foreign Auto Sales Inc", "Import Trade Services", "Infiniti", "Isis Imports Ltd",
-                        "Isuzu", "J.K. Motors", "JBA Motorcars, Inc.", "Jaguar", "Jeep", "Kandi", "Karma", "Kenyon Corporation Of America",
-                        "Kia", "Koenigsegg", "Laforza Automobile Inc", "Lambda Control Systems", "Lamborghini", "Land Rover", "Lexus",
-                        "Lincoln", "London Coach Co Inc", "London Taxi", "Lordstown", "Lotus", "Lucid", "MINI", "Mahindra", "Maserati",
-                        "Maybach", "Mazda", "McLaren Automotive", "Mcevoy Motors", "Mercedes-Benz", "Mercury", "Merkur", "Mitsubishi",
-                        "Mobility Ventures LLC", "Morgan", "Nissan", "Oldsmobile", "PAS Inc - GMC", "PAS, Inc", "Pagani", "Panos",
-                        "Panoz Auto-Development", "Panther Car Company Limited", "Peugeot", "Pininfarina", "Plymouth", "Polestar",
-                        "Pontiac", "Porsche", "Quantum Technologies", "Qvale", "RUF Automobile", "Ram", "Red Shift Ltd.", "Renault",
-                        "Rivian", "Rolls-Royce", "Roush Performance", "Ruf Automobile Gmbh", "S and S Coach Company E.p. Dutton", "SRT",
-                        "STI", "Saab", "Saleen", "Saleen Performance", "Saturn", "Scion", "Shelby", "Spyker", "Sterling", "Subaru",
-                        "Superior Coaches Div E.p. Dutton", "Suzuki", "TVR Engineering Ltd", "Tecstar, LP", "Tesla", "Texas Coach Company",
-                        "Toyota", "VPG", "Vector", "Vinfast", "Vixen Motor Company", "Volga Associated Automobile", "Volkswagen", "Volvo",
-                        "Wallace Environmental", "Yugo", "smart"
-                    );
-                    
+                    <option value="other" disabled selected>Brand</option>
+                        <?php
+                        // Array of car brands
+                        $car_brands = array("Acura", "Alfa Romeo", "Aston Martin", "Audi", "BMW", "BYD", "Bentley", "Bugatti", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Daewoo", "Dodge", "Ferrari", "Fiat", "Ford", "GMC", "General Motors", "Genesis", "Honda", "Hummer", "Hyundai", "Infiniti", "Isuzu", "Jaguar", "Jeep", "Kia", "Koenigsegg", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "MINI", "Maserati", "Maybach", "Mazda", "McLaren", "Mercedes-Benz", "Mitsubishi", "Nissan", "GMC", "Pagani", "Peugeot", "Plymouth", "Pontiac", "Porsche", "Renault", "Rolls-Royce", "Smart", "Subaru", "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo");
 
-                    // Loop through the array to generate options
-                    foreach ($car_brands as $brand) {
-                        echo '<option value="' . esc_attr($brand) . '">' . esc_html($brand) . '</option>';
-                    }
-                    ?>
+
+                        // Loop through the array to generate options
+                        foreach ($car_brands as $brand) {
+                            echo '<option value="' . esc_attr($brand) . '">' . esc_html($brand) . '</option>';
+                        }
+                        ?>
                 </select>
 
                 <input required name="sell_model" type="text" id="sell_model" class="sell_form_model" placeholder="<?php
