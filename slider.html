@@ -1,0 +1,31 @@
+<div class="car_slider">
+                <!-- Swiper -->
+
+                <div
+                  style="
+                    --swiper-navigation-color: #fff;
+                    --swiper-pagination-color: #fff;
+                  "
+                  class="swiper mySwiper2"
+                >
+                  <div class="swiper-wrapper">
+		
+					  
+		<?php 
+$images = get_field('gallery');
+if( $images ): ?>
+            <?php foreach( $images as $key => $image ): ?>
+                <?php if($key == 0): ?>
+                   
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                   
+                <?php endif; ?>
+            <?php endforeach; ?>
+<?php endif; ?>
+
+
+                  </div>
+                </div>
+                
+              </div>
+				

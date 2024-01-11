@@ -1,0 +1,4 @@
+.wpcf7-form p span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

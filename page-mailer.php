@@ -1,0 +1,175 @@
+<?php get_header(); ?>
+<main>
+	<section class="page_title" style="background-image: url(/wp-content/themes/ax-car-main/img/Sectiondd-min.jpeg)">
+		<div class="page_title_block">
+			<div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
+				<?php
+				$current_language = pll_current_language();
+				if ($current_language == 'en') {
+					echo 'SUBMIT FORM';
+
+				} elseif ($current_language == 'ru') {
+					echo 'Отправка заявки';
+				} else {
+					echo 'SUBMIT FORM';
+				}
+				?>
+			</div>
+			<div class="breadcrums" data-aos="fade-up" data-aos-delay="200">
+				<?php
+				$current_language = pll_current_language();
+				if ($current_language == 'en') {
+					echo '<span><a href="/">Home</a></span>
+              <span>Submit form</span>';
+
+				} elseif ($current_language == 'ru') {
+					echo '<span><a href="/ru/">Главная</a></span>
+              <span>Отправка заявки</span>';
+				} else {
+					echo '<span>Home</span>
+              <span>Submit form</span>';
+				}
+				?>
+			</div>
+		</div>
+		<div class="background_overlay"></div>
+	</section>
+
+	<section class="buy_a_car_form container">
+		<div class="section_title" data-aos="fade-up" data-aos-delay="300">
+			<?php
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				// Получение значений полей формы
+				$name = $_POST["yourname"];
+				$lastname = $_POST["lastname"];
+				$number = $_POST["number"];
+				$email = $_POST["email"];
+				$message = $_POST["message"];
+
+
+
+				// Проверка заполненности полей
+				if (empty($name) || empty($number) || empty($email)) {
+					// Если есть незаполненные поля, выводим ошибку
+					echo "Please fill in all the fields.";
+				} else {
+
+
+
+
+					//отправка на webhook
+					// Получение User-Agent (браузера)
+					$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+					// Получение IP-адреса пользователя
+					$user_ip = $_SERVER['REMOTE_ADDR'];
+
+					// Получение полного URL с UTM-метками
+					$current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+					// Получение реферера (откуда пользователь перешел)
+					$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
+
+					$post_data = array(
+						'name' => $name,
+						'phone' => $number,
+						'email' => $email,
+						'message' => $message,
+						'client_ip' => $user_ip,
+						'client_url' => $current_url,
+						'source' => 'axcars',
+					);
+
+					// Создайте запрос
+					$request_args = array(
+						'body' => $post_data,
+						'headers' => array(
+							'Content-Type' => 'application/x-www-form-urlencoded',
+							'User-Agent' => $user_agent,
+							'Referer' => $referer
+						),
+					);
+
+					// Отправка запроса
+					$response = wp_safe_remote_post('https://api.axcapital.ae/api/v2/submit/form/', $request_args);
+
+					if (is_wp_error($response)) {
+						$resp = 'Ошибка при отправке запроса: ' . $response->get_error_message();
+					} else {
+						$response_body = wp_remote_retrieve_body($response);
+						$resp = 'Ответ от сервера: ' . $response_body;
+					}
+
+					$log = date('Y-m-d H:i:s') . ' ' . print_r($post_data, true) . $resp;
+					file_put_contents(__DIR__ . '/log.txt', $log . PHP_EOL, FILE_APPEND);
+					//отправка на webhook завершился
+			
+
+
+
+					// Формирование заголовка письма    
+					//$to = "info@axcars.ae";
+					$to = "Vitalii@axmotors.ae";
+					$subject = "New Consultation Request";
+					$message = "Name: $name, \nLast Name: $lastname, \nPhone Number: $number, \nEmail: $email, \nMessage: $message";
+
+					// Опции для функции wp_mail()
+					$headers = array(
+						'From: AX LUXURY CARS <info@axcars.ae>',
+						'Content-Type: text/html; charset=UTF-8'
+					);
+
+					// Отправка письма
+					if (wp_mail($to, $subject, $message, $headers)) {
+						// Если письмо отправлено успешно, выводим сообщение об успешной отправке формы
+			
+						$current_language = pll_current_language();
+						if ($current_language == 'en') {
+							echo 'Form submitted successfully';
+
+						} elseif ($current_language == 'ru') {
+							echo 'Форма успешно отправлена';
+						} else {
+							echo 'Form submitted successfully';
+						}
+					} else {
+						// Если возникла ошибка при отправке письма, выводим сообщение об ошибке
+						echo "Error sending the form. Please try again later.";
+					}
+				}
+			}
+			?>
+
+
+
+
+
+		</div>
+		<div class="section_description" data-aos="fade-up" data-aos-delay="450" style="text-align:center;">
+			<a onclick="javascript:history.back(); return false;" href='#' class="button" style="width: 100px;
+	display: block;
+	text-align: center;
+	margin: 70px auto 0px;">
+				<?php
+				$current_language = pll_current_language();
+				if ($current_language == 'en') {
+					echo 'Back';
+
+				} elseif ($current_language == 'ru') {
+					echo 'Назад';
+				} else {
+					echo 'Back';
+				}
+				?>
+			</a>
+		</div>
+
+	</section>
+
+
+
+
+
+
+	<?php get_footer() ?>

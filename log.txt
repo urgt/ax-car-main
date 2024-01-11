@@ -1,0 +1,572 @@
+2023-10-20 07:21:47 Array
+(
+    [name] => Sardor
+    [phone] => 9999987576757
+    [email] => testov@testt.com
+    [client_ip] => 82.215.106.72
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:26:54 Array
+(
+    [name] => message
+    [phone] => 1111
+    [email] => qq@qq.qq
+    [message] => message test
+    [client_ip] => 188.162.40.12
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:40:55 Array
+(
+    [name] => test
+    [phone] => 971589320032
+    [email] => test@gmail.com
+    [message] => test
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:41:30 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:41:31 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:41:31 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:41:32 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:48:52 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:48:52 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:49:08 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 07:49:08 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:01:55 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:01:55 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:01:56 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:02:50 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:02:51 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:03:17 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:03:20 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 08:03:21 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 09:26:05 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-10-20 10:06:25 Array
+(
+    [name] => test
+    [phone] => +971551234567
+    [email] => dsemenenko7@gmail.com
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:01:09 Array
+(
+    [name] => Test
+    [phone] => +998935270152
+    [email] => akhmadeev.amir.9@gmail.com
+    [message] => 
+    [client_ip] => 82.215.106.77
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:02:56 Array
+(
+    [name] => Test
+    [phone] => +998935270152
+    [email] => akhmadeev.amir.9@gmail.com
+    [message] => 
+    [client_ip] => 82.215.106.77
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:12:04 Array
+(
+    [name] => Александр
+    [phone] => +79033827470
+    [email] => sashicus@gmail.com
+    [message] => 
+    [client_ip] => 49.237.43.149
+    [client_url] => https://axluxurycars.ae/ru/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:12:35 Array
+(
+    [name] => Alexander
+    [phone] => +79033827470
+    [email] => luchenkov999@gmail.com
+    [message] => 
+    [client_ip] => 49.237.43.149
+    [client_url] => https://axluxurycars.ae/ru/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:18:09 Array
+(
+    [name] => Alexander
+    [phone] => +79033827470
+    [email] => sashicus@gmail.com
+    [message] => 
+    [client_ip] => 49.237.43.149
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:19:16 Array
+(
+    [name] => Alexander
+    [phone] => +79033827470
+    [email] => luchenkov999@gmail.com
+    [message] => 
+    [client_ip] => 49.237.43.149
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 07:20:47 Array
+(
+    [name] => Alexander
+    [phone] => +79033827470
+    [email] => sashicus@gmail.com
+    [message] => 
+    [client_ip] => 49.237.43.149
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 09:02:00 Array
+(
+    [name] => 14.01hesw9kp3jvhe2awpsnwqszd3@mail4u.life
+    [phone] => 14.01hesw9kp3jvhe2awpsnwqszd3@mail4u.life
+    [email] => 14.01hesw9kp3jvhe2awpsnwqszd3@mail4u.life
+    [message] => 
+    [client_ip] => 45.134.253.171
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-11-13 09:02:02 Array
+(
+    [name] => 14.01hesw9kp3jvhe2awpsnwqszd3@mail4u.life
+    [phone] => 14.01hesw9kp3jvhe2awpsnwqszd3@mail4u.life
+    [email] => 14.01hesw9kp3jvhe2awpsnwqszd3@mail4u.life
+    [message] => 
+    [client_ip] => 46.8.56.209
+    [client_url] => https://axluxurycars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2023-12-23 10:34:28 Array
+(
+    [name] => Alex
+    [phone] => +79033827470
+    [email] => sashicus@gmail.com
+    [message] => 
+    [client_ip] => 184.22.188.224
+    [client_url] => https://axcars.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
+2024-01-07 18:50:16 1
+2024-01-07 18:50:46 1
+2024-01-07 18:51:12 Array
+(
+    [name] => Снимок экрана 2023-12-29 в 15.13.02.png
+    [full_path] => Снимок экрана 2023-12-29 в 15.13.02.png
+    [type] => image/png
+    [tmp_name] => /private/var/tmp/phpFtbJQa
+    [error] => 0
+    [size] => 41496
+)
+
+2024-01-07 18:52:33 Array
+(
+    [name] => Снимок экрана 2023-12-29 в 15.13.02.png
+    [full_path] => Снимок экрана 2023-12-29 в 15.13.02.png
+    [type] => image/png
+    [tmp_name] => /private/var/tmp/phpZUzITC
+    [error] => 0
+    [size] => 41496
+)
+
+2024-01-07 18:52:46 Array
+(
+    [name] => 1010.jpg
+    [full_path] => 1010.jpg
+    [type] => image/jpeg
+    [tmp_name] => /private/var/tmp/php8v3pYp
+    [error] => 0
+    [size] => 36065
+)
+
+2024-01-07 18:53:06 Array
+(
+    [name] => Снимок экрана 2023-11-23 в 15.03.37.png
+    [full_path] => Снимок экрана 2023-11-23 в 15.03.37.png
+    [type] => image/png
+    [tmp_name] => /private/var/tmp/phpW5QcpK
+    [error] => 0
+    [size] => 359181
+)
+
+2024-01-07 18:55:10 Array
+(
+    [name] => Array
+        (
+            [0] => 1010.jpg
+            [1] => Снимок экрана 2023-11-23 в 15.03.37.png
+            [2] => Снимок экрана 2023-12-29 в 15.13.02.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => 1010.jpg
+            [1] => Снимок экрана 2023-11-23 в 15.03.37.png
+            [2] => Снимок экрана 2023-12-29 в 15.13.02.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/jpeg
+            [1] => image/png
+            [2] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /private/var/tmp/php2m4OJ1
+            [1] => /private/var/tmp/php1Lciqp
+            [2] => /private/var/tmp/phpLFe0P3
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 36065
+            [1] => 359181
+            [2] => 41496
+        )
+
+)
+
+2024-01-07 18:55:10 1010.jpg
+2024-01-07 18:55:10 Снимок экрана 2023-11-23 в 15.03.37.png
+2024-01-07 18:55:10 Снимок экрана 2023-12-29 в 15.13.02.png
+2024-01-07 18:56:43 Array
+(
+    [name] => Array
+        (
+            [0] => 1010.jpg
+            [1] => Снимок экрана 2023-11-23 в 15.03.37.png
+            [2] => Снимок экрана 2023-12-29 в 15.13.02.png
+        )
+
+    [full_path] => Array
+        (
+            [0] => 1010.jpg
+            [1] => Снимок экрана 2023-11-23 в 15.03.37.png
+            [2] => Снимок экрана 2023-12-29 в 15.13.02.png
+        )
+
+    [type] => Array
+        (
+            [0] => image/jpeg
+            [1] => image/png
+            [2] => image/png
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /private/var/tmp/php1FDthI
+            [1] => /private/var/tmp/phpeLn4z1
+            [2] => /private/var/tmp/phpbkpj6U
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 36065
+            [1] => 359181
+            [2] => 41496
+        )
+
+)
+
+2024-01-07 19:03:10 Array
+(
+    [0] => 1010.jpg
+    [1] => Снимок экрана 2023-11-23 в 15.03.37.png
+    [2] => Снимок экрана 2023-12-29 в 15.13.02.png
+)
+
+2024-01-07 19:06:18 Array
+(
+    [0] => 1010.jpg
+    [1] => Снимок экрана 2023-11-23 в 15.03.37.png
+    [2] => Снимок экрана 2023-12-29 в 15.13.02.png
+)
+
+2024-01-07 19:13:36 Array
+(
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+)
+
+2024-01-07 19:16:11 Array
+(
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+)
+
+2024-01-07 19:16:11 File Key: error, File Value: Array
+(
+    [0] => 0
+    [1] => 0
+    [2] => 0
+)
+
+2024-01-07 19:16:51 Array
+(
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+)
+
+2024-01-07 19:16:51 File Key: error, File Value: Array
+(
+    [0] => 0
+    [1] => 0
+    [2] => 0
+)
+
+2024-01-08 05:24:36 Array
+(
+    [name] => Heh
+    [phone] => 6666
+    [email] => urinbaewwvg@gmail.com
+    [message] => 
+    [client_ip] => ::1
+    [client_url] => http://localhost:10008/mailer
+    [source] => axcars
+)
+Ответ от сервера: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2024-01-08 09:46:23 Array
+(
+    [name] => tosin 
+    [phone] => 0554845681
+    [email] => tosin@axcapital.ae
+    [message] => 
+    [client_ip] => 91.72.172.198
+    [client_url] => https://axmotors.ae/mailer
+    [source] => axcars
+)
+Ответ от сервера: 
