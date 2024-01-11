@@ -272,7 +272,7 @@
                     echo 'Model';
                 }
                 ?>" />
-                <input required name="sell_year" type="number" id="sell_year" min="0" step="1" class="sell_form_year" placeholder="<?php
+                <input required name="sell_year" type="number" id="sell_year" min="1900" step="1" class="sell_form_year" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
                     echo 'Year of issue';
@@ -295,15 +295,15 @@
                         echo 'Mileage';
                     }
                     ?>" />
-                <input required name="sell_price" type="text" id="sell_price" class="sell_form_price" placeholder="<?php
+                <input required name="sell_price" type="number" id="sell_price" min="0" step="1" class="sell_form_price" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo 'Price';
+                    echo 'Price AED';
 
                 } elseif ($current_language == 'ru') {
-                    echo 'Цена';
+                    echo 'Цена в AED';
                 } else {
-                    echo 'Price';
+                    echo 'Price AED';
                 }
                 ?>" />
                 <input required name="sell_name" type="text" id="sell_name" class="sell_form_name" placeholder="<?php
