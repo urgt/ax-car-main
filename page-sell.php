@@ -272,7 +272,7 @@
                     echo 'Model';
                 }
                 ?>" />
-                <input required name="sell_year" type="number" id="sell_year" class="sell_form_year" placeholder="<?php
+                <input required name="sell_year" type="number" id="sell_year" min="0" step="1" class="sell_form_year" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
                     echo 'Year of issue';
@@ -283,7 +283,7 @@
                     echo 'Year of issue';
                 }
                 ?>" />
-                <input required name="sell_mileage" type="number" id="sell_mileage" class="sell_form_mileage"
+                <input required name="sell_mileage" type="number" id="sell_mileage" min="0" step="1" class="sell_form_mileage"
                     placeholder="<?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
