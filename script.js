@@ -15,30 +15,30 @@ function toggleMenu() {
   }
 }
 
-if ($("#language-selected").is(":empty")) {
-  $(".menu li").each(function () {
-    if ($(this).attr("class") == "selected") {
-      var selected = $(this).find(".lang-code").html().toUpperCase();
-      console.log($(this).find(".lang-code").html().toUpperCase());
-      $("#language-selected").html(selected);
+if (jQuery("#language-selected").is(":empty")) {
+  jQuery(".menu li").each(function () {
+    if (jQuery(this).attr("class") == "selected") {
+      var selected = jQuery(this).find(".lang-code").html().toUpperCase();
+      console.log(jQuery(this).find(".lang-code").html().toUpperCase());
+      jQuery("#language-selected").html(selected);
     }
   });
 }
 
 //The next following line displays and set selected language
-$(".dropdownbox").click(function () {
-  $(".menu").toggleClass("showMenu");
-  $(".menu > li").click(function () {
-    var selected = $(this).find(".lang-code").html().toUpperCase();
-    console.log($(this).find(".lang-code").html().toUpperCase());
-    $("#language-selected").html(selected);
-    $(".menu").removeClass("showMenu");
+jQuery(".dropdownbox").click(function () {
+  jQuery(".menu").toggleClass("showMenu");
+  jQuery(".menu > li").click(function () {
+    var selected = jQuery(this).find(".lang-code").html().toUpperCase();
+    console.log(jQuery(this).find(".lang-code").html().toUpperCase());
+    jQuery("#language-selected").html(selected);
+    jQuery(".menu").removeClass("showMenu");
   });
 });
 
 //Close language select box if nothing is selected
-$("#dropdown-wrapper").mouseleave(function () {
-  $(".menu").removeClass("showMenu");
+jQuery("#dropdown-wrapper").mouseleave(function () {
+  jQuery(".menu").removeClass("showMenu");
 });
 
 var swiper = new Swiper(".mySwiper1", {
@@ -66,8 +66,8 @@ function buttonClick(event) {
 }
 
 function showAllFilters() {
-  $(".filter_selects select").show();
-  $(".all_filters").hide();
+  jQuery(".filter_selects select").show();
+  jQuery(".all_filters").hide();
 }
 
 // car details swiper
@@ -89,8 +89,8 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
-jQuery(document).ready(function ($) {
-  $(".accordionjs").accordionjs({
+jQuery(document).ready(function (jQuery) {
+  jQuery(".accordionjs").accordionjs({
     closeAble: true,
 
     // Close other sections.(data-close-other)
@@ -181,7 +181,7 @@ if (elem) {
   }
 }
 
-$(document).ready(function ($) {
+jQuery(document).ready(function (jQuery) {
   var addsWrap = jQuery("#brands");
   var isDragging = false;
   var startX;
@@ -189,7 +189,7 @@ $(document).ready(function ($) {
 
   addsWrap.on("mousedown", function (e) {
     // Проверяем, что нажатие произошло на элементе addsWrap
-    if (!$(e.target).closest(addsWrap).length) return;
+    if (!jQuery(e.target).closest(addsWrap).length) return;
 
     // Предотвращаем переход по ссылке при начале драга
     e.preventDefault();
@@ -274,14 +274,14 @@ if (elemClasses) {
   console.log("Элемент classes не найден на странице");
 }
 
-$(document).ready(function ($) {
+jQuery(document).ready(function (jQuery) {
   var addsWrapClasses = jQuery("#classes");
   var isDraggingClasses = false;
   var startXClasses;
   var scrollLeftClasses;
 
   addsWrapClasses.on("mousedown", function (e) {
-    if (!$(e.target).closest(addsWrapClasses).length) return;
+    if (!jQuery(e.target).closest(addsWrapClasses).length) return;
     e.preventDefault();
     isDraggingClasses = true;
     startXClasses = e.pageX;
@@ -374,12 +374,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       textContainer.addEventListener("mouseenter", () => {
         if (textSpan.offsetWidth + 5 > textContainer.offsetWidth) {
-          const translateXValue = `calc(-${
+          const translateXValue = `calc(-jQuery{
             textSpan.offsetWidth - textContainer.offsetWidth
           }px)`;
 
           textSpan.style.transition = "transform 1s linear";
-          textSpan.style.transform = `translateX(${translateXValue})`;
+          textSpan.style.transform = `translateX(jQuery{translateXValue})`;
           textContainer.classList.add("no-after");
         }
       });

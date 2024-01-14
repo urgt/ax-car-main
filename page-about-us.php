@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>2/img/1221.png)">
+<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/1224.jpg)">
     <div class="page_title_block">
         <div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
             <?php
