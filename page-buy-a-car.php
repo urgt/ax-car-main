@@ -78,12 +78,12 @@
 				 data-aos-delay="600" method="POST" action="<?php
 			$current_language = pll_current_language(); // Получение текущего языка
     		if($current_language == 'en'){ // Если текущий язык - английский
-        	echo 'https://axluxurycars.ae/mailer'; // Вывод значения для английского языка
+        	echo home_url('/mailer'); // Вывод значения для английского языка
         	// Добавьте здесь необходимые строки для других значений на английском языке
     		} elseif($current_language == 'ru'){ // Если текущий язык - русский
         	echo 'https://axluxurycars.ae/ru/mailer'; // Вывод значения для русского языка
     		} else{
-        	echo 'https://axluxurycars.ae/mailer'; // Вывод значения по умолчанию
+        	echo home_url('/mailer'); // Вывод значения по умолчанию
     		}	
 			?>">
               <input 

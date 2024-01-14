@@ -204,8 +204,16 @@
   grid-row-gap: 60px;
 }
 
+.main_page_catalog_cards_card-wrap{
+
+}
+
 .main_page_catalog_cards_card {
   margin-bottom: 12px;
+  height: 100%;
+  width: 100%;
+  max-width: 330px;
+  max-height: 185px;
 }
 .buy_info {
   display: flex;
@@ -733,5 +741,31 @@ ul#select2-sell_brand-results, span.select2-search.select2-search--dropdown{
   .cta_section,
   .how_we_work_section {
     display: none !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .main_page_catalog_cards{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1080px) {
+  .main_page_catalog_cards{
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+}
+
+
+@media (max-width: 780px){
+  .main_page_catalog_cards_card {
+      
+  }
+}
+
+@media (max-width: 700px){
+  .main_page_catalog_cards_card {
+    
   }
 }

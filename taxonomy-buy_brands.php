@@ -380,19 +380,22 @@
 							<div class="buy_info">
 
 								<a href="<?php the_permalink(); ?>">
-									<div class="buy_car_title" id="textContainer">
-										<span>
-											<?php the_title(); ?>
-										</span>
+									<div class="buy_info">
+										<div class="buy_car_title" id="textContainer">
+											<span>
+												<?php the_title(); ?>
+											</span>
 
+										</div>
+										<div class="buy_car_price">
+											<?php
+											$terms = get_the_terms($post->ID, 'buy_price');
+											echo number_format($terms[0]->name, 0, '.', ' ');
+											?> AED
+										</div>
 									</div>
 								</a>
-								<div class="buy_car_price">
-									<?php
-									$terms = get_the_terms($post->ID, 'buy_price');
-									echo number_format($terms[0]->name, 0, '.', ' ');
-									?> AED
-								</div>
+
 
 							</div>
 						</div>
@@ -456,12 +459,12 @@
 			<form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
-				echo 'https://axluxurycars.ae/mailer';
+				echo home_url('/mailer');
 
 			} elseif ($current_language == 'ru') {
 				echo 'https://axluxurycars.ae/ru/mailer';
 			} else {
-				echo 'https://axluxurycars.ae/mailer';
+				echo home_url('/mailer');
 			}
 			?>">
 				<input required name="yourname" type="text" class="get_consultation_first_name" placeholder="<?php

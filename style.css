@@ -589,7 +589,7 @@ ul.menu li:hover {
 .main_page_catalog_cards_card {
   flex: 1;
   background-repeat: no-repeat;
-  padding: 200px 30px 30px;
+
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -776,9 +776,7 @@ ul.menu li:hover {
 .reviews_section {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url(https://st.sarmag.ru/wp-content/themes/ax-car-main/img/Section-min\(
-      1\
-    ).webp);
+  background-image: url(https://axmotors.ae/wp-content/themes/ax-car-main/img/Section-min.webp);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -1898,8 +1896,6 @@ button.button {
 }
 
 @media (max-width: 650px) {
-  .catalog_filter {
-  }
 
   .filter_selects select:last-child {
     width: 100%;

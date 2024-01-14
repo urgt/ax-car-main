@@ -519,10 +519,10 @@
 						?>
 
 
-						<div data-aos="fade-up" data-aos-delay="100">
+						<div data-aos="fade-up" data-aos-delay="100" class="main_page_catalog_cards_card-wrap">
 
-							<a href="<?php the_permalink(); ?>" class="main_page_catalog_cards_card" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-				')">
+							<a href="<?php the_permalink(); ?>" class="main_page_catalog_cards_card"
+								style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>')">
 
 							</a>
 							<a href="<?php the_permalink(); ?>">
@@ -603,12 +603,12 @@
 			<form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
-				echo 'https://axluxurycars.ae/mailer';
+				echo home_url('/mailer');
 
 			} elseif ($current_language == 'ru') {
 				echo 'https://axluxurycars.ae/ru/mailer';
 			} else {
-				echo 'https://axluxurycars.ae/mailer';
+				echo home_url('/mailer');
 			}
 			?>">
 				<input required name="yourname" type="text" class="get_consultation_first_name" placeholder="<?php

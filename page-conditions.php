@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>2/img/1224.png)">
+<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/1221.jpg)">
     <div class="page_title_block">
         <div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
             <?php
@@ -843,12 +843,12 @@
         <form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
-            echo 'https://axluxurycars.ae/mailer';
+            echo home_url('/mailer');
 
         } elseif ($current_language == 'ru') {
             echo 'https://axluxurycars.ae/ru/mailer';
         } else {
-            echo 'https://axluxurycars.ae/mailer';
+            echo home_url('/mailer');
         }
         ?>">
             <input required name="yourname" type="text" class="get_consultation_first_name" placeholder="<?php

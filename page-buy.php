@@ -76,12 +76,12 @@
             <form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
-                echo 'https://axluxurycars.ae/mailer';
+                echo home_url('/mailer');
 
             } elseif ($current_language == 'ru') {
                 echo 'https://axluxurycars.ae/ru/mailer';
             } else {
-                echo 'https://axluxurycars.ae/mailer';
+                echo home_url('/mailer');
             }
             ?>">
                 <input required name="yourname" type="text" class="get_consultation_first_name" placeholder="<?php
