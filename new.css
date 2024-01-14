@@ -204,13 +204,6 @@
   grid-row-gap: 60px;
 }
 
-.main_page_catalog_cards_card-wrap{
-
-}
-
-.swiper-prev, .swiper-next{
-  cursor: pointer;
-}
 
 .main_page_catalog_cards_card {
   margin-bottom: 12px;
@@ -329,6 +322,7 @@
   border-bottom: 1px solid darkgray;
   text-align: left;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .swiper-next {
@@ -336,6 +330,7 @@
   border-bottom: 1px solid darkgray;
   text-align: right;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 /* CONSULTATION FORM */
