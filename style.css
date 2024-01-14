@@ -1,20 +1,12 @@
 /*
-Theme Name: AX Cars (fixed)
-Theme URI: https://axcars.ae
+Theme Name: AX Motors 
+Theme URI: https://axmotors.ae
 Author: AX Technology
 Author URI: https://wordpress.org/
-Description: Very nice theme
-Requires at least: 0.3
-Tested up to: 6.2
-Requires PHP: 8.2
-Version: 1.8
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: axcars
-Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Description: AX Motors  theme
+Version: 2.0.1
+Text Domain: axmotors
 */
-
-/*  @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Gilda+Display&family=Poppins:wght@400;500;600;700&family=Raleway:wght@200;400;500;600;700&family=Roboto&display=swap'); */
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Gilda+Display&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@200;400;500;600;700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
