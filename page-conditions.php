@@ -331,7 +331,7 @@
             ?>
 
         </div>
-        <a href="#" class="mainform button" data-aos="fade-up" data-aos-delay="450">
+        <a  class="mainform button" data-aos="fade-up" data-aos-delay="450">
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {

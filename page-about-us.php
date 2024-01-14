@@ -1023,8 +1023,8 @@
 
             </div>
             <div class="swiper-pag">
-                <a href="#" class="swiper-prev">PREV</a>
-                <a href="#" class="swiper-next">NEXT</a>
+                <a  class="swiper-prev">PREV</a>
+                <a  class="swiper-next">NEXT</a>
             </div>
         </div>
 

@@ -422,7 +422,7 @@
           <p>
             <?php display_converted_price(); ?>
           </p>
-          <a href="#" class="button mainform2">
+          <a  class="button mainform2">
             <span>
               <?php
               $current_language = pll_current_language();
