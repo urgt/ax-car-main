@@ -208,6 +208,10 @@
 
 }
 
+.swiper-prev, .swiper-next{
+  cursor: pointer;
+}
+
 .main_page_catalog_cards_card {
   margin-bottom: 12px;
   height: 100%;
