@@ -1,8 +1,8 @@
 AOS.init({
-		duration: 1000, // values from 0 to 3000, with step 50ms
-		easing: 'ease-in-out-cubic', // default easing for AOS animations
-		once: false, // whether animation should happen only once - while scrolling down
-		mirror: true, // whether elements should animate out while scrolling past them
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  easing: "ease-in-out-cubic", // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
 });
 
 function toggleMenu() {
@@ -490,10 +490,64 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+jQuery(document).ready(function () {
+  jQuery("#sell_brand").select2({
+    placeholder: "Select a brand",
+  });
+});
 
-jQuery(document).ready(function() {
-  jQuery('#sell_brand').select2({
-    placeholder: "Select a brand"
+document.addEventListener("DOMContentLoaded", () => {
+  let startX = 0;
+  let startY = 0;
 
+  const carousel = document.querySelector(".logos_section.brands");
+
+  carousel.addEventListener("mousedown", (e) => {
+    startX = e.pageX;
+    startY = e.pageY;
+  });
+
+  carousel.addEventListener("click", (e) => {
+    const currentX = e.pageX;
+    const currentY = e.pageY;
+    const distance = Math.sqrt(
+      Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
+    );
+
+    if (distance > 5) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  let startX = 0;
+  let startY = 0;
+
+  const classesCarousel = document.querySelector(".logos_section.classes");
+
+  classesCarousel.addEventListener("mousedown", (e) => {
+    startX = e.pageX;
+    startY = e.pageY;
+  });
+
+  classesCarousel.addEventListener("click", (e) => {
+    const targetElement = e.target;
+    if (
+      targetElement.tagName === "A" &&
+      targetElement.parentElement.tagName === "DIV"
+    ) {
+      const currentX = e.pageX;
+      const currentY = e.pageY;
+      const distance = Math.sqrt(
+        Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
+      );
+
+      if (distance > 5) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }
   });
 });

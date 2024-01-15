@@ -204,7 +204,6 @@
   grid-row-gap: 60px;
 }
 
-
 .main_page_catalog_cards_card {
   margin-bottom: 12px;
   height: 100%;
@@ -602,23 +601,23 @@
   border-top: 0.5px solid rgba(255, 255, 255, 0.4);
 }
 
-.sell_car_form span.select2.select2-container.select2-container--default{
+.sell_car_form span.select2.select2-container.select2-container--default {
   grid-column: 1 / -1;
-  width: 100%!important;
+  width: 100% !important;
 }
 
-.sell_car_form .select2-container--default .select2-selection--single{
-  
+.sell_car_form .select2-container--default .select2-selection--single {
   text-align: left;
   background-color: unset;
   width: 100%;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid var(--paragraph, rgba(255, 255, 255, 0.4));
-   
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow{
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
   height: 26px;
   position: absolute;
   top: 15px;
@@ -626,7 +625,7 @@
   width: 20px;
 }
 
-.sell_car_form .select2-container .select2-selection--single{
+.sell_car_form .select2-container .select2-selection--single {
   height: auto;
 }
 
@@ -634,12 +633,14 @@
   background-color: #483030;
 }
 
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: #3f444c;
   color: white;
 }
 
-ul#select2-sell_brand-results, span.select2-search.select2-search--dropdown{
+ul#select2-sell_brand-results,
+span.select2-search.select2-search--dropdown {
   background-color: black;
 }
 .select2-container--default .select2-search--dropdown .select2-search__field {
@@ -647,7 +648,10 @@ ul#select2-sell_brand-results, span.select2-search.select2-search--dropdown{
   background: black;
   color: white;
 }
-.sell_car_form .select2-container--default .select2-selection--single .select2-selection__rendered{
+.sell_car_form
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   opacity: 0.3;
   color: #fff;
   padding: 15px 0px;
@@ -744,27 +748,59 @@ ul#select2-sell_brand-results, span.select2-search.select2-search--dropdown{
 }
 
 @media (max-width: 1400px) {
-  .main_page_catalog_cards{
+  .main_page_catalog_cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (max-width: 1080px) {
-  .main_page_catalog_cards{
+  .main_page_catalog_cards {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
   }
 }
 
-
-@media (max-width: 780px){
+@media (max-width: 780px) {
   .main_page_catalog_cards_card {
-      
   }
 }
 
-@media (max-width: 700px){
-  .main_page_catalog_cards_card {
-    
-  }
+/*фикс адаптива*/
+.main_page_catalog_cards > div {
+  display: flex;
+  flex-direction: column;
 }
+.main_page_catalog_cards div a {
+  min-width: 100%;
+}
+.main_page_catalog_cards_card {
+  height: 180px;
+  background-size: cover !important;
+  display: flex;
+}
+.main_page_catalog_cards .buy_info {
+  display: flex;
+}
+.main_page_catalog_cards .buy_car_title {
+  max-width: unset !important;
+  width: 80%;
+  position: relative;
+  height: 24px;
+}
+.main_page_catalog_cards .buy_car_title span {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  transition: 4s !important;
+  transform: translateX(0px);
+  display: flex;
+  width: max-content;
+}
+.main_page_catalog_cards .buy_info:hover .buy_car_title span {
+  transform: translateX(calc(-100% + 105px)) !important;
+}
+.main_page_catalog_cards .buy_car_price {
+  max-width: max-content;
+  height: 24px;
+}
+/*фикс адаптива конец*/
