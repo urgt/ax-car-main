@@ -740,13 +740,6 @@ span.select2-search.select2-search--dropdown {
 
 /* CTA */
 
-@media (max-width: 760px) {
-  .cta_section,
-  .how_we_work_section {
-    display: none !important;
-  }
-}
-
 @media (max-width: 1400px) {
   .main_page_catalog_cards {
     grid-template-columns: 1fr 1fr 1fr;
