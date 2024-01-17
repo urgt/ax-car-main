@@ -43,6 +43,12 @@
   color: #d3a188;
 }
 
+.main_buttons{
+  display: flex;
+  gap: 20px;
+}
+
+
 /* HERO */
 
 .new_hero_section {
@@ -754,7 +760,8 @@ span.select2-search.select2-search--dropdown {
 }
 
 @media (max-width: 780px) {
-  .main_page_catalog_cards_card {
+  .main_buttons {
+    flex-direction: column;
   }
 }
 

@@ -10,7 +10,7 @@
                 <?php the_content(); ?>
             </div>
 
-            <div style="display:flex;">
+            <div class="main_buttons">
 
 
                 <a href="<?php
