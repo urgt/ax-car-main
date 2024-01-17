@@ -21,7 +21,7 @@
                 } elseif ($current_language == 'ru') {
                     echo '/ru/buy_a_car';
                 } else {
-                    echo '/cars';
+                    echo '/buy_a_car';
                 }
                 ?>" class="button" data-aos="fade-up" data-aos-delay="200" style="">
                     <?php
@@ -33,6 +33,30 @@
                         echo 'Купить авто';
                     } else {
                         echo 'FIND YOUR CAR';
+                    }
+                    ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/Icon.svg" alt="" />
+                </a>
+                <a href="<?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                    echo '/sell';
+
+                } elseif ($current_language == 'ru') {
+                    echo '/ru/sell';
+                } else {
+                    echo '/sell';
+                }
+                ?>" class="button" data-aos="fade-up" data-aos-delay="200" style="">
+                    <?php
+                    $current_language = pll_current_language();
+                    if ($current_language == 'en') {
+                        echo 'SELL YOUR CAR';
+
+                    } elseif ($current_language == 'ru') {
+                        echo 'Продать авто';
+                    } else {
+                        echo 'SELL YOUR CAR';
                     }
                     ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/Icon.svg" alt="" />
