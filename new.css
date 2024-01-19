@@ -803,4 +803,63 @@ span.select2-search.select2-search--dropdown {
   max-width: max-content;
   height: 24px;
 }
+
+/*фикс адаптива мобилки*/
+.main_page_catalog_inner .tabs .tab:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 780px) {
+  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
+    padding: 100px!important;
+  }
+  .main_page_catalog_cards_card-wrap .buy_info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main_page_catalog_cards .main_page_catalog_cards_card-wrap .buy_car_title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
+    padding: 70px!important;
+  }
+}/*фикс адаптива мобилки*/
+.main_page_catalog_inner .tabs .tab:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 780px) {
+  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
+    padding: 100px!important;
+  }
+  .main_page_catalog_cards_card-wrap .buy_info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main_page_catalog_cards .main_page_catalog_cards_card-wrap .buy_car_title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
+    padding: 70px!important;
+  }
+	.main_page_catalog_cards .buy_info{
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.main_page_catalog_cards .buy_car_title {
+  		width: 100%;
+	}
+}
+
+@media (max-width: 450px) {
+  .main_page_catalog_cards_card {
+    padding: 47px !important;
+  }
+}
 /*фикс адаптива конец*/
