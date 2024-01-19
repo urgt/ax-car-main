@@ -388,7 +388,7 @@
                     echo 'Or contact us right now via';
                 }
                 ?>
-                <a href="https://wa.me/+971556702309">
+                <a href="https://wa.me/+971585893990">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
                         alt="contact us right now via whatsapp" />
                     <span class="luxury">WHATSAPP</span>
