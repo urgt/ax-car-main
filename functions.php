@@ -16,7 +16,6 @@ function enqueue_custom_styles()
 	wp_enqueue_style('ax-car-main-form-style', get_template_directory_uri() . '/formstyle.css', array(), null);
 	wp_enqueue_style('ax-car-main-accordion-style', get_template_directory_uri() . '/accordion.css', array(), null);
 	wp_enqueue_style('ax-car-main-style', get_template_directory_uri() . '/style.css', array(), null);
-	wp_enqueue_style('ax-car-main-new-style', get_template_directory_uri() . '/new.css', array(), null);
 
 	// Подключение стилей для AOS
 	wp_enqueue_style('aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), null);
