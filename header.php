@@ -66,6 +66,14 @@
 
       <div class="header_right " data-aos="fade" data-aos-easing="ease-in-out">
         <ul class="social-links ">
+          <li class="header-search">
+            <?php echo do_shortcode('[ivory-search id="3133" title="Search"]') ?>
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ic-search.svg" alt=""> -->
+          </li>
+          <li>
+            <img class="ic-account" src="<?php echo get_template_directory_uri(); ?>/img/ic-account.svg" alt="">
+
+          </li>
           <li>
             <div>
               <div id="lang-form">
@@ -111,3 +119,6 @@
         </a>
       </div>
     </header>
+    <div class="mobile_search" data-aos="fade">
+      <?php echo do_shortcode('[ivory-search id="3133" title="Search"]') ?>
+    </div>

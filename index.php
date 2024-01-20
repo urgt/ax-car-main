@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <main class="homepage_main">
 
-    <section class="new_hero_section">
+    <section class="new_hero_section"
+        style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.jpg')">
         <div class="new_hero_content container">
             <h1 class="new_hero_title" data-aos="fade-up">
                 <?php the_title(); ?>

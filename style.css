@@ -297,13 +297,27 @@ body {
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 16px;
 }
 
 .social-links li {
   display: inline;
   list-style-type: none;
-  padding-right: 20px;
-  float: left;
+  padding: 0;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.social-links form{
+  max-width: 145px;
+}
+
+.ic-account{  
+  width: 26px;
+  height: 26px;
 }
 
 #lang-form div {
@@ -1888,7 +1902,6 @@ button.button {
 }
 
 @media (max-width: 650px) {
-
   .filter_selects select:last-child {
     width: 100%;
   }
@@ -1937,4 +1950,28 @@ button.button {
   .car_details_desc p {
     column-count: 1;
   }
+}
+
+
+.is-ajax-search-no-result{
+  background-color: #0a0a0a!important;
+}
+
+.mobile_search{
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .social-links li.header-search{
+    display: none;
+  }
+
+  .mobile_search{
+    display: block;
+  }
+
+  .is-form-style input.is-search-input, .is-form-style button.is-search-submit{
+    height: 45px;
+  }
+  
 }
