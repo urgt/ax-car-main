@@ -4,14 +4,14 @@ Theme URI: https://axmotors.ae
 Author: AX Technology
 Author URI: https://axtechnology.uz/
 Description: AX Motors  theme
-Version: 2.0.4
+Version: 2.0.5
 Text Domain: axmotors
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Gilda+Display&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@200;400;500;600;700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-@import url("fonts/alethiapro/stylesheet.css");
+@import url("assets/fonts/alethiapro/stylesheet.css");
 
 html,
 body,
