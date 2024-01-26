@@ -41,26 +41,26 @@
           $current_language = pll_current_language();
           if ($current_language == 'en') {
             echo '
-            <a href="/buy_a_car" class="nav_link"><li>Buy a car</li></a>
-            <a href="/sell" class="nav_link"><li>Sell a car</li></a>    
-            <a href="/conditions" class="nav_link"><li>Conditions</li></a>    
-            <a href="/about-us" class="nav_link"><li>About</li></a>
-            <a href="/contact-us" class="nav_link"><li>Contact us</li></a>';
+            <li><a href="/buy_a_car" class="nav_link">Buy a car</a></li>
+            <li><a href="/sell" class="nav_link">Sell a car</a> </li>   
+            <li><a href="/conditions" class="nav_link">Conditions</a> </li>   
+            <li><a href="/about-us" class="nav_link">About</a></li>
+            <li><a href="/contact-us" class="nav_link">Contact us</a></li>';
 
           } elseif ($current_language == 'ru') {
             echo '
-            <a href="/ru/buy_a_car" class="nav_link"><li>Купить авто</li></a>
-            <a href="/ru/sell" class="nav_link"><li>Продать авто</li></a>
-            <a href="/ru/conditions" class="nav_link"><li>Условия</li></a>
-            <a href="/ru/about-us" class="nav_link"><li>О нас</li></a>
-            <a href="/ru/contact-us" class="nav_link"><li>Контакты</li></a>';
+            <li><a href="/ru/buy_a_car" class="nav_link">Купить авто</a></li>
+            <li><a href="/ru/sell" class="nav_link">Продать авто</a></li>
+            <li><a href="/ru/conditions" class="nav_link">Условия</a></li>
+            <li><a href="/ru/about-us" class="nav_link">О нас</a></li>
+            <li><a href="/ru/contact-us" class="nav_link">Контакты</a></li>';
           } else {
             echo '
-            <a href="/buy_a_car" class="nav_link"><li>Buy a car</li></a>
-            <a href="/sell" class="nav_link"><li>Sell a car</li></a>    
-            <a href="/conditions" class="nav_link"><li>Conditions</li></a>   
-            <a href="/about-us" class="nav_link"><li>About</li></a>
-            <a href="/contact-us" class="nav_link"><li>Contact us</li></a>';
+            <li><a href="/buy_a_car" class="nav_link">Buy a car</a></li>
+            <li><a href="/sell" class="nav_link">Sell a car</a></li>   
+            <li><a href="/conditions" class="nav_link">Conditions</a></li>
+            <li><a href="/about-us" class="nav_link">About</a></li>
+            <li><a href="/contact-us" class="nav_link">Contact us</a></li>';
           }
           ?>
         </ul>
