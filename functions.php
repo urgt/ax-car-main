@@ -517,3 +517,11 @@ function add_custom_csp_meta_tag() {
 
 add_action('admin_head', 'add_custom_csp_meta_tag');
 
+function remove_taxonomy_widgets() {
+    // Убираем виджет категорий
+    remove_meta_box('categorydiv', 'buy_a_car', 'side');
+    // Убираем виджет меток
+    remove_meta_box('tagsdiv-post_tag', 'buy_a_car', 'side');
+}
+
+add_action('admin_menu', 'remove_taxonomy_widgets');
