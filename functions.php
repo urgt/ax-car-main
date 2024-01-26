@@ -4,13 +4,13 @@ function enqueue_custom_styles()
 {
 
 	if (is_page('sell')) {
-		wp_enqueue_style('metro-style', get_template_directory_uri() . '/assets/metro/metro.css');
-		wp_enqueue_style('metro-icons-style', get_template_directory_uri() . '/assets/metro/icons.css');
-		wp_enqueue_style('select2-style', get_template_directory_uri() . '/assets/select2/select2.css');
+		wp_enqueue_style('metro-style', get_template_directory_uri() . '/assets/metro/metro.css', array(), null);
+		wp_enqueue_style('metro-icons-style', get_template_directory_uri() . '/assets/metro/icons.css', array(), null);
+		wp_enqueue_style('select2-style', get_template_directory_uri() . '/assets/select2/select2.css', array(), null);
 	}
 
 	// Подключение стилей для swiper
-	wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
+	wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css', array(), null);
 
 	// Подключение остальных стилей
 	wp_enqueue_style('ax-car-main-form-style', get_template_directory_uri() . '/assets/formstyle.css', array(), null);
