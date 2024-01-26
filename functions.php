@@ -16,9 +16,6 @@ function enqueue_custom_styles()
 	wp_enqueue_style('ax-car-main-form-style', get_template_directory_uri() . '/assets/formstyle.css', array(), null);
 	wp_enqueue_style('ax-car-main-accordion-style', get_template_directory_uri() . '/assets/accordion.css', array(), null);
 	wp_enqueue_style('ax-car-main-style', get_template_directory_uri() . '/style.css', array(), null);
-
-	// Подключение стилей для AOS
-	wp_enqueue_style('aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), null);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
@@ -31,18 +28,14 @@ function enqueue_custom_scripts()
 	// Подключение скрипта для swiper
 	wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array('jquery'), null, true);
 
-	// Подключение скрипта для AOS
-	wp_enqueue_script('aos-script', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), null, true);
-
-
 	wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/metro/metro.js', array('jquery'), null, true);
 
 	// Подключение скрипта для accordion
-	wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/accordion.js', array('jquery', 'swiper-script', 'aos-script'), null, true);
+	wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/accordion.js', array('jquery', 'swiper-script'), null, true);
 
 	wp_enqueue_script('select2-script', get_template_directory_uri() . '/assets/select2/select2.full.js', array('jquery'), null, true);
 	// Подключение скрипта для ax-car-main
-	wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/assets/script.js', array('jquery', 'select2-script', 'swiper-script', 'aos-script', 'metro-script', 'accordion-script'), null, true);
+	wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/assets/script.js', array('jquery', 'select2-script', 'swiper-script', 'metro-script', 'accordion-script'), null, true);
 
 
 }
@@ -72,7 +65,7 @@ function book_shortcode()
 {
 	?>
 
-	<div class="section_title" data-aos="fade-up" data-aos-delay="300">
+	<div class="section_title" >
 		<h2 style="text-align:center;">
 			<?php
 			$current_language = pll_current_language();
@@ -90,7 +83,7 @@ function book_shortcode()
 			?>
 		</h2>
 	</div>
-	<div class="section_description" data-aos="fade-up" data-aos-delay="450" style="text-align:center;">
+	<div class="section_description"   style="text-align:center;">
 		<?php
 		$current_language = pll_current_language();
 		if ($current_language == 'en') {
@@ -108,7 +101,7 @@ function book_shortcode()
 	</div>
 	<div class="buy_a_car_form_wrapper">
 
-		<form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
+		<form class="get_consultation_form"   method="POST" action="<?php
 		$current_language = pll_current_language();
 		if ($current_language == 'en') {
 			echo '/mailer';
@@ -177,7 +170,7 @@ function book_shortcode()
 				?>
 			</button>
 		</form>
-		<div class="contact_whatsapp" data-aos="fade-up" data-aos-delay="600">
+		<div class="contact_whatsapp"  >
 			<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
@@ -209,7 +202,7 @@ function rent_shortcode()
 {
 	?>
 
-	<div class="section_title" data-aos="fade-up" data-aos-delay="300">
+	<div class="section_title" >
 		<h2 style="text-align:center;">
 			<?php
 			$current_language = pll_current_language();
@@ -227,7 +220,7 @@ function rent_shortcode()
 			?>
 		</h2>
 	</div>
-	<div class="section_description" data-aos="fade-up" data-aos-delay="450" style="text-align:center;">
+	<div class="section_description"   style="text-align:center;">
 		<?php
 		$current_language = pll_current_language();
 		if ($current_language == 'en') {
@@ -245,7 +238,7 @@ function rent_shortcode()
 	</div>
 	<div class="buy_a_car_form_wrapper">
 
-		<form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
+		<form class="get_consultation_form"   method="POST" action="<?php
 		$current_language = pll_current_language();
 		if ($current_language == 'en') {
 			echo '/mailer';
@@ -314,7 +307,7 @@ function rent_shortcode()
 				?>
 			</button>
 		</form>
-		<div class="contact_whatsapp" data-aos="fade-up" data-aos-delay="600">
+		<div class="contact_whatsapp"  >
 			<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {

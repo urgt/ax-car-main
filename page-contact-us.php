@@ -2,7 +2,7 @@
 <main>
   <section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/1225.jpg)">
     <div class="page_title_block">
-      <div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
+      <div class="page_title_text" >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -15,7 +15,7 @@
         }
         ?>
       </div>
-      <div class="breadcrums" data-aos="fade-up" data-aos-delay="250">
+      <div class="breadcrums"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -36,7 +36,7 @@
   </section>
 
   <section class="contact_us_form_section container">
-    <div class="contact_us_form_block" data-aos="fade-up" data-aos-delay="300">
+    <div class="contact_us_form_block" >
       <form method="POST" action="<?php
       $current_language = pll_current_language();
       if ($current_language == 'en') {
@@ -108,7 +108,7 @@
       </form>
     </div>
     <div class="contact_us_form_content">
-      <div class="section_subtitle luxury" data-aos="fade-up" data-aos-delay="300">
+      <div class="section_subtitle luxury" >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -124,7 +124,7 @@
         }
         ?>
       </div>
-      <div class="section_title" data-aos="fade-up" data-aos-delay="450">
+      <div class="section_title"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -140,7 +140,7 @@
         }
         ?>
       </div>
-      <div class="section_description" data-aos="fade-up" data-aos-delay="600">
+      <div class="section_description"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -156,7 +156,7 @@
         }
         ?>
       </div>
-      <div class="contact_info" data-aos="fade-up" data-aos-delay="700">
+      <div class="contact_info">
         <div>
           <img src="<?php echo get_template_directory_uri(); ?>/img/ph_map-pin.svg" alt="location" />
           <?php
@@ -214,7 +214,7 @@
   </section>
 
   <section class="contct_gallery container">
-    <div class="section_title" data-aos="fade-up" data-aos-delay="100">
+    <div class="section_title" >
       <?php
       $current_language = pll_current_language();
       if ($current_language == 'en') {
@@ -230,7 +230,7 @@
       }
       ?>
     </div>
-    <div class="section_subtitle" data-aos="fade-up" data-aos-delay="250">
+    <div class="section_subtitle"  >
       <?php
       $current_language = pll_current_language();
       if ($current_language == 'en') {
@@ -247,7 +247,7 @@
       ?>
     </div>
 
-    <div class="gallery_block" data-aos="fade-up" data-aos-delay="400">
+    <div class="gallery_block"  >
       <img src="<?php echo get_template_directory_uri(); ?>/img/No Active-min.jpg" alt="" />
       <img class="active_img" src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 574135-min.jpg" alt="" />
       <img src="<?php echo get_template_directory_uri(); ?>/img/No Activeuygmin.jpg" alt="" />

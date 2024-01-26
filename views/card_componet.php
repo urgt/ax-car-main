@@ -1,4 +1,4 @@
-<div data-aos="fade-up" data-aos-delay="100" class="main_page_catalog_cards_card-wrap">
+<div  class="main_page_catalog_cards_card-wrap">
 
     <a href="<?php the_permalink(); ?>" class="main_page_catalog_cards_card" style="background-image: url('<?php
       $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');

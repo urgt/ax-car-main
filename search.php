@@ -3,7 +3,7 @@
     <section class="page_title"
         style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/buy_car.jpg)">
         <div class="page_title_block">
-            <div class="page_title_text" data-aos="fade-up" data-aos-delay="200">
+            <div class="page_title_text"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -17,7 +17,7 @@
                 ?>
 
             </div>
-            <div class="breadcrums" data-aos="fade-up" data-aos-delay="300">
+            <div class="breadcrums" >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -42,25 +42,25 @@
             <!-- <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
-                echo '<div class="section_subtitle luxury" data-aos="fade-up"
-				 data-aos-delay="200">Our Collection</div>
-            <div class="section_title" data-aos="fade-up"
-				 data-aos-delay="300"><h1>Luxury Cars in Dubai</h1></div>
+                echo '<div class="section_subtitle luxury" 
+				 >Our Collection</div>
+            <div class="section_title" 
+				><h1>Luxury Cars in Dubai</h1></div>
             ';
 
             } elseif ($current_language == 'ru') {
-                echo '<div class="section_subtitle luxury" data-aos="fade-up"
-				 data-aos-delay="200">Наша коллекция</div>
-            <div class="section_title" data-aos="fade-up"
-				 data-aos-delay="300"><h1>Элитные автомобили в Дубае</h1></div>
+                echo '<div class="section_subtitle luxury" 
+				 >Наша коллекция</div>
+            <div class="section_title" 
+				><h1>Элитные автомобили в Дубае</h1></div>
             ';
             } else {
-                echo '<div class="section_subtitle luxury" data-aos="fade-up"
-				 data-aos-delay="200">Our Collection</div>
-            <div class="section_title" data-aos="fade-up"
-				 data-aos-delay="300"><h1>Luxury Cars in Dubai</div>
-            <div class="section_description" data-aos="fade-up"
-				 data-aos-delay="400">
+                echo '<div class="section_subtitle luxury" 
+				 >Our Collection</div>
+            <div class="section_title" 
+				><h1>Luxury Cars in Dubai</div>
+            <div class="section_description" 
+				 >
               Our fleet features 2021 to 2023 cars, which are in excellent
               technical condition. We will deliver the chosen car to any
               convenient location in Dubai within 3 hours.
@@ -124,7 +124,7 @@
                         } else {
                             echo '/buy_brands/porsche/';
                         }
-                        ?>"><img width="100" style="padding-top:2px;" data-aos="fade-up" data-aos-delay="50"
+                        ?>"><img width="100" style="padding-top:2px;"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Porsche11.svg"
                                 alt="Ax motors Porsche" /></a>
                         <a class="brand" href="<?php
@@ -137,7 +137,7 @@
                         } else {
                             echo '/buy_brands/mercedes-benz/';
                         }
-                        ?>"><img width="100" data-aos="fade-up" data-aos-delay="150"
+                        ?>"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Mercedes11.svg"
                                 alt="Ax motors Mercedes Benz" /></a>
                         <a class="brand" class="brand" href="<?php
@@ -150,7 +150,7 @@
                         } else {
                             echo '/buy_brands/bentley/';
                         }
-                        ?>" style="padding-top:10px"><img width="150" data-aos="fade-up" data-aos-delay="250"
+                        ?>" style="padding-top:10px"><img width="150"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Bentley11.svg"
                                 alt="Ax motors Bentley" /></a>
                         <a class="brand" href="<?php
@@ -163,7 +163,7 @@
                         } else {
                             echo '/buy_brands/bmw/';
                         }
-                        ?>"><img width="100" data-aos="fade-up" data-aos-delay="350"
+                        ?>"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/BMW11.svg"
                                 alt="Ax motors BMW" /></a>
                         <a class="brand" href="<?php
@@ -176,7 +176,7 @@
                         } else {
                             echo '/buy_brands/lamborghini/';
                         }
-                        ?>"><img width="75" style="padding-top:15px" data-aos="fade-up" data-aos-delay="450"
+                        ?>"><img width="75" style="padding-top:15px"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Lamborghini.svg"
                                 alt="Ax motors Lamborghini" /></a>
                         <a class="brand" href="<?php
@@ -189,7 +189,7 @@
                         } else {
                             echo '/buy_brands/mclaren/';
                         }
-                        ?>" style="padding-top:2px"><img width="100" data-aos="fade-up" data-aos-delay="550"
+                        ?>" style="padding-top:2px"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Mclaren22.svg"
                                 alt="Ax motors Mclaren" /></a>
 
@@ -203,7 +203,7 @@
                         } else {
                             echo '/buy_brands/rolls-royce/';
                         }
-                        ?>" style="padding-top:5px;"><img width="75" data-aos="fade-up" data-aos-delay="550"
+                        ?>" style="padding-top:5px;"><img width="75"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Rolls Royce11.svg"
                                 alt="Ax motors Rolls Roys" /></a>
 
@@ -217,7 +217,7 @@
                         } else {
                             echo '/buy_brands/ferrari/';
                         }
-                        ?>" style="padding-top:3px"><img width="100" data-aos="fade-up" data-aos-delay="550"
+                        ?>" style="padding-top:3px"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Ferrari11.svg"
                                 alt="Ax motors Ferrari" /></a>
                         <a class="brand" href="<?php
@@ -230,7 +230,7 @@
                         } else {
                             echo '/buy_brands/land-rover/';
                         }
-                        ?>" style="padding-top:12px"><img width="100" data-aos="fade-up" data-aos-delay="550"
+                        ?>" style="padding-top:12px"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Land Rover11.svg"
                                 alt="Ax motors Land Rover" /></a>
                         <a class="brand" href="<?php
@@ -243,7 +243,7 @@
                         } else {
                             echo '/buy_brands/cadillac/';
                         }
-                        ?>" style="padding-top:7px"><img width="100" data-aos="fade-up" data-aos-delay="550"
+                        ?>" style="padding-top:7px"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Cadillac22.svg"
                                 alt="Ax motors Cadillac" /></a>
                         <a class="brand" href="<?php
@@ -256,7 +256,7 @@
                         } else {
                             echo '/buy_brands/jaguar/';
                         }
-                        ?>" style="padding-top:15px"><img width="100" data-aos="fade-up" data-aos-delay="550"
+                        ?>" style="padding-top:15px"><img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Jaguar11.svg" alt="Jaguar" /></a>
                         <a class="brand" href="<?php
                         $current_language = pll_current_language();
@@ -269,7 +269,7 @@
                             echo '/buy_brands/audi/';
                         }
                         ?>" style="padding-top:13px">
-                            <img width="100" data-aos="fade-up" data-aos-delay="550"
+                            <img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Audi11.svg"
                                 alt="Ax motors Audi" /></a>
 
@@ -284,7 +284,7 @@
                             echo '/buy_brands/bugatti/';
                         }
                         ?>" style="padding-top:5px">
-                            <img width="100" data-aos="fade-up" data-aos-delay="550"
+                            <img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Bugatti11 (1).svg"
                                 alt="Ax motors Bugatti" /></a>
 
@@ -299,7 +299,7 @@
                             echo '/buy_brands/lotus/';
                         }
                         ?>" style="padding-top:20px">
-                            <img width="80" data-aos="fade-up" data-aos-delay="550"
+                            <img width="80"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Lotus11.svg"
                                 alt="Ax motors Lotus" /></a>
 
@@ -314,7 +314,7 @@
                             echo '/buy_brands/lincoln/';
                         }
                         ?>" style="padding-top:17px">
-                            <img width="80" data-aos="fade-up" data-aos-delay="550"
+                            <img width="80"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Lincoln11.svg"
                                 alt="Ax motors Lincoln" /></a>
 
@@ -329,7 +329,7 @@
                             echo '/buy_brands/maserati/';
                         }
                         ?>" style="padding-top:15px">
-                            <img width="75" data-aos="fade-up" data-aos-delay="550"
+                            <img width="75"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Layer_17 (3).svg"
                                 alt="Ax motors Maserati" /></a>
 
@@ -344,7 +344,7 @@
                             echo '/buy_brands/corvette/';
                         }
                         ?>" style="padding-top:16px">
-                            <img width="100" data-aos="fade-up" data-aos-delay="550"
+                            <img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Corvette11.svg"
                                 alt="Ax motors Corvette" /></a>
 
@@ -359,7 +359,7 @@
                             echo '/buy_brands/mini/';
                         }
                         ?>" style="padding-top:20px">
-                            <img width="100" data-aos="fade-up" data-aos-delay="550"
+                            <img width="100"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Mini11.svg"
                                 alt="Ax motors Mini" /></a>
 
@@ -374,7 +374,7 @@
                             echo '/buy_brands/aston-martin/';
                         }
                         ?>" style="padding-top:18px">
-                            <img width="120" data-aos="fade-up" data-aos-delay="550"
+                            <img width="120"  
                                 src="<?php echo get_template_directory_uri(); ?>/img/Aston Martin11.svg"
                                 alt="Aston Martin" /></a>
 
@@ -508,7 +508,7 @@
 
 
 
-            <div class="main_page_catalog_cards" data-aos="fade-up" data-aos-delay="300">
+            <div class="main_page_catalog_cards" >
 
                 <?php
                 // проверяем есть ли посты в глобальном запросе - переменная $wp_query
@@ -554,7 +554,7 @@
     </section>
 
     <section class="buy_a_car_form container">
-        <div class="section_title" data-aos="fade-up" data-aos-delay="300">
+        <div class="section_title" >
             <h2>
                 <?php
                 $current_language = pll_current_language();
@@ -569,7 +569,7 @@
                 ?>
             </h2>
         </div>
-        <div class="section_description" data-aos="fade-up" data-aos-delay="450">
+        <div class="section_description"  >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -584,7 +584,7 @@
         </div>
         <div class="buy_a_car_form_wrapper">
 
-            <form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
+            <form class="get_consultation_form"   method="POST" action="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo home_url('/mailer');
@@ -653,7 +653,7 @@
                     ?>
                 </button>
             </form>
-            <div class="contact_whatsapp" data-aos="fade-up" data-aos-delay="600">
+            <div class="contact_whatsapp"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -675,7 +675,7 @@
     </section>
 
     <section class="how_it_works container">
-        <div class="section_subtitle luxury" data-aos="fade-up" data-aos-delay="100">
+        <div class="section_subtitle luxury" >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -688,7 +688,7 @@
             }
             ?>
         </div>
-        <div class="section_title" data-aos="fade-up" data-aos-delay="250">
+        <div class="section_title"  >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -702,7 +702,7 @@
             ?>
         </div>
 
-        <div class="info_cards" data-aos="fade-up" data-aos-delay="400">
+        <div class="info_cards"  >
             <div class="info_cards_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/Location (1).svg" alt="Quick response" />
                 <div class="info_cards_card_title">
@@ -795,7 +795,7 @@
 
 
     <section class="steps_buy_car container" style="display:none;">
-        <div class="section_subtitle luxury" data-aos="fade-up" data-aos-delay="100">
+        <div class="section_subtitle luxury" >
             <?php
             $top_cars = get_field('how_it_works');
             if ($top_cars):
@@ -811,7 +811,7 @@
             endif;
             ?>
         </div>
-        <div class="section_title" data-aos="fade-up" data-aos-delay="250">
+        <div class="section_title"  >
             <?php
             $top_cars = get_field('how_it_works');
             if ($top_cars):
@@ -828,7 +828,7 @@
             ?>
         </div>
 
-        <div class="steps_text" data-aos="fade-up" data-aos-delay="400">
+        <div class="steps_text"  >
             <div class="steps_text_block">
                 <div class="section_title">
                     <?php

@@ -4,7 +4,7 @@
     <section class="page_title"
         style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/sell_back-min.jpeg)">
         <div class="page_title_block">
-            <div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
+            <div class="page_title_text" >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -17,7 +17,7 @@
                 }
                 ?>
             </div>
-            <div class="breadcrums" data-aos="fade-up" data-aos-delay="200">
+            <div class="breadcrums"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -37,7 +37,7 @@
         <div class="background_overlay"></div>
     </section>
 
-    <div class="section_description container sell_page" data-aos="fade-up" data-aos-delay="450">
+    <div class="section_description container sell_page"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -57,7 +57,7 @@
 
     <section class="buy_a_car_form container sell_page">
         <div class="sell_car_form_section">
-            <div class="section_title" data-aos="fade-up" data-aos-delay="300">
+            <div class="section_title" >
                 <h2>
                     <?php
                     $current_language = pll_current_language();
@@ -75,7 +75,7 @@
                     ?>
                 </h2>
             </div>
-            <div class="section_description" data-aos="fade-up" data-aos-delay="450">
+            <div class="section_description"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -93,7 +93,7 @@
             </div>
 
 
-            <div class="info_cards sell_page" data-aos="fade-up" data-aos-delay="400">
+            <div class="info_cards sell_page"  >
                 <div class="info_cards_card ">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/Location (1).svg" alt="Quick response" />
                     <div class="info_cards_card_title">
@@ -205,7 +205,7 @@
 
         <div class="buy_a_car_form_wrapper">
 
-            <div class="section_title" data-aos="fade-up" data-aos-delay="300">
+            <div class="section_title" >
                 <h2>
                     <?php
                     $current_language = pll_current_language();
@@ -223,7 +223,7 @@
                     ?>
                 </h2>
             </div>
-            <div class="section_description" data-aos="fade-up" data-aos-delay="450">
+            <div class="section_description"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -241,7 +241,7 @@
             </div>
 
 
-            <form class="get_consultation_form sell_car_form" data-aos="fade-up" data-aos-delay="600" method="POST"
+            <form class="get_consultation_form sell_car_form"   method="POST"
                 action="" enctype="multipart/form-data">
                 <div class="loader_form_wrap">
                     <div data-role="activity" data-type="cycle" data-style="color"></div>
@@ -376,7 +376,7 @@
             <div id="successMessage" style="display: none;">
                 Form submitted successfully!
             </div>
-            <div class="contact_whatsapp" data-aos="fade-up" data-aos-delay="600">
+            <div class="contact_whatsapp"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -397,8 +397,8 @@
         </div>
     </section>
 
-    <section class="sell_page_faq container" data-aos="fade-up" data-aos-delay="600">
-        <div class="section_title" data-aos="fade-up" data-aos-delay="300">
+    <section class="sell_page_faq container"  >
+        <div class="section_title" >
             <h2>
                 <?php
                 $current_language = pll_current_language();

@@ -1,4 +1,4 @@
-<div class="post_count" data-aos="fade-up" data-aos-delay="300"> 
+<div class="post_count" > 
     <?php
     $term = get_queried_object(); // Получаем объект текущей таксономии
     

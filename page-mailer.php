@@ -2,7 +2,7 @@
 <main>
 	<section class="page_title" style="background-image: url(/wp-content/themes/ax-car-main/img/Sectiondd-min.jpeg)">
 		<div class="page_title_block">
-			<div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
+			<div class="page_title_text" >
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
@@ -15,7 +15,7 @@
 				}
 				?>
 			</div>
-			<div class="breadcrums" data-aos="fade-up" data-aos-delay="200">
+			<div class="breadcrums"  >
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
@@ -36,7 +36,7 @@
 	</section>
 
 	<section class="buy_a_car_form container">
-		<div class="section_title" data-aos="fade-up" data-aos-delay="300">
+		<div class="section_title" >
 			<?php
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				// Получение значений полей формы
@@ -146,7 +146,7 @@
 
 
 		</div>
-		<div class="section_description" data-aos="fade-up" data-aos-delay="450" style="text-align:center;">
+		<div class="section_description"   style="text-align:center;">
 			<a onclick="javascript:history.back(); return false;" href='#' class="button" style="width: 100px;
 	display: block;
 	text-align: center;

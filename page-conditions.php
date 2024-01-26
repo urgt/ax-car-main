@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/1221.jpg)">
     <div class="page_title_block">
-        <div class="page_title_text" data-aos="fade-up" data-aos-delay="100">
+        <div class="page_title_text" >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -14,7 +14,7 @@
             }
             ?>
         </div>
-        <div class="breadcrums" data-aos="fade-up" data-aos-delay="250">
+        <div class="breadcrums"  >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -34,7 +34,7 @@
     <div class="background_overlay"></div>
 </section>
 <section class="how_it_works container">
-    <div class="section_subtitle luxury" data-aos="fade-up" data-aos-delay="300">
+    <div class="section_subtitle luxury" >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -50,7 +50,7 @@
         }
         ?>
     </div>
-    <div class="section_title" data-aos="fade-up" data-aos-delay="450">
+    <div class="section_title"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -66,7 +66,7 @@
         }
         ?>
     </div>
-    <div class="section_description" data-aos="fade-up" data-aos-delay="600">
+    <div class="section_description"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -82,7 +82,7 @@
         }
         ?>
     </div>
-    <div class="info_cards" data-aos="fade-up" data-aos-delay="750">
+    <div class="info_cards"  >
         <div class="info_cards_card">
             <img src="<?php echo get_template_directory_uri(); ?>/img/Locationone9.svg" alt="Quick response" />
             <div class="info_cards_card_title">
@@ -301,7 +301,7 @@
 
     <div class="cta_two_section_left">
 
-        <div class="section_title" data-aos="fade-up" data-aos-delay="150">
+        <div class="section_title"  >
             <h2>
                 <?php
                 $current_language = pll_current_language();
@@ -317,7 +317,7 @@
 
             </h2>
         </div>
-        <div class="section_description" data-aos="fade-up" data-aos-delay="300">
+        <div class="section_description" >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -331,7 +331,7 @@
             ?>
 
         </div>
-        <a  class="mainform button" data-aos="fade-up" data-aos-delay="450">
+        <a  class="mainform button"  >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -349,7 +349,7 @@
     </div>
 
 
-    <div class="cta_two_section_right" data-aos="fade-left" data-aos-delay="200">
+    <div class="cta_two_section_right"  >
         <img src="<?php echo get_template_directory_uri(); ?>/img/man.jpg" alt="<?php
            $current_language = pll_current_language();
            if ($current_language == 'en') {
@@ -373,7 +373,7 @@
 <section class="how_we_work_section container">
 
 
-    <div class="section_title" data-aos="fade-up" data-aos-delay="200">How we work</div>
+    <div class="section_title"  >How we work</div>
 
     <div class="how_we_work_numbers">
 
@@ -540,7 +540,7 @@
 <section class="accordions_block container">
     <div class="faqs_block">
 
-        <div class="section_title" data-aos="fade-up" data-aos-delay="200">
+        <div class="section_title"  >
             <?php
             $top_cars = get_field('faqs_block');
             if ($top_cars):
@@ -558,7 +558,7 @@
         </div>
 
     </div>
-    <ul id="my-accordion" class="accordionjs" data-aos="fade-up" data-aos-delay="300">
+    <ul id="my-accordion" class="accordionjs" >
         <!-- Section 1 -->
         <li>
             <div>
@@ -810,7 +810,7 @@
 
 
 <section class="buy_a_car_form container">
-    <div class="section_title" data-aos="fade-up" data-aos-delay="300">
+    <div class="section_title" >
         <h2>
             <?php
             $current_language = pll_current_language();
@@ -825,7 +825,7 @@
             ?>
         </h2>
     </div>
-    <div class="section_description" data-aos="fade-up" data-aos-delay="450">
+    <div class="section_description"  >
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
@@ -840,7 +840,7 @@
     </div>
     <div class="buy_a_car_form_wrapper">
 
-        <form class="get_consultation_form" data-aos="fade-up" data-aos-delay="600" method="POST" action="<?php
+        <form class="get_consultation_form"   method="POST" action="<?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
             echo home_url('/mailer');
@@ -909,7 +909,7 @@
                 ?>
             </button>
         </form>
-        <div class="contact_whatsapp" data-aos="fade-up" data-aos-delay="600">
+        <div class="contact_whatsapp"  >
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {

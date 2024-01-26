@@ -32,10 +32,10 @@
       } else {
         echo '/';
       }
-      ?>"><img style="width:100px" data-aos="fade" data-aos-easing="ease-in-out"
+      ?>"><img style="width:100px" 
           src="/wp-content/uploads/2023/12/AX_MOTORS_Logo-e1702210136781.png" alt="AX MOTORS" /></a>
 
-      <nav class="header_nav " data-aos="fade" data-aos-easing="ease-in-out">
+      <nav class="header_nav " >
         <ul class="nav">
           <?php
           $current_language = pll_current_language();
@@ -66,7 +66,7 @@
         </ul>
       </nav>
 
-      <div class="header_right " data-aos="fade" data-aos-easing="ease-in-out">
+      <div class="header_right " >
         <ul class="social-links ">
           <li class="header-search">
             <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
@@ -121,6 +121,6 @@
         </a>
       </div>
     </header>
-    <div class="mobile_search" data-aos="fade">
+    <div class="mobile_search" >
       <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
     </div>

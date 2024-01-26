@@ -1,4 +1,4 @@
-<div class="logos_section container classes" data-aos="fade-up" data-aos-delay="100" id="classes">
+<div class="logos_section container classes"  id="classes">
 
                 <div style="text-align:center;">
                     <a href="<?php
