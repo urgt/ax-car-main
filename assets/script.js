@@ -64,12 +64,6 @@ if (button) {
 function buttonClick(event) {
   event.preventDefault();
 }
-
-function showAllFilters() {
-  jQuery(".filter_selects select").show();
-  jQuery(".all_filters").hide();
-}
-
 // car details swiper
 
 var swiper = new Swiper(".mySwiper", {

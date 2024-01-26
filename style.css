@@ -469,14 +469,7 @@ ul.menu li:hover {
 
 /* about us section */
 
-.about_ax_cars {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-image: url("https://st.sarmag.ru/wp-content/themes/ax-car-main/img/Fotoju-min.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 50%;
-}
+
 
 .about_ax_cars_content {
   display: flex;
@@ -1103,70 +1096,6 @@ button.button {
   gap: 10px;
 }
 
-.filter_selects select,
-.searchandfilter select {
-  padding: 15px 12px;
-
-  background: black;
-  border: 1px solid #595858;
-  color: #939393;
-  font-variant-numeric: lining-nums proportional-nums;
-
-  /* Caption1 */
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-
-  -webkit-appearance: none; /* Safari и Chrome */
-  -moz-appearance: none; /* Mozilla */
-  -ms-appearance: none; /* IE */
-  background-image: url("https://st.sarmag.ru/wp-content/themes/ax-car-main/img/iconamoon_arrow-up-2-thin.svg");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 15px) center;
-  width: 100%;
-  outline: none;
-  cursor: pointer;
-}
-
-.filter_selects select:last-child {
-  width: 175%;
-}
-.filter_buttons {
-  display: flex;
-  gap: 10px;
-}
-.filter_buttons .button,
-.sf-field-submit input {
-  padding: 15px 40px !important;
-  border: 1px solid var(--primary, #d3a188);
-  color: var(--primary, #d3a188);
-  background: black;
-  font-family: Raleway;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-}
-.all_filters {
-  display: none;
-}
-.filter_buttons .button_gray,
-.search-filter-reset {
-  padding: 15px 12px !important;
-  border: 1px solid #595858;
-  color: #939393;
-  font-variant-numeric: lining-nums proportional-nums;
-  background: black;
-  /* Caption1 */
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .found_count {
   text-align: left;
   margin-bottom: 30px;
