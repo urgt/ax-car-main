@@ -124,10 +124,6 @@
 				</div>
 			</div>
 
-
-
-
-
 			<div class="main_page_catalog_cards" data-aos="fade-up" data-aos-delay="300">
 
 				<?php

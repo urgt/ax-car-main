@@ -72,16 +72,7 @@
 
 			<?php get_template_part('views/car_brands'); ?>
 
-			<?php
-			$term = get_queried_object(); // Получаем объект текущей таксономии
-			
-			if ($term) {
-				$term_count = $term->count; // Получаем количество записей для таксономии
-				echo '<h1>' . single_term_title('', false) . '</h1>'; // Выводим заголовок таксономии
-				echo '<p>Total Posts: ' . $term_count . '</p>'; // Выводим количество записей
-			}
-			?>
-
+			<?php get_template_part('views/post_count'); ?>
 
 			<div class="main_page_catalog_cards" data-aos="fade-up" data-aos-delay="300">
 
