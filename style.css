@@ -325,6 +325,10 @@ body {
   margin-top: 1px;
 }
 
+button {
+	cursor: pointer;
+}
+
 #lang-form #dropdown-wrapper {
   width: 100px;
   margin-top: 20px;

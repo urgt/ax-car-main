@@ -507,11 +507,13 @@ function sell_car_form_handler()
 	}
 }
 
-
-
-
-
-
-
 add_action('wp_ajax_nopriv_sell_car_form', 'sell_car_form_handler');
 add_action('wp_ajax_sell_car_form', 'sell_car_form_handler');
+
+
+function add_custom_csp_meta_tag() {
+    echo '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">';
+}
+
+add_action('admin_head', 'add_custom_csp_meta_tag');
+

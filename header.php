@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
   <!--<meta name="viewport" content="width=500">-->
 
   <?php wp_head(); ?>
@@ -67,7 +69,7 @@
       <div class="header_right " data-aos="fade" data-aos-easing="ease-in-out">
         <ul class="social-links ">
           <li class="header-search">
-            <?php echo do_shortcode('[ivory-search id="3133" title="Search"]') ?>
+            <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
             <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ic-search.svg" alt=""> -->
           </li>
           <li>
@@ -120,5 +122,5 @@
       </div>
     </header>
     <div class="mobile_search" data-aos="fade">
-      <?php echo do_shortcode('[ivory-search id="3133" title="Search"]') ?>
+      <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
     </div>
