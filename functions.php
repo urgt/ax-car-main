@@ -42,7 +42,7 @@ function enqueue_custom_scripts()
 
 	wp_enqueue_script('select2-script', get_template_directory_uri() . '/assets/select2/select2.full.js', array('jquery'), null, true);
 	// Подключение скрипта для ax-car-main
-	wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/assets/script.js', array('jquery','select2-script', 'swiper-script', 'aos-script', 'metro-script', 'accordion-script'), null, true);
+	wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/assets/script.js', array('jquery', 'select2-script', 'swiper-script', 'aos-script', 'metro-script', 'accordion-script'), null, true);
 
 
 }
@@ -511,17 +511,24 @@ add_action('wp_ajax_nopriv_sell_car_form', 'sell_car_form_handler');
 add_action('wp_ajax_sell_car_form', 'sell_car_form_handler');
 
 
-function add_custom_csp_meta_tag() {
-    echo '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">';
+function add_custom_csp_meta_tag()
+{
+	echo '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">';
 }
 
 add_action('admin_head', 'add_custom_csp_meta_tag');
 
-function remove_taxonomy_widgets() {
-    // Убираем виджет категорий
-    remove_meta_box('categorydiv', 'buy_a_car', 'side');
-    // Убираем виджет меток
-    remove_meta_box('tagsdiv-post_tag', 'buy_a_car', 'side');
-}
+// function remove_taxonomy_widgets_for_buy_a_car()
+// {
 
-add_action('admin_menu', 'remove_taxonomy_widgets');
+// 	remove_meta_box('categorydiv', 'buy_a_car', 'side');
+// 	remove_meta_box('tagsdiv-post_tag', 'buy_a_car', 'side');
+
+// 	$taxonomies = get_object_taxonomies('buy_a_car', 'objects');
+// 	foreach ($taxonomies as $taxonomy) {
+// 		remove_meta_box('tagsdiv-' . $taxonomy->name, 'buy_a_car', 'side');
+// 	}
+// }
+
+// add_action('admin_menu', 'remove_taxonomy_widgets_for_buy_a_car');
+

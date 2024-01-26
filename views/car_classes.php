@@ -12,7 +12,7 @@
                         echo '/buy_a_car';
                     }
                     ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/alcars.png" alt="All cars" /><br>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/all-cars.svg" alt="All cars" /><br>
                         <?php
                         $current_language = pll_current_language();
                         if ($current_language == 'en') {
@@ -39,7 +39,7 @@
                         echo '/buy_class/business-class';
                     }
                     ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/businessclass.png"
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/bussines-class.svg"
                             alt="Business class" /><br>
                         <?php
                         $current_language = pll_current_language();
@@ -67,7 +67,7 @@
                         echo '/buy_class/middle-class';
                     }
                     ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/middleclass.png"
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/middle-class.svg"
                             alt="Middle class" /><br>
                         <?php
                         $current_language = pll_current_language();
@@ -95,7 +95,7 @@
                         echo '/buy_class/sport-cars';
                     }
                     ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/sportcars.png" alt="Sport cars" /><br>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/sport-cars.svg" alt="Sport cars" /><br>
                         <?php
                         $current_language = pll_current_language();
                         if ($current_language == 'en') {
