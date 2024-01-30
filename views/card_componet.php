@@ -6,7 +6,7 @@
             $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
             $thumbnail_url_https = str_replace('http://', 'https://', $thumbnail_url);
             echo $thumbnail_url_https;
-            ?>" alt=" <?php the_title(); ?>">
+            ?>" alt=" <?php the_title(); ?>" loading="lazy">
         </div>
 
         <div class="buy_info">
