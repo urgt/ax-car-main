@@ -39,7 +39,7 @@ function enqueue_custom_scripts()
 
 	wp_enqueue_script('select2-script', get_template_directory_uri() . '/assets/select2/select2.full.js', array('jquery'), null, true);
 	// Подключение скрипта для ax-car-main
-	wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/assets/script.js', array('jquery', 'select2-script', 'swiper-script', 'metro-script', 'accordion-script'), null, true);
+	wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/assets/script.js', array('jquery', 'select2-script', 'swiper-script', 'accordion-script'), null, true);
 
 
 }

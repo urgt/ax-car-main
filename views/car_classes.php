@@ -12,7 +12,7 @@
                         echo '/buy_a_car';
                     }
                     ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/all-cars.svg" alt="All cars" /><br>
+                        <img class="all_cars_class" src="<?php echo get_template_directory_uri(); ?>/img/all-cars.svg" alt="All cars" /><br>
                         <?php
                         $current_language = pll_current_language();
                         if ($current_language == 'en') {
@@ -122,7 +122,7 @@
                         echo '/buy_class/moto';
                     }
                     ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/moto_cat.png" alt="Motorcycles" class="moto_class" width="187px" height="141px"/><br>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/moto_cat.png" alt="Motorcycles" class="moto_class"/><br>
                         <?php
                         $current_language = pll_current_language();
                         if ($current_language == 'en') {

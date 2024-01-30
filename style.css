@@ -185,6 +185,11 @@ a {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .main_page_catalog_cards {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 body {
@@ -589,18 +594,19 @@ ul.menu li:hover {
 }
 
 .main_page_catalog_cards_card {
-  flex: 1;
-  background-repeat: no-repeat;
-
   display: flex;
   flex-direction: column;
-  justify-content: end;
   text-align: left;
   color: #fff;
   position: relative;
-  background-size: cover;
-  background-position: center;
 }
+
+.main_page_catalog_cards_card .card_img img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
 .background_overlay {
   position: absolute;
   height: 100%;
@@ -1606,11 +1612,6 @@ button.button {
     grid-template-columns: 1fr 1fr;
   }
 
-  .main_page_catalog_cards_card {
-    background-size: cover;
-    background-position: center;
-  }
-
   .cta_section {
     flex-direction: column;
   }
@@ -2116,13 +2117,6 @@ button.button {
   grid-row-gap: 60px;
 }
 
-.main_page_catalog_cards_card {
-  margin-bottom: 12px;
-  height: 100%;
-  width: 100%;
-  max-width: 330px;
-  max-height: 185px;
-}
 .buy_info {
   display: flex;
   align-items: center;
@@ -2656,6 +2650,17 @@ span.select2-search.select2-search--dropdown {
   .main_page_catalog_cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .main_page_catalog_cards {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main_page_catalog_cards {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -2672,18 +2677,7 @@ span.select2-search.select2-search--dropdown {
 }
 
 /*фикс адаптива*/
-.main_page_catalog_cards > div {
-  display: flex;
-  flex-direction: column;
-}
-.main_page_catalog_cards div a {
-  min-width: 100%;
-}
-.main_page_catalog_cards_card {
-  height: 180px;
-  background-size: cover !important;
-  display: flex;
-}
+
 .main_page_catalog_cards .buy_info {
   display: flex;
 }
@@ -2715,60 +2709,9 @@ span.select2-search.select2-search--dropdown {
   margin-right: 0;
 }
 
-@media (max-width: 780px) {
-  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
-    padding: 100px !important;
-  }
-  .main_page_catalog_cards_card-wrap .buy_info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .main_page_catalog_cards .main_page_catalog_cards_card-wrap .buy_car_title {
-    width: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
-    padding: 70px !important;
-  }
-} /*фикс адаптива мобилки*/
 .main_page_catalog_inner .tabs .tab:last-child {
   margin-right: 0;
 }
-
-@media (max-width: 780px) {
-  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
-    padding: 100px !important;
-  }
-  .main_page_catalog_cards_card-wrap .buy_info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .main_page_catalog_cards .main_page_catalog_cards_card-wrap .buy_car_title {
-    width: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .main_page_catalog_cards_card-wrap .main_page_catalog_cards_card {
-    padding: 70px !important;
-  }
-  .main_page_catalog_cards .buy_info {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .main_page_catalog_cards .buy_car_title {
-    width: 100%;
-  }
-}
-
-@media (max-width: 450px) {
-  .main_page_catalog_cards_card {
-    padding: 47px !important;
-  }
-}
-/*фикс адаптива конец*/
 
 /* plugin css pro */
 
@@ -2860,11 +2803,13 @@ span.select2-search.select2-search--dropdown {
   overflow-x: scroll;
 }
 
-#classes div img{
-  width: 187px;
-  height: 141px;
-  object-fit: scale-down;
+div#classes div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
+
 .info_cards_card {
   padding: 32px;
 }
@@ -2872,19 +2817,6 @@ span.select2-search.select2-search--dropdown {
   display: none;
 }
 
-/*фикс адаптива*/
-.main_page_catalog_cards > div {
-  display: flex;
-  flex-direction: column;
-}
-.main_page_catalog_cards div a {
-  width: 100%;
-}
-.main_page_catalog_cards_card {
-  height: 180px;
-  background-size: cover !important;
-  display: flex;
-}
 .main_page_catalog_cards .buy_info {
   display: flex;
 }
@@ -3142,17 +3074,21 @@ span.select2-search.select2-search--dropdown {
   .car_details_items_wrapper {
     gap: 0;
   }
-  .car_details_info_property_values,
-  .car_details_info_property_names {
-    /*font-size: 13px;*/
+  .main_page_catalog_cards{
+    grid-row-gap: 18px;
+    grid-column-gap: 10px;
   }
+
 }
-@media (max-width: 500px) {
-  .car_details_info_property_values,
-  .car_details_info_property_names {
-    /* font-size: 10px; */
+
+@media (max-width: 700px) {
+  .main_page_catalog_cards{
+    grid-row-gap: 18px;
+    grid-column-gap: 10px;
   }
+
 }
+
 
 @media (max-width: 400px) {
   .car_details_info_property_values {
@@ -3240,49 +3176,6 @@ span.select2-search.select2-search--dropdown {
 
 /* BUY A CAR */
 
-.main_page_catalog_cards_card {
-  background-size: 100%;
-  padding: 130px 30px 30px;
-}
-
-@media (max-width: 1050px) {
-  .main_page_catalog_cards_card {
-    background-size: 100%;
-    background-position: center;
-    padding: 100px !important;
-  }
-}
-
-@media (max-width: 780px) {
-  .main_page_catalog_cards_card {
-    background-size: 100%;
-    background-position: center;
-    padding: 200px !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .main_page_catalog_cards_card {
-    background-size: 100%;
-    background-position: center;
-    padding: 150px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .main_page_catalog_cards_card {
-    background-size: 100%;
-    background-position: center;
-    padding: 100px !important;
-  }
-}
-
-@media (max-width: 300px) {
-  .main_page_catalog_cards_card {
-    padding: 85px !important;
-  }
-}
-
 /* NAVIGATION */
 
 .navigation {
@@ -3329,6 +3222,15 @@ span.select2-search.select2-search--dropdown {
     display: block;
     width: 200px;
   }
+
+  .main_page_catalog_cards .buy_info {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .buy_car_title::after {
+    display: none;
+  }
 }
 
 /* NEW BRANDS */
@@ -3344,9 +3246,12 @@ span.select2-search.select2-search--dropdown {
 }
 
 .moto_class {
-  width: 187px;
-  height: 141px;
+  width: 141px;
   object-fit: scale-down;
+}
+
+.all_cars_class{
+  object-position: 0px -18px;
 }
 
 .post_count {
