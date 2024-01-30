@@ -10,12 +10,12 @@ function enqueue_custom_styles()
 	}
 
 	// Подключение стилей для swiper
-	wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css', array(), null);
+	wp_enqueue_style('swiper-style', get_template_directory_uri() . '/assets/swiper.css', array(), null);
 
 	// Подключение остальных стилей
 	wp_enqueue_style('ax-car-main-form-style', get_template_directory_uri() . '/assets/formstyle.css', array(), null);
 	wp_enqueue_style('ax-car-main-accordion-style', get_template_directory_uri() . '/assets/accordion.css', array(), null);
-	wp_enqueue_style('ax-car-main-style', get_template_directory_uri() . '/style.css', array(), null);
+	wp_enqueue_style('ax-car-main-style', get_template_directory_uri() . '/style.css', array('swiper-style', 'ax-car-main-form-style', 'ax-car-main-accordion-style'), null);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
@@ -23,12 +23,16 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 function enqueue_custom_scripts()
 {
 	// Подключение jQuery
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.7.0.min.js', array(), null, true);
+	wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/jquery.js', array(), null, true);
 
 	// Подключение скрипта для swiper
-	wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array('jquery'), null, true);
+	wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/swiper.js', array('jquery'), null, true);
 
-	wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/metro/metro.js', array('jquery'), null, true);
+	if (is_page('sell')) {
+		wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/metro/metro.js', array('jquery'), null, true);
+	}
+
+	
 
 	// Подключение скрипта для accordion
 	wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/accordion.js', array('jquery', 'swiper-script'), null, true);
