@@ -104,125 +104,125 @@
   </section>
 
   <section class="buy_a_car_form container">
-    <div class="section_title" >
-        <h2>
-            <?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'BUYING A CAR ONLINE WITH DELIVERY';
-
-            } elseif ($current_language == 'ru') {
-                echo 'ПОКУПКА МАШИНЫ ОНЛАЙН С ДОСТАВКОЙ';
-            } else {
-                echo 'BUYING A CAR ONLINE WITH DELIVERY';
-            }
-            ?>
-        </h2>
-    </div>
-    <div class="section_description"  >
+    <div class="section_title">
+      <h2>
         <?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
-            echo "Let us know your preferences, and we'll handle the entire purchase process for you. Our team will find the right car, negotiate deals, and manage all the details, saving you time and ensuring a hassle-free experience.";
+          echo 'BUYING A CAR ONLINE WITH DELIVERY';
 
         } elseif ($current_language == 'ru') {
-            echo 'Расскажите нашим агентам о предпочтениях при выборе машины, и мы освободим вас от хлопот. Команда займется покупкой авто, обсудит с вами все детали и доставит машину в любую точку Дубая. Это значительно сэкономит ваше время.';
+          echo 'ПОКУПКА МАШИНЫ ОНЛАЙН С ДОСТАВКОЙ';
         } else {
-            echo "Let us know your preferences, and we'll handle the entire purchase process for you. Our team will find the right car, negotiate deals, and manage all the details, saving you time and ensuring a hassle-free experience.";
+          echo 'BUYING A CAR ONLINE WITH DELIVERY';
         }
         ?>
+      </h2>
+    </div>
+    <div class="section_description">
+      <?php
+      $current_language = pll_current_language();
+      if ($current_language == 'en') {
+        echo "Let us know your preferences, and we'll handle the entire purchase process for you. Our team will find the right car, negotiate deals, and manage all the details, saving you time and ensuring a hassle-free experience.";
+
+      } elseif ($current_language == 'ru') {
+        echo 'Расскажите нашим агентам о предпочтениях при выборе машины, и мы освободим вас от хлопот. Команда займется покупкой авто, обсудит с вами все детали и доставит машину в любую точку Дубая. Это значительно сэкономит ваше время.';
+      } else {
+        echo "Let us know your preferences, and we'll handle the entire purchase process for you. Our team will find the right car, negotiate deals, and manage all the details, saving you time and ensuring a hassle-free experience.";
+      }
+      ?>
     </div>
     <div class="buy_a_car_form_wrapper">
 
-        <form class="get_consultation_form"   method="POST" action="<?php
+      <form id="secure-form" class="get_consultation_form" method="POST" action="<?php
+      $current_language = pll_current_language();
+      if ($current_language == 'en') {
+        echo home_url('/mailer');
+
+      } elseif ($current_language == 'ru') {
+        echo 'https://axluxurycars.ae/ru/mailer';
+      } else {
+        echo home_url('/mailer');
+      }
+      ?>">
+        <input required name="yourname" type="text" class="get_consultation_first_name" placeholder="<?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
-            echo home_url('/mailer');
+          echo 'First Name';
 
         } elseif ($current_language == 'ru') {
-            echo 'https://axluxurycars.ae/ru/mailer';
+          echo 'Ваше имя';
         } else {
-            echo home_url('/mailer');
+          echo 'First Name';
         }
-        ?>">
-            <input required name="yourname" type="text" class="get_consultation_first_name" placeholder="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'First Name';
+        ?>" />
+        <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
+        $current_language = pll_current_language();
+        if ($current_language == 'en') {
+          echo 'Last Name';
 
-            } elseif ($current_language == 'ru') {
-                echo 'Ваше имя';
-            } else {
-                echo 'First Name';
-            }
-            ?>" />
-            <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'Last Name';
+        } elseif ($current_language == 'ru') {
+          echo 'Фамилия';
+        } else {
+          echo 'Last Name';
+        }
+        ?>" />
+        <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
+        $current_language = pll_current_language();
+        if ($current_language == 'en') {
+          echo 'Phone Number';
 
-            } elseif ($current_language == 'ru') {
-                echo 'Фамилия';
-            } else {
-                echo 'Last Name';
-            }
-            ?>" />
-            <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'Phone Number';
+        } elseif ($current_language == 'ru') {
+          echo 'Номер телефона';
+        } else {
+          echo 'Phone Number';
+        }
+        ?>" />
+        <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
+        $current_language = pll_current_language();
+        if ($current_language == 'en') {
+          echo 'Email';
 
-            } elseif ($current_language == 'ru') {
-                echo 'Номер телефона';
-            } else {
-                echo 'Phone Number';
-            }
-            ?>" />
-            <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'Email';
+        } elseif ($current_language == 'ru') {
+          echo 'Электронная почта';
+        } else {
+          echo 'Email';
+        }
+        ?>" />
+        <button class="button new g-recaptcha" data-sitekey="6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq" data-callback='onSubmit' data-action='submit'>
+          <?php
+          $current_language = pll_current_language();
+          if ($current_language == 'en') {
+            echo 'SEND';
 
-            } elseif ($current_language == 'ru') {
-                echo 'Электронная почта';
-            } else {
-                echo 'Email';
-            }
-            ?>" />
-            <button class="button new">
-                <?php
-                $current_language = pll_current_language();
-                if ($current_language == 'en') {
-                    echo 'SEND';
+          } elseif ($current_language == 'ru') {
+            echo 'Отправить';
+          } else {
+            echo 'SEND';
+          }
+          ?>
+        </button>
+      </form>
+      <div class="contact_whatsapp">
+        <?php
+        $current_language = pll_current_language();
+        if ($current_language == 'en') {
+          echo 'Or contact us right now via';
 
-                } elseif ($current_language == 'ru') {
-                    echo 'Отправить';
-                } else {
-                    echo 'SEND';
-                }
-                ?>
-            </button>
-        </form>
-        <div class="contact_whatsapp"  >
-            <?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'Or contact us right now via';
-
-            } elseif ($current_language == 'ru') {
-                echo 'Cвяжитесь с нами через';
-            } else {
-                echo 'Or contact us right now via';
-            }
-            ?>
-            <a href="https://wa.me/+971585893990">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                    alt="contact us right now via whatsapp" />
-                <span class="luxury">WHATSAPP</span>
-            </a>
-        </div>
+        } elseif ($current_language == 'ru') {
+          echo 'Cвяжитесь с нами через';
+        } else {
+          echo 'Or contact us right now via';
+        }
+        ?>
+        <a href="https://wa.me/+971585893990">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
+            alt="contact us right now via whatsapp" />
+          <span class="luxury">WHATSAPP</span>
+        </a>
+      </div>
     </div>
-</section>
+  </section>
 
 
 

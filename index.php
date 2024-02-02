@@ -1095,7 +1095,7 @@
                 }
                 ?>
             </div>
-            <form method="POST" action="<?php
+            <form id="secure-form" method="POST" action="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo home_url('/mailer');

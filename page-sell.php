@@ -241,7 +241,7 @@
             </div>
 
 
-            <form class="get_consultation_form sell_car_form"   method="POST"
+            <form id="secure-form" class="get_consultation_form sell_car_form"   method="POST"
                 action="" enctype="multipart/form-data">
                 <div class="loader_form_wrap">
                     <div data-role="activity" data-type="cycle" data-style="color"></div>

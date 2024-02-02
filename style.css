@@ -3278,3 +3278,7 @@ div#classes div a {
   font-weight: 300;
   line-height: 150%;
 }
+
+.grecaptcha-badge { 
+  visibility: hidden;
+}
