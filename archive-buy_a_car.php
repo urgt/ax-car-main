@@ -135,7 +135,7 @@
 						?>
 
 
-						<?php get_template_part('views/card_componet'); ?>
+						<?php get_template_part('views/card_component'); ?>
 
 						<?php
 					}

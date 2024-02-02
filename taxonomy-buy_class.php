@@ -84,32 +84,7 @@
 						?>
 
 
-						<div >
-
-							<a href="<?php the_permalink(); ?>" class="main_page_catalog_cards_card" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-				')">
-
-
-							</a> <a href="<?php the_permalink(); ?>">
-								<div class="buy_info">
-
-									<div class="buy_car_title" id="textContainer">
-										<span>
-											<?php the_title(); ?>
-										</span>
-
-									</div>
-
-									<div class="buy_car_price">
-										<?php
-										$terms = get_the_terms($post->ID, 'buy_price');
-										echo number_format($terms[0]->name, 0, '.', ' ');
-										?> AED
-									</div>
-
-								</div>
-							</a>
-						</div>
+                        <?php get_template_part('views/card_component'); ?>
 
 						<?php
 					}
