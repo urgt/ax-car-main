@@ -1,9 +1,3 @@
-
-function onSubmit(6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq) {
-  document.getElementById("secure-form").submit();
-}
-
-
 function toggleMenu() {
   if (!document.querySelector(".header_nav").classList.contains("active")) {
     document.querySelector(".header_nav").classList.add("active");
@@ -409,11 +403,9 @@ function handleCarouselClick(e) {
   return preventClick;
 }
 
-// Refactored code for handling carousel events
-// Refactored code for handling carousel events
 const carousel = document.querySelector(".logos_section.brands");
 
-if (carousel) {
+if (carousel != null) {
   let startX = 0;
   let startY = 0;
 
@@ -495,23 +487,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const carousel = document.querySelector(".logos_section.brands");
 
-  carousel.addEventListener("mousedown", (e) => {
-    startX = e.pageX;
-    startY = e.pageY;
-  });
+  if (carousel != null){
+    carousel.addEventListener("mousedown", (e) => {
+      startX = e.pageX;
+      startY = e.pageY;
+    });
 
-  carousel.addEventListener("click", (e) => {
-    const currentX = e.pageX;
-    const currentY = e.pageY;
-    const distance = Math.sqrt(
-      Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
-    );
+    carousel.addEventListener("click", (e) => {
+      const currentX = e.pageX;
+      const currentY = e.pageY;
+      const distance = Math.sqrt(
+          Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
+      );
 
-    if (distance > 5) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  });
+      if (distance > 5) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+  }
+
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -520,27 +516,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const classesCarousel = document.querySelector(".logos_section.classes");
 
-  classesCarousel.addEventListener("mousedown", (e) => {
-    startX = e.pageX;
-    startY = e.pageY;
-  });
+    if (classesCarousel != null){
+      classesCarousel.addEventListener("mousedown", (e) => {
+        startX = e.pageX;
+        startY = e.pageY;
+      });
 
-  classesCarousel.addEventListener("click", (e) => {
-    const targetElement = e.target;
-    if (
-      targetElement.tagName === "A" &&
-      targetElement.parentElement.tagName === "DIV"
-    ) {
-      const currentX = e.pageX;
-      const currentY = e.pageY;
-      const distance = Math.sqrt(
-        Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
-      );
+      classesCarousel.addEventListener("click", (e) => {
+        const targetElement = e.target;
+        if (
+            targetElement.tagName === "A" &&
+            targetElement.parentElement.tagName === "DIV"
+        ) {
+          const currentX = e.pageX;
+          const currentY = e.pageY;
+          const distance = Math.sqrt(
+              Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
+          );
 
-      if (distance > 5) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+          if (distance > 5) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }
+      });
     }
-  });
+
 });

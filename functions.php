@@ -524,17 +524,4 @@ function add_custom_csp_meta_tag()
 
 add_action('admin_head', 'add_custom_csp_meta_tag');
 
-// function remove_taxonomy_widgets_for_buy_a_car()
-// {
-
-// 	remove_meta_box('categorydiv', 'buy_a_car', 'side');
-// 	remove_meta_box('tagsdiv-post_tag', 'buy_a_car', 'side');
-
-// 	$taxonomies = get_object_taxonomies('buy_a_car', 'objects');
-// 	foreach ($taxonomies as $taxonomy) {
-// 		remove_meta_box('tagsdiv-' . $taxonomy->name, 'buy_a_car', 'side');
-// 	}
-// }
-
-// add_action('admin_menu', 'remove_taxonomy_widgets_for_buy_a_car');
 
