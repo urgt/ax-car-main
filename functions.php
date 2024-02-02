@@ -428,8 +428,8 @@ function sell_car_form_handler()
 			return;
 		}
 
-		//$to = 'vitalii@axmotors.ae';
-		$to = 'urinbaevg@gmail.com';
+		$to = 'vitalii@axmotors.ae';
+		//$to = 'urinbaevg@gmail.com';
 		$subject = 'New Car Sell Form Submission';
 
 		$message = "<p><strong>Brand:</strong> {$_POST['sell_brand']}</p>";
