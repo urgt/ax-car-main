@@ -1,3 +1,9 @@
+var onloadCallback = function() {
+  grecaptcha.render('form-captcha', {
+    'sitekey' : '6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq'
+  });
+};
+
 function toggleMenu() {
   if (!document.querySelector(".header_nav").classList.contains("active")) {
     document.querySelector(".header_nav").classList.add("active");

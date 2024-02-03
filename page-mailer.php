@@ -45,98 +45,111 @@
 				$number = $_POST["number"];
 				$email = $_POST["email"];
 				$message = $_POST["message"];
+                $recaptcha = $_POST['g-recaptcha-response'];
 
 
 
 				// Проверка заполненности полей
-				if (empty($name) || empty($number) || empty($email)) {
+				if (empty($name) || empty($number) || empty($email) || empty($recaptcha)) {
 					// Если есть незаполненные поля, выводим ошибку
 					echo "Please fill in all the fields.";
 				} else {
 
+                    $google_url="https://www.google.com/recaptcha/api/siteverify";
+                    $secret='6LcTFGQpAAAAAAlCP0qMqwdK4cqjmZGwavz_vIke';
+                    $ip=$_SERVER['REMOTE_ADDR'];
+                    $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
+                    $res=SiteVerify($url);
+                    $res= json_decode($res, true);
+
+                    if($res['success'])
+                    {
+                        //отправка на webhook
+                        // Получение User-Agent (браузера)
+                        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+                        // Получение IP-адреса пользователя
+                        $user_ip = $_SERVER['REMOTE_ADDR'];
+
+                        // Получение полного URL с UTM-метками
+                        $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+                        // Получение реферера (откуда пользователь перешел)
+                        $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+
+
+                        $post_data = array(
+                            'name' => $name,
+                            'phone' => $number,
+                            'email' => $email,
+                            'message' => $message,
+                            'client_ip' => $user_ip,
+                            'client_url' => $current_url,
+                            'source' => 'axcars',
+                        );
+
+                        // Создайте запрос
+                        $request_args = array(
+                            'body' => $post_data,
+                            'headers' => array(
+                                'Content-Type' => 'application/x-www-form-urlencoded',
+                                'User-Agent' => $user_agent,
+                                'Referer' => $referer
+                            ),
+                        );
+
+                        // Отправка запроса
+                        $response = wp_safe_remote_post('https://api.axcapital.ae/api/v2/submit/form/', $request_args);
+
+                        if (is_wp_error($response)) {
+                            $resp = 'Ошибка при отправке запроса: ' . $response->get_error_message();
+                        } else {
+                            $response_body = wp_remote_retrieve_body($response);
+                            $resp = 'Ответ от сервера: ' . $response_body;
+                        }
+
+                        $log = date('Y-m-d H:i:s') . ' ' . print_r($post_data, true) . $resp;
+                        file_put_contents(__DIR__ . '/log.txt', $log . PHP_EOL, FILE_APPEND);
+                        //отправка на webhook завершился
 
 
 
-					//отправка на webhook
-					// Получение User-Agent (браузера)
-					$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
-					// Получение IP-адреса пользователя
-					$user_ip = $_SERVER['REMOTE_ADDR'];
+                        // Формирование заголовка письма
+                        $to = "urinbaevg@gmail.com";
+                        //$to = "Vitalii@axmotors.ae";
+                        $subject = "New Consultation Request";
+                        $message = "Name: $name, \nLast Name: $lastname, \nPhone Number: $number, \nEmail: $email, \nMessage: $message";
 
-					// Получение полного URL с UTM-метками
-					$current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+                        // Опции для функции wp_mail()
+                        $headers = array(
+                            'From: AX LUXURY CARS <info@axcars.ae>',
+                            'Content-Type: text/html; charset=UTF-8'
+                        );
 
-					// Получение реферера (откуда пользователь перешел)
-					$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+                        // Отправка письма
+                        if (wp_mail($to, $subject, $message, $headers)) {
+                            // Если письмо отправлено успешно, выводим сообщение об успешной отправке формы
 
+                            $current_language = pll_current_language();
+                            if ($current_language == 'en') {
+                                echo 'Form submitted successfully';
 
-					$post_data = array(
-						'name' => $name,
-						'phone' => $number,
-						'email' => $email,
-						'message' => $message,
-						'client_ip' => $user_ip,
-						'client_url' => $current_url,
-						'source' => 'axcars',
-					);
-
-					// Создайте запрос
-					$request_args = array(
-						'body' => $post_data,
-						'headers' => array(
-							'Content-Type' => 'application/x-www-form-urlencoded',
-							'User-Agent' => $user_agent,
-							'Referer' => $referer
-						),
-					);
-
-					// Отправка запроса
-					$response = wp_safe_remote_post('https://api.axcapital.ae/api/v2/submit/form/', $request_args);
-
-					if (is_wp_error($response)) {
-						$resp = 'Ошибка при отправке запроса: ' . $response->get_error_message();
-					} else {
-						$response_body = wp_remote_retrieve_body($response);
-						$resp = 'Ответ от сервера: ' . $response_body;
-					}
-
-					$log = date('Y-m-d H:i:s') . ' ' . print_r($post_data, true) . $resp;
-					file_put_contents(__DIR__ . '/log.txt', $log . PHP_EOL, FILE_APPEND);
-					//отправка на webhook завершился
-			
+                            } elseif ($current_language == 'ru') {
+                                echo 'Форма успешно отправлена';
+                            } else {
+                                echo 'Form submitted successfully';
+                            }
+                        } else {
+                            // Если возникла ошибка при отправке письма, выводим сообщение об ошибке
+                            echo "Error sending the form. Please try again later.";
+                        }
+                    }
+                    else{
+                        echo "Recaptcha error!";
+                    }
 
 
-
-					// Формирование заголовка письма    
-					//$to = "urinbaevg@gmail.com";
-					$to = "Vitalii@axmotors.ae";
-					$subject = "New Consultation Request";
-					$message = "Name: $name, \nLast Name: $lastname, \nPhone Number: $number, \nEmail: $email, \nMessage: $message";
-
-					// Опции для функции wp_mail()
-					$headers = array(
-						'From: AX LUXURY CARS <info@axcars.ae>',
-						'Content-Type: text/html; charset=UTF-8'
-					);
-
-					// Отправка письма
-					if (wp_mail($to, $subject, $message, $headers)) {
-						// Если письмо отправлено успешно, выводим сообщение об успешной отправке формы
-			
-						$current_language = pll_current_language();
-						if ($current_language == 'en') {
-							echo 'Form submitted successfully';
-
-						} elseif ($current_language == 'ru') {
-							echo 'Форма успешно отправлена';
-						} else {
-							echo 'Form submitted successfully';
-						}
-					} else {
-						// Если возникла ошибка при отправке письма, выводим сообщение об ошибке
-						echo "Error sending the form. Please try again later.";
-					}
 				}
 			}
 			?>

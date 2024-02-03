@@ -248,7 +248,7 @@
 					echo 'Email';
 				}
 				?>" />
-				<button class="button new g-recaptcha" data-sitekey="6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq" data-callback='onSubmit'
+				<button class="button new g-recaptcha" data-sitekey="6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq" data-callback='onFormSubmit'
 					data-action='submit'>
 					<?php
 					$current_language = pll_current_language();

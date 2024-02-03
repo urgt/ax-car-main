@@ -3284,9 +3284,9 @@ div#classes div a {
   line-height: 150%;
 }
 
-/*.grecaptcha-badge { */
-/*  visibility: hidden;*/
-/*}*/
+.grecaptcha-badge {
+  visibility: hidden;
+}
 
 #load-more-img, #hide-img-btn{
   cursor: pointer;
