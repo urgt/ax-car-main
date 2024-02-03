@@ -17,7 +17,7 @@
               if ($images): ?>
                 <?php foreach ($images as $image): ?>
                   <div class="swiper-slide">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php
+                    <img loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php
                        $current_language = pll_current_language();
                        if ($current_language == 'en') {
                          echo 'Buy';
@@ -377,7 +377,7 @@
             if ($images): ?>
               <?php foreach ($images as $image): ?>
                 <a href="<?php echo esc_url($image['url']); ?>" class="foobox" rel="gallery">
-                  <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" />
+                  <img loading="lazy" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" />
                 </a>
               <?php endforeach; ?>
 
