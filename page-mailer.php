@@ -130,8 +130,8 @@
 
 
                         // Формирование заголовка письма
-                        $to = "urinbaevg@gmail.com";
-                        //$to = "Vitalii@axmotors.ae";
+                        //$to = "urinbaevg@gmail.com";
+                        $to = "Vitalii@axmotors.ae";
                         $subject = "New Consultation Request";
                         $message = "Name: $name, \nLast Name: $lastname, \nPhone Number: $number, \nEmail: $email, \nMessage: $message";
 
