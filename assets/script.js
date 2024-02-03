@@ -8,6 +8,35 @@ function toggleMenu() {
   }
 }
 
+jQuery(document).ready(function($) {
+  const $container = $('.car_details_sidebar_gallery_imgs');
+  if ($container != null) {
+    const imagesToShow = 4;
+    const $images = $container.find('a');
+    const $hiddenImages = $images.slice(imagesToShow);
+
+    if ($images.length > imagesToShow) {
+      $hiddenImages.hide();
+      $('#hide-img-btn').hide();
+
+      $('#load-more-img').on('click', () => {
+        $hiddenImages.show();
+        $('#load-more-img').hide();
+        $('#hide-img-btn').show();
+      });
+
+      $('#hide-img-btn').on('click', () => {
+        $hiddenImages.hide();
+        $('#load-more-img').show();
+        $('#hide-img-btn').hide();
+      });
+    } else {
+      $('#load-more-img, #hide-img-btn').hide();
+    }
+  }
+});
+
+
 if (jQuery("#language-selected").is(":empty")) {
   jQuery(".menu li").each(function () {
     if (jQuery(this).attr("class") == "selected") {

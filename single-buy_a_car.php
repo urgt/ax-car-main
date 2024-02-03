@@ -383,6 +383,36 @@
 
             <?php endif; ?>
           </div>
+            <a id="load-more-img" class="button">
+              <span>
+                <?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                    echo 'Show more';
+
+                } elseif ($current_language == 'ru') {
+                    echo 'Показать ещё';
+                } else {
+                    echo 'Show more';
+                }
+                ?>
+              </span>
+            </a>
+            <a id="hide-img-btn" class="button">
+              <span>
+                <?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                    echo 'Show less';
+
+                } elseif ($current_language == 'ru') {
+                    echo 'Показать меньше';
+                } else {
+                    echo 'Show less';
+                }
+                ?>
+              </span>
+            </a>
         </div>
         <div class="car_details_sidebar_consultant">
           <div class="consultant_info">

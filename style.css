@@ -4,7 +4,7 @@ Theme URI: https://axmotors.ae
 Author: AX Technology
 Author URI: https://axtechnology.uz/
 Description: AX Motors  theme
-Version: 2.0.5
+Version: 2.0.6
 Text Domain: axmotors
 */
 
@@ -1279,6 +1279,11 @@ button.button {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.consultant_info img{
+  width: 100px;
+  height: 100px;
 }
 
 .consiltant_info_name p {
@@ -3279,6 +3284,14 @@ div#classes div a {
   line-height: 150%;
 }
 
-.grecaptcha-badge { 
-  visibility: hidden;
+/*.grecaptcha-badge { */
+/*  visibility: hidden;*/
+/*}*/
+
+#load-more-img, #hide-img-btn{
+  cursor: pointer;
+  width: auto;
+  justify-content: center;
+  padding: 12px;
+  margin-top: 10px;
 }
