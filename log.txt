@@ -18700,3 +18700,26 @@ type %SYSTEMROOT%\\win.ini
     [source] => axcars
 )
 Ответ от сервера: 
+2024-02-03 08:53:07 Array
+(
+    [name] => Testing
+    [phone] => 6666
+    [email] => test@test.com
+    [message] => 
+    [client_ip] => ::1
+    [client_url] => http://localhost:10008/mailer
+    [source] => axcars
+)
+Ответ от сервера: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+

@@ -38,6 +38,19 @@
 	<section class="buy_a_car_form container">
 		<div class="section_title" >
 			<?php
+
+            function SiteVerify($url)
+            {
+                $curl = curl_init();
+                curl_setopt($curl, CURLOPT_URL, $url);
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($curl, CURLOPT_TIMEOUT, 15);
+                curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36");
+                $curlData = curl_exec($curl);
+                curl_close($curl);
+                return $curlData;
+            }
+
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				// Получение значений полей формы
 				$name = $_POST["yourname"];
@@ -46,6 +59,7 @@
 				$email = $_POST["email"];
 				$message = $_POST["message"];
                 $recaptcha = $_POST['g-recaptcha-response'];
+
 
 
 
@@ -146,7 +160,7 @@
                         }
                     }
                     else{
-                        echo "Recaptcha error!";
+                        echo "ERROR: Recaptcha error!";
                     }
 
 

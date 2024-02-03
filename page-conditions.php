@@ -840,7 +840,7 @@
     </div>
     <div class="buy_a_car_form_wrapper">
 
-        <form id="secure-form" class="get_consultation_form"   method="POST" action="<?php
+        <form  class="get_consultation_form"   method="POST" action="<?php
         $current_language = pll_current_language();
         if ($current_language == 'en') {
             echo home_url('/mailer');
@@ -895,6 +895,8 @@
                 echo 'Email';
             }
             ?>" />
+            <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
+
             <button class="button new">
                 <?php
                 $current_language = pll_current_language();

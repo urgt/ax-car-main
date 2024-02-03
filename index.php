@@ -1095,7 +1095,7 @@
                 }
                 ?>
             </div>
-            <form id="secure-form" method="POST" action="<?php
+            <form  method="POST" action="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo home_url('/mailer');
@@ -1139,6 +1139,8 @@
                     echo 'Email';
                 }
                 ?>" />
+
+                <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
                 <button class="button">
                     <?php
                     $current_language = pll_current_language();

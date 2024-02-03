@@ -241,7 +241,7 @@
             </div>
 
 
-            <form id="secure-form" class="get_consultation_form sell_car_form"   method="POST"
+            <form  class="get_consultation_form sell_car_form"   method="POST"
                 action="" enctype="multipart/form-data">
                 <div class="loader_form_wrap">
                     <div data-role="activity" data-type="cycle" data-style="color"></div>
@@ -358,6 +358,8 @@
                         data-button-title="Add photos">
                     <span class="photos_desc">* We will add it to your review to make it aesthetically pleasing</span>
                 </div>
+
+                <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
 
                 <button class="button new">
                     <?php
