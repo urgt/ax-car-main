@@ -32,7 +32,7 @@ function enqueue_custom_scripts()
 		wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/metro/metro.js', array('jquery'), null, true);
 	}
 
-	wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit', array(), null, true );
+	wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js?render=6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq?onload=onloadCallback&render=explicit', array(), null, true );
 
 	// Подключение скрипта для accordion
 	wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/accordion.js', array('jquery', 'swiper-script'), null, true);
