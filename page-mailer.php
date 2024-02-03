@@ -56,7 +56,7 @@
 				} else {
 
                     $google_url="https://www.google.com/recaptcha/api/siteverify";
-                    $secret='6LcTFGQpAAAAAAlCP0qMqwdK4cqjmZGwavz_vIke';
+                    $secret='6Lc_PWUpAAAAAEuwaBIG-ZXPfjJvafoNchapaQHG';
                     $ip=$_SERVER['REMOTE_ADDR'];
                     $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
                     $res=SiteVerify($url);

@@ -189,7 +189,7 @@
           echo 'Email';
         }
         ?>" />
-          <div class="g-recaptcha" data-sitekey="6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq"></div>
+          <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
         <button class="button new" >
           <?php
           $current_language = pll_current_language();
