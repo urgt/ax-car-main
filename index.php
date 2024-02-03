@@ -1140,8 +1140,8 @@
                 }
                 ?>" />
 
-                <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
-                <button class="button">
+
+                <button class="button new">
                     <?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
