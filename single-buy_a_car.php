@@ -17,24 +17,26 @@
               if ($images): ?>
                 <?php foreach ($images as $image): ?>
                   <div class="swiper-slide">
-                    <img loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php
-                       $current_language = pll_current_language();
-                       if ($current_language == 'en') {
-                         echo 'Buy';
+                      <a href="<?php echo esc_url($image['url']); ?>" class="foobox" rel="gallery">
+                          <img loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php
+                          $current_language = pll_current_language();
+                          if ($current_language == 'en') {
+                              echo 'Buy';
 
-                       } elseif ($current_language == 'ru') {
-                         echo 'Купить';
-                       } else {
-                         echo 'Buy';
-                       }
-                       ?> <?php the_title(); ?> <?php
-                           $terms = get_the_terms($post->ID, 'buy_colors');
-                           $colors = array();
-                           foreach ($terms as $term) {
-                             $colors[] = $term->name;
-                           }
-                           echo implode(', ', $colors);
-                           ?>" />
+                          } elseif ($current_language == 'ru') {
+                              echo 'Купить';
+                          } else {
+                              echo 'Buy';
+                          }
+                          ?> <?php the_title(); ?> <?php
+                          $terms = get_the_terms($post->ID, 'buy_colors');
+                          $colors = array();
+                          foreach ($terms as $term) {
+                              $colors[] = $term->name;
+                          }
+                          echo implode(', ', $colors);
+                          ?>" />
+                      </a>
                   </div>
                 <?php endforeach; ?>
               <?php endif; ?>
