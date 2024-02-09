@@ -72,12 +72,12 @@
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo 'Our experienced team offers personalized consultations, guiding you through the process and helping you find the right vehicle to meet your specific requirements for your comfort.';
+					echo 'Our team of automotive experts is dedicated to exceeding your expectations by providing personalized assistance throughout the entire car buying process.';
 
 				} elseif ($current_language == 'ru') {
 					echo 'Наша опытная команда предлагает индивидуальные консультации, сопровождая вас на протяжении всего процесса и помогая вам найти подходящий автомобиль, отвечающий вашим конкретным требованиям к вашему комфорту.';
 				} else {
-					echo 'Our experienced team offers personalized consultations, guiding you through the process and helping you find the right vehicle to meet your specific requirements for your comfort.';
+					echo 'Our team of automotive experts is dedicated to exceeding your expectations by providing personalized assistance throughout the entire car buying process.';
 				} ?>
 
 			</div>
