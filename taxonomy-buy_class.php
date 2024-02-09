@@ -5,15 +5,7 @@
 		<div class="page_title_block">
 			<div class="page_title_text"  >
 				<?php
-				$current_language = pll_current_language();
-				if ($current_language == 'en') {
-					echo 'Buy a car';
-
-				} elseif ($current_language == 'ru') {
-					echo 'Арендовать авто';
-				} else {
-					echo 'Buy a car';
-				}
+					echo single_term_title('', false);
 				?>
 
 			</div>
@@ -22,15 +14,15 @@
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
 					echo '<span><a href="/">Home</a></span>
-              <span>Buy a car</span>';
+              <span>' . single_term_title('', false) . '</span>';
 
 
 				} elseif ($current_language == 'ru') {
 					echo '<span><a href="/ru/">Главная</a></span>
-              <span>Аренда авто</span>';
+              <span>' . single_term_title('', false) . '</span>';
 				} else {
 					echo '<span>Home</span>
-              <span>Buy a car</span>';
+              <span>' . single_term_title('', false) . '</span>';
 				}
 				?>
 
