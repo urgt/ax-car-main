@@ -7,7 +7,7 @@ Description: AX Motors  theme
 Version: 2.0.6
 Text Domain: axmotors
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Gilda+Display&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@200;400;500;600;700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
@@ -2000,10 +2000,11 @@ button.button {
 
 .new_hero_title {
   color: #fff;
-  font-family: "alethia_proregular", serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-size: 72px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 72px;
   text-transform: uppercase;
 }
@@ -2759,7 +2760,6 @@ span.select2-search.select2-search--dropdown {
 }
 .new_hero_title {
   text-align: center;
-  font-family: "alethia_proregular", serif;
   font-size: 64px;
 }
 .pum-theme-913 .pum-content + .pum-close,
