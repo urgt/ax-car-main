@@ -2,7 +2,7 @@
 
 <main>
     <section class="page_title"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/sell_back-min.jpeg)">
+        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Sell.webp)">
         <div class="page_title_block">
             <div class="page_title_text" >
                 <?php

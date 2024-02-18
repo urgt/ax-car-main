@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main>
-  <section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/1225.jpg)">
+  <section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Contact-us.webp)">
     <div class="page_title_block">
       <div class="page_title_text">
         <?php

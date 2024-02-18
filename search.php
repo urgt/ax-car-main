@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="buy-archive__main">
     <section class="page_title"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/buy_car.jpg)">
+        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Search-results.webp)">
         <div class="page_title_block">
             <div class="page_title_text"  >
                 <?php

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/1224.jpg)">
+<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/About-us.webp)">
     <div class="page_title_block">
         <div class="page_title_text" >
             <?php
