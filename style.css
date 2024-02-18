@@ -1655,9 +1655,7 @@ button.button {
   }
 }
 @media (max-width: 850px) {
-  .get_consultation {
-    background: rgba(255, 255, 255, 0.05);
-  }
+
   .get_consultation_inner {
     background: none;
     border: none;
@@ -2248,7 +2246,12 @@ button.button {
 /* CONSULTATION FORM */
 
 .get_consultation_inner {
-  background: rgba(255, 255, 255, 0.05);
+  background: #111;
+}
+
+.get_consultation_inner button.button.new{
+  width: 100%;
+  justify-content: center;
 }
 
 .cta_two_section_left .button {
