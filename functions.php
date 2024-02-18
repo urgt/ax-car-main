@@ -207,8 +207,11 @@ function book_shortcode()
 add_shortcode('booknowwshortcode', 'book_shortcode');
 
 
+add_action('admin_menu', 'remove_comments_menu');
 
-
+function remove_comments_menu() {
+    remove_menu_page('edit-comments.php');
+}
 
 function rent_shortcode()
 {
@@ -526,3 +529,4 @@ function add_custom_csp_meta_tag()
 add_action('admin_head', 'add_custom_csp_meta_tag');
 
 
+require_once get_template_directory() .'/include/reviews.php';

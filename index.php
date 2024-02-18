@@ -1031,26 +1031,16 @@
                     </div>
 
                 </div>
-                <div class="swiper-pag">
-                    <a class="swiper-prev">PREV</a>
-                    <a class="swiper-next">NEXT</a>
-                </div>
+
+            </div>
+            <div class="swiper-pag">
+                <a class="swiper-prev">PREV</a>
+                <a class="swiper-next">NEXT</a>
             </div>
 
 
 
-
-            <a href="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo '/contact-us';
-
-            } elseif ($current_language == 'ru') {
-                echo '/ru/contact-us';
-            } else {
-                echo '/contact-us';
-            }
-            ?>" class="button leave-review">
+            <a class="button leave-review popmake-1678">
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
