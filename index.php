@@ -755,7 +755,7 @@
 
 
         <div class="cta_two_section_right"  >
-            <img src="<?php echo get_template_directory_uri(); ?>/img/man.jpg" alt="<?php
+            <img src="<?php echo get_template_directory_uri(); ?>/img/Brokerage-Services.webp" alt="<?php
                $current_language = pll_current_language();
                if ($current_language == 'en') {
                    echo 'mercedes benz e class 2022 in Dubai';
