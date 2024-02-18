@@ -3,7 +3,7 @@
 	<section class="page_title"
 		style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Buy-a-car.webp)">
 		<div class="page_title_block">
-			<div class="page_title_text">
+			<h1 class="page_title_text">
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
@@ -16,7 +16,7 @@
 				}
 				?>
 
-			</div>
+			</h1>
 			<div class="breadcrums">
 				<?php
 				$current_language = pll_current_language();
