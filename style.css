@@ -2206,6 +2206,7 @@ button.button {
   background: #111;
   padding: 20px;
   margin: 20px;
+  width: 100%;
 }
 
 .swiper-slide .review_item .review_author {

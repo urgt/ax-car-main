@@ -796,239 +796,68 @@
             </div>
             <div class="swiper review-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="review_item"  >
-                            <div class="review_author">
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="review_item"  >-->
+<!--                            <div class="review_author">-->
+<!---->
+<!--                                <div class="review_author_info">-->
+<!--                                    <div class="review_author_name">-->
+<!--                                        --><?php
+//                                        ?>
+<!--                                    </div>-->
+<!--                                    <div class="review_author_country">-->
+<!--                                        --><?php //?>
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <p class="review_text">-->
+<!--                                --><?php
+//
+//                                ?>
+<!--                            </p>-->
+<!---->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                                <div class="review_author_info">
-                                    <div class="review_author_name">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_name_one_en'];
+                    <?php
+                    // Создаем новый экземпляр класса WP_Query
+                    $query = new WP_Query( array(
+                        'post_type' => 'review', // Указываем тип поста
+                        'post_status' => 'publish', // Указываем статус "опубликован"
+                        // Дополнительные параметры по вашему усмотрению
+                    ) );
 
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_name_one_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_name_one_en'];
-                                            }
-                                        endif;
-                                        ?>
+                    // Проверяем, есть ли посты
+                    if ( $query->have_posts() ) {
+                        // Начинаем цикл
+                        while ( $query->have_posts() ) {
+                            $query->the_post();
+                            ?>
+                            <div class="swiper-slide">
+                                <div class="review_item">
+                                    <div class="review_author">
+                                        <div class="review_author_info">
+                                            <div class="review_author_name">
+                                                <?php the_title(); ?>
+                                            </div>
+                                            <div class="review_author_country">
+                                                <?php echo get_post_meta( get_the_ID(), 'review_country', true ); ?>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="review_author_country">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_country_one_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_country_one_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_country_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
+                                    <p class="review_text">
+                                        <?php echo get_post_meta( get_the_ID(), 'review_text', true ); ?>
+                                    </p>
                                 </div>
                             </div>
-                            <p class="review_text">
-                                <?php
-                                $cars_fleet = get_field('reviews');
-                                if ($cars_fleet):
-                                    $current_language = pll_current_language();
-                                    if ($current_language == 'en') {
-                                        echo $cars_fleet['review_text_one_en'];
-
-                                    } elseif ($current_language == 'ru') {
-                                        echo $cars_fleet['review_text_one_ru'];
-                                    } else {
-                                        echo $cars_fleet['review_text_one_en'];
-                                    }
-                                endif;
-                                ?>
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review_item"  >
-                            <div class="review_author">
-
-                                <div class="review_author_info">
-                                    <div class="review_author_name">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_name_two_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_name_two_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_name_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
-                                    <div class="review_author_country">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_country_two_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_country_two_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_country_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review_text">
-                                <?php
-                                $cars_fleet = get_field('reviews');
-                                if ($cars_fleet):
-                                    $current_language = pll_current_language();
-                                    if ($current_language == 'en') {
-                                        echo $cars_fleet['review_text_two_en'];
-
-                                    } elseif ($current_language == 'ru') {
-                                        echo $cars_fleet['review_text_two_ru'];
-                                    } else {
-                                        echo $cars_fleet['review_text_one_en'];
-                                    }
-                                endif;
-                                ?>
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review_item"  >
-                            <div class="review_author">
-
-                                <div class="review_author_info">
-                                    <div class="review_author_name">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_name_three_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_name_three_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_name_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
-                                    <div class="review_author_country">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_country_three_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_country_three_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_country_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review_text">
-                                <?php
-                                $cars_fleet = get_field('reviews');
-                                if ($cars_fleet):
-                                    $current_language = pll_current_language();
-                                    if ($current_language == 'en') {
-                                        echo $cars_fleet['review_text_three_en'];
-
-                                    } elseif ($current_language == 'ru') {
-                                        echo $cars_fleet['review_text_three_ru'];
-                                    } else {
-                                        echo $cars_fleet['review_text_one_en'];
-                                    }
-                                endif;
-                                ?>
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="review_item"  >
-                            <div class="review_author">
-
-                                <div class="review_author_info">
-                                    <div class="review_author_name">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_name_four_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_name_four_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_name_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
-                                    <div class="review_author_country">
-                                        <?php
-                                        $cars_fleet = get_field('reviews');
-                                        if ($cars_fleet):
-                                            $current_language = pll_current_language();
-                                            if ($current_language == 'en') {
-                                                echo $cars_fleet['review_author_country_four_en'];
-
-                                            } elseif ($current_language == 'ru') {
-                                                echo $cars_fleet['review_author_country_four_ru'];
-                                            } else {
-                                                echo $cars_fleet['review_author_country_one_en'];
-                                            }
-                                        endif;
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review_text">
-                                <?php
-                                $cars_fleet = get_field('reviews');
-                                if ($cars_fleet):
-                                    $current_language = pll_current_language();
-                                    if ($current_language == 'en') {
-                                        echo $cars_fleet['review_text_four_en'];
-
-                                    } elseif ($current_language == 'ru') {
-                                        echo $cars_fleet['review_text_four_ru'];
-                                    } else {
-                                        echo $cars_fleet['review_text_one_en'];
-                                    }
-                                endif;
-                                ?>
-                            </p>
-
-                        </div>
-                    </div>
+                            <?php
+                        }
+                        // Восстанавливаем оригинальные данные
+                        wp_reset_postdata();
+                    } else {
+                        echo 'Отзывов нет не найдено';
+                    }
+                    ?>
 
                 </div>
 
