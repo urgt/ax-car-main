@@ -17,12 +17,12 @@
                 <a href="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo '/buy_a_car';
+                    echo '/buy';
 
                 } elseif ($current_language == 'ru') {
-                    echo '/ru/buy_a_car';
+                    echo '/ru/buy';
                 } else {
-                    echo '/buy_a_car';
+                    echo '/buy';
                 }
                 ?>" class="button"  >
                     <?php
@@ -342,9 +342,9 @@
                     <a href="<?php
                     $url = get_site_url();
                     if ($current_language == 'en') {
-                        echo $url . '/buy_a_car';
+                        echo $url . '/buy';
                     } else {
-                        echo $url . '/ru/buy_a_car';
+                        echo $url . '/ru/buy';
                     }
 
                     ?>">

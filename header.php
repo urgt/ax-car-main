@@ -41,7 +41,7 @@
           $current_language = pll_current_language();
           if ($current_language == 'en') {
             echo '
-            <li><a href="/buy_a_car" class="nav_link">Buy a car</a></li>
+            <li><a href="/buy" class="nav_link">Buy a car</a></li>
             <li><a href="/sell" class="nav_link">Sell a car</a> </li>   
             <li><a href="/conditions" class="nav_link">Conditions</a> </li>   
             <li><a href="/about-us" class="nav_link">About</a></li>
@@ -49,14 +49,14 @@
 
           } elseif ($current_language == 'ru') {
             echo '
-            <li><a href="/ru/buy_a_car" class="nav_link">Купить авто</a></li>
+            <li><a href="/ru/buy" class="nav_link">Купить авто</a></li>
             <li><a href="/ru/sell" class="nav_link">Продать авто</a></li>
             <li><a href="/ru/conditions" class="nav_link">Условия</a></li>
             <li><a href="/ru/about-us" class="nav_link">О нас</a></li>
             <li><a href="/ru/contact-us" class="nav_link">Контакты</a></li>';
           } else {
             echo '
-            <li><a href="/buy_a_car" class="nav_link">Buy a car</a></li>
+            <li><a href="/buy" class="nav_link">Buy a car</a></li>
             <li><a href="/sell" class="nav_link">Sell a car</a></li>   
             <li><a href="/conditions" class="nav_link">Conditions</a></li>
             <li><a href="/about-us" class="nav_link">About</a></li>

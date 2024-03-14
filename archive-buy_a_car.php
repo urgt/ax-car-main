@@ -82,47 +82,9 @@
 
 			</div>
 
-			<div class="tabs">
-				<div class="tab active">
-					<?php
-					$current_language = pll_current_language();
-					if ($current_language == 'en') {
-						echo 'BRANDS';
-
-					} elseif ($current_language == 'ru') {
-						echo 'БРЕНДЫ';
-					} else {
-						echo 'BRANDS';
-					}
-					?>
-				</div>
-				<div class="tab">
-					<?php
-					$current_language = pll_current_language();
-					if ($current_language == 'en') {
-						echo 'CATEGORY';
-
-					} elseif ($current_language == 'ru') {
-						echo 'КАТЕГОРИИ';
-					} else {
-						echo 'CATEGORY';
-					} ?>
-				</div>
-			</div>
-
-			<div class="tab-content">
-				<div class="content-tab active">
-
-					<?php get_template_part('views/car_brands'); ?>
-
-				</div>
-
-				<div class="content-tab">
-
-					<?php get_template_part('views/car_classes'); ?>
-
-				</div>
-			</div>
+            <div class="container">
+                <?php echo do_shortcode('[fe_widget]')?>
+            </div>
 
 			<div class="main_page_catalog_cards">
 

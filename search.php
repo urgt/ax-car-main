@@ -390,12 +390,12 @@
                             <a href="<?php
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
-                                echo '/buy_a_car';
+                                echo '/buy';
 
                             } elseif ($current_language == 'ru') {
-                                echo '/ru/buy_a_car';
+                                echo '/ru/buy';
                             } else {
-                                echo '/buy_a_car';
+                                echo '/buy';
                             }
                             ?>">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/alcars.png"
