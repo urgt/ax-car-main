@@ -83,7 +83,8 @@
 			</div>
 
             <div class="container">
-                <?php echo do_shortcode('[fe_widget]')?>
+                <?php echo do_shortcode('[fe_widget id="3441"]')?>
+                <?php echo do_shortcode('[fe_widget id="3412"]')?>
             </div>
 
 			<div class="main_page_catalog_cards">
