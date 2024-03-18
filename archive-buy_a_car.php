@@ -82,9 +82,18 @@
 
 			</div>
 
-            <div class="container">
-                <?php echo do_shortcode('[fe_widget id="3441"]')?>
-                <?php echo do_shortcode('[fe_widget id="3412"]')?>
+            <div class="tab-content">
+                <div class="content-tab active">
+
+                    <?php get_template_part('views/car_brands'); ?>
+
+                </div>
+
+                <div class="content-tab">
+
+                    <?php get_template_part('views/car_classes'); ?>
+
+                </div>
             </div>
 
 			<div class="main_page_catalog_cards">
