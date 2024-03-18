@@ -207,8 +207,11 @@ function book_shortcode()
 add_shortcode('booknowwshortcode', 'book_shortcode');
 
 
+add_action('admin_menu', 'remove_comments_menu');
 
-
+function remove_comments_menu() {
+    remove_menu_page('edit-comments.php');
+}
 
 function rent_shortcode()
 {
@@ -525,4 +528,50 @@ function add_custom_csp_meta_tag()
 
 add_action('admin_head', 'add_custom_csp_meta_tag');
 
+function pluralize($word) {
+    // Массив исключений для нестандартных форм множественного числа
+    $exceptions = array(
+        'man' => 'men',
+        'woman' => 'women',
+        'child' => 'children',
+        // Добавьте любые другие исключения по мере необходимости
+    );
 
+    // Проверка на исключения
+    if (isset($exceptions[$word])) {
+        return $exceptions[$word];
+    }
+
+    // Правила для обработки общих случаев
+    $rules = array(
+        '/(s)tatus$/i' => '\1tatuses',
+        '/(quiz)$/i' => '\1zes',
+        '/^(ox)$/i' => '\1en',
+        '/([m|l])ouse$/i' => '\1ice',
+        '/(matr|vert|ind)ix|ex$/i' => '\1ices',
+        '/(x|ch|ss|sh)$/i' => '\1es',
+        '/([^aeiouy]|qu)ies$/i' => '\1y',
+        '/([^aeiouy]|qu)y$/i' => '\1ies',
+        '/(hive)$/i' => '\1s',
+        '/(?:([^f])fe|([lr])f)$/i' => '\1\2ves',
+        '/sis$/i' => 'ses',
+        '/([ti])um$/i' => '\1a',
+        '/(buffal|tomat)o$/i' => '\1oes',
+        '/(bu)s$/i' => '\1ses',
+        '/(alias)$/i' => '\1es',
+        '/(octop)us$/i' => '\1i',
+        '/(ax|test)is$/i' => '\1es',
+        '/s$/' => 's',
+        '/$/' => 's',
+    );
+
+    foreach ($rules as $rule => $replacement) {
+        if (preg_match($rule, $word)) {
+            return preg_replace($rule, $replacement, $word);
+        }
+    }
+
+    return $word . 's'; // По умолчанию добавляем "s" к слову
+}
+
+require_once get_template_directory() .'/include/reviews.php';

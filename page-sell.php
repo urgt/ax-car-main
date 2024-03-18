@@ -2,9 +2,9 @@
 
 <main>
     <section class="page_title"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/sell_back-min.jpeg)">
+        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Sell.webp)">
         <div class="page_title_block">
-            <div class="page_title_text" >
+            <h1 class="page_title_text" >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -16,7 +16,7 @@
                     echo 'SELL';
                 }
                 ?>
-            </div>
+            </h1>
             <div class="breadcrums"  >
                 <?php
                 $current_language = pll_current_language();
@@ -251,7 +251,7 @@
                     <option value="other" disabled selected>Brand</option>
                         <?php
                         // Array of car brands
-                        $car_brands = array("Acura", "Alfa Romeo", "Aston Martin", "Audi", "BMW", "BYD", "Bentley", "Bugatti", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Daewoo", "Dodge", "Ferrari", "Fiat", "Ford", "GMC", "Genesis", "Honda", "Hummer", "Hyundai", "Infiniti", "Isuzu", "Jaguar", "Jeep", "Kia", "Koenigsegg", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "MINI", "Maserati", "Maybach", "Mazda", "McLaren", "Mercedes-Benz", "Mitsubishi", "Nissan", "Opel", "Pagani", "Peugeot", "Porsche", "Renault", "Rolls-Royce", "Smart", "Subaru", "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo");
+                        $car_brands = array("Acura", "Alfa Romeo", "Aston Martin", "Audi", "BMW", "BYD", "Bentley", "Bugatti", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari", "Fiat", "Ford", "GMC", "Genesis", "Honda", "Hummer", "Hyundai", "Infiniti", "Isuzu", "Jaguar", "Jeep", "Kia", "Koenigsegg", "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "MINI", "Maserati", "Maybach", "Mazda", "McLaren", "Mercedes-Benz", "Mitsubishi", "Nissan", "Opel", "Pagani", "Peugeot", "Porsche", "Renault", "Rolls-Royce", "Smart", "Subaru", "Suzuki", "Tesla", "Toyota", "Volkswagen", "Volvo");
 
 
                         // Loop through the array to generate options

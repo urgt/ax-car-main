@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <main class="buy-archive__main">
     <section class="page_title"
-        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/buy_car.jpg)">
+        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Search-results.webp)">
         <div class="page_title_block">
-            <div class="page_title_text"  >
+            <h1 class="page_title_text"  >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -16,7 +16,7 @@
                 }
                 ?>
 
-            </div>
+            </h1>
             <div class="breadcrums" >
                 <?php
                 $current_language = pll_current_language();
@@ -390,12 +390,12 @@
                             <a href="<?php
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
-                                echo '/buy_a_car';
+                                echo '/buy';
 
                             } elseif ($current_language == 'ru') {
-                                echo '/ru/buy_a_car';
+                                echo '/ru/buy';
                             } else {
-                                echo '/buy_a_car';
+                                echo '/buy';
                             }
                             ?>">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/alcars.png"

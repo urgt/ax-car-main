@@ -9,7 +9,7 @@ Text Domain: axmotors
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Gilda+Display&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@200;400;500;600;700&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
 @import url("assets/fonts/alethiapro/stylesheet.css");
 
@@ -804,7 +804,7 @@ ul.menu li:hover {
 }
 
 .review_text {
-  color: #fff;
+  color: #ffffff8a;
 
   /* txt */
   font-family: "Montserrat";
@@ -1035,13 +1035,10 @@ button.button {
 .page_title_text {
   color: #fff;
   text-align: center;
-
-  /* H1 */
-  font-family: "alethia_proregular", serif;
-  font-size: 72px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 72px; /* 100% */
+  font-family: Montserrat, sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 72px;
   text-transform: uppercase;
 }
 
@@ -1655,17 +1652,20 @@ button.button {
   }
 }
 @media (max-width: 850px) {
-  .get_consultation {
-    background: rgba(255, 255, 255, 0.05);
-  }
+
   .get_consultation_inner {
     background: none;
     border: none;
   }
+
+  .get_consultation_inner button.new{
+    width: 100%;
+    justify-content: center;
+  }
   .get_consultation_inner .section_title {
     color: var(--text, #fff);
     text-align: center;
-    font-family: "Montserrat";
+    font-family: "Montserrat" sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 200;
@@ -2206,6 +2206,7 @@ button.button {
   background: #111;
   padding: 20px;
   margin: 20px;
+  width: 100%;
 }
 
 .swiper-slide .review_item .review_author {
@@ -2247,7 +2248,7 @@ button.button {
 /* CONSULTATION FORM */
 
 .get_consultation_inner {
-  background: rgba(255, 255, 255, 0.05);
+  background: #111;
 }
 
 .cta_two_section_left .button {
@@ -2497,7 +2498,7 @@ button.button {
 .accordion > .frame > .heading {
   padding: 42px 0 !important;
   color: #fff;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -3006,8 +3007,7 @@ div#classes div a {
 
 /* popup */
 
-#pum-922,
-#pum-1678 {
+#pum-922 {
   background: black;
 }
 
@@ -3277,7 +3277,7 @@ div#classes div a {
 
 .post_count p {
   color: rgba(255, 255, 255, 0.6);
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -3294,4 +3294,60 @@ div#classes div a {
   justify-content: center;
   padding: 12px;
   margin-top: 10px;
+}
+
+/* filter styles */
+.wpc-filters-main-wrap a.wpc-filters-reset-button{
+  background-color: unset!important;
+}
+
+
+.wpc-filter-layout-dropdown .select2-container--default .select2-selection--single, .wpc-sorting-form .select2-container--default .select2-selection--single{
+  background: unset!important;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: #251c1c!important;
+}
+.select2-container--default .wpc-filter-everything-dropdown .select2-results__option--highlighted[aria-selected], .select2-container--default .wpc-filter-everything-dropdown .select2-results__option--highlighted[data-selected] {
+  background-color: #3f444c!important;
+  color: #f5f5f5!important;
+}
+
+.select2-container--default .wpc-filter-everything-dropdown .select2-search--dropdown .select2-search__field:focus{
+  border: none!important;
+}
+.wpc-filter-layout-dropdown .select2-container--default .select2-selection--single, .wpc-sorting-form .select2-container--default .select2-selection--single {
+  border-color: #fbfcff20!important;
+  border-radius: 0!important;
+
+}
+
+.wpc-filter-layout-dropdown .select2-container--default .select2-selection--single .select2-selection__rendered, .wpc-sorting-form .select2-container--default .select2-selection--single .select2-selection__rendered{
+  padding: 14px 16px!important;
+}
+.wpc-filter-title{
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+body > div.wrapper > main > section.main_page_catalog > div > div.container > div > div > div.wpc-filters-widget-content.wpc-show-counts-yes.wpc-query-on-the-page > span > span > span.select2-search.select2-search--dropdown > input{
+  background: #0a0a0a!important;
+}
+
+.sidebar .widget .wpc-filter-everything-dropdown li.select2-results__option, .wpc-filter-everything-dropdown .select2-results__option{
+  background: #000!important;
+}
+
+.select2-dropdown{
+  border: 1px solid #1c1818!important;
+}
+
+.wpc-instead-of-posts-found{
+  display: none;
+}
+.wpc-filter-set-3441 .wpc-filters-widget-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
 }

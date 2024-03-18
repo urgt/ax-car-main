@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <main class="buy-archive__main">
 	<section class="page_title"
-		style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/buy_car.jpg)">
+		style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Buy-a-car.webp)">
 		<div class="page_title_block">
-			<div class="page_title_text">
+			<h1 class="page_title_text">
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
@@ -16,7 +16,7 @@
 				}
 				?>
 
-			</div>
+			</h1>
 			<div class="breadcrums">
 				<?php
 				$current_language = pll_current_language();
@@ -82,47 +82,19 @@
 
 			</div>
 
-			<div class="tabs">
-				<div class="tab active">
-					<?php
-					$current_language = pll_current_language();
-					if ($current_language == 'en') {
-						echo 'BRANDS';
+            <div class="tab-content">
+                <div class="content-tab active">
 
-					} elseif ($current_language == 'ru') {
-						echo 'БРЕНДЫ';
-					} else {
-						echo 'BRANDS';
-					}
-					?>
-				</div>
-				<div class="tab">
-					<?php
-					$current_language = pll_current_language();
-					if ($current_language == 'en') {
-						echo 'CATEGORY';
+                    <?php get_template_part('views/car_brands'); ?>
 
-					} elseif ($current_language == 'ru') {
-						echo 'КАТЕГОРИИ';
-					} else {
-						echo 'CATEGORY';
-					} ?>
-				</div>
-			</div>
+                </div>
 
-			<div class="tab-content">
-				<div class="content-tab active">
+                <div class="content-tab">
 
-					<?php get_template_part('views/car_brands'); ?>
+                    <?php get_template_part('views/car_classes'); ?>
 
-				</div>
-
-				<div class="content-tab">
-
-					<?php get_template_part('views/car_classes'); ?>
-
-				</div>
-			</div>
+                </div>
+            </div>
 
 			<div class="main_page_catalog_cards">
 
