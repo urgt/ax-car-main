@@ -57,7 +57,7 @@ $args = [
                                  */
                                 echo apply_filters( 'wpc_filters_radio_term_html', '<a '.$link_attributes.'>'.$term_object->name.'</a>', $link_attributes, $term_object, $filter );
 
-                                ?>&nbsp;<?php flrt_filter_count( $term_object, $set['show_count']['value'] ); ?>
+                                ?><?php flrt_filter_count( $term_object, $set['show_count']['value'] ); ?>
                             </label>
                         </div>
                     </li>

@@ -51,10 +51,10 @@ if ( ! defined('ABSPATH') ) {
                         <div class="wpc-filters-range-column wpc-filters-range-min-column">
                             <?php // if there are value in $_GET we have to put it into field ?>
                             <?php // attr step should be configured in options ?>
-                            <input type="number" class="wpc-filters-range-min" name="<?php echo esc_attr( $minName ); ?>" value="<?php echo esc_attr( $min ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-min="<?php echo esc_attr( $absMin ); ?>" />
+                            <span>Min</span><input type="number" class="wpc-filters-range-min" name="<?php echo esc_attr( $minName ); ?>" pattern="[0-9]*" min="<?php echo  $min?>" max="<?php echo  $max?>" value="<?php echo esc_attr( $min ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-min="<?php echo esc_attr( $absMin ); ?>" />
                         </div>
                         <div class="wpc-filters-range-column wpc-filters-range-max-column">
-                            <input type="number" class="wpc-filters-range-max" name="<?php echo esc_attr( $maxName ); ?>" value="<?php echo esc_attr( $max ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-max="<?php echo esc_attr( $absMax ); ?>" />
+                            <span>Max</span><input type="number" class="wpc-filters-range-max" name="<?php echo esc_attr( $maxName ); ?>" pattern="[0-9]*" min="<?php echo  $min?>" max="<?php echo  $max?>" value="<?php echo esc_attr( $max ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-max="<?php echo esc_attr( $absMax ); ?>" />
                         </div>
                     </div>
                     <?php
