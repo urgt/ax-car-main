@@ -84,9 +84,9 @@
 
             <div class="filter_container">
                 <?php echo do_shortcode('[fe_widget id="3441"]')?>
+                <?php echo do_shortcode('[fe_widget id="3447"]')?>
                 <?php echo do_shortcode('[fe_widget id="3451"]')?>
                 <?php echo do_shortcode('[fe_widget id="3412"]')?>
-                <?php echo do_shortcode('[fe_widget id="3457"]')?>
             </div>
 
 			<div class="main_page_catalog_cards">
