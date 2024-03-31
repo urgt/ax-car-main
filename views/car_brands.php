@@ -2,12 +2,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/porsche/';
+							echo '/buy/brand-porsche/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/porsche/';
+							echo '/ru/buy/brand-porsche/';
 						} else {
-							echo '/brands/porsche/';
+							echo '/buy/brand-porsche/';
 						}
 						?>"><img width="100" style="padding-top:2px;"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Porsche11.svg"
@@ -15,12 +15,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/mercedes-benz/';
+							echo '/buy/brand-mercedes-benz/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/mercedes-benz/';
+							echo '/ru/buy/brand-mercedes-benz/';
 						} else {
-							echo '/brands/mercedes-benz/';
+							echo '/buy/brand-mercedes-benz/';
 						}
 						?>"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Mercedes11.svg"
@@ -28,12 +28,12 @@
 						<a class="brand" class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/bentley/';
+							echo '/buy/brand-bentley/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/bentley/';
+							echo '/ru/buy/brand-bentley/';
 						} else {
-							echo '/brands/bentley/';
+							echo '/buy/brand-bentley/';
 						}
 						?>" style="padding-top:10px"><img width="150"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Bentley11.svg"
@@ -41,12 +41,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/bmw/';
+							echo '/buy/brand-bmw/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/bmw/';
+							echo '/ru/buy/brand-bmw/';
 						} else {
-							echo '/brands/bmw/';
+							echo '/buy/brand-bmw/';
 						}
 						?>"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/BMW11.svg"
@@ -54,12 +54,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/lamborghini/';
+							echo '/buy/brand-lamborghini/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/lamborghini/';
+							echo '/ru/buy/brand-lamborghini/';
 						} else {
-							echo '/brands/lamborghini/';
+							echo '/buy/brand-lamborghini/';
 						}
 						?>"><img width="75" style="padding-top:15px"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Lamborghini.svg"
@@ -67,12 +67,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/mclaren/';
+							echo '/buy/brand-mclaren/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/mclaren/';
+							echo '/ru/buy/brand-mclaren/';
 						} else {
-							echo '/brands/mclaren/';
+							echo '/buy/brand-mclaren/';
 						}
 						?>" style="padding-top:2px"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Mclaren22.svg"
@@ -81,12 +81,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/rolls-royce/';
+							echo '/buy/brand-rolls-royce/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/rolls-royce/';
+							echo '/ru/buy/brand-rolls-royce/';
 						} else {
-							echo '/brands/rolls-royce/';
+							echo '/buy/brand-rolls-royce/';
 						}
 						?>" style="padding-top:5px;"><img width="75"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Rolls Royce11.svg"
@@ -95,12 +95,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/ferrari/';
+							echo '/buy/brand-ferrari/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/ferrari/';
+							echo '/ru/buy/brand-ferrari/';
 						} else {
-							echo '/brands/ferrari/';
+							echo '/buy/brand-ferrari/';
 						}
 						?>" style="padding-top:3px"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Ferrari11.svg"
@@ -108,12 +108,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/land-rover/';
+							echo '/buy/brand-land-rover/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/land-rover/';
+							echo '/ru/buy/brand-land-rover/';
 						} else {
-							echo '/brands/land-rover/';
+							echo '/buy/brand-land-rover/';
 						}
 						?>" style="padding-top:12px"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Land Rover11.svg"
@@ -121,12 +121,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/cadillac/';
+							echo '/buy/brand-cadillac/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/cadillac/';
+							echo '/ru/buy/brand-cadillac/';
 						} else {
-							echo '/brands/cadillac/';
+							echo '/buy/brand-cadillac/';
 						}
 						?>" style="padding-top:7px"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Cadillac22.svg"
@@ -134,24 +134,24 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/jaguar/';
+							echo '/buy/brand-jaguar/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/jaguar/';
+							echo '/ru/buy/brand-jaguar/';
 						} else {
-							echo '/brands/jaguar/';
+							echo '/buy/brand-jaguar/';
 						}
 						?>" style="padding-top:15px"><img width="100"  
 								src="<?php echo get_template_directory_uri(); ?>/img/Jaguar11.svg" alt="Jaguar" /></a>
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/audi/';
+							echo '/buy/brand-audi/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/audi/';
+							echo '/ru/buy/brand-audi/';
 						} else {
-							echo '/brands/audi/';
+							echo '/buy/brand-audi/';
 						}
 						?>" style="padding-top:13px">
 							<img width="100"  
@@ -161,12 +161,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/bugatti/';
+							echo '/buy/brand-bugatti/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/bugatti/';
+							echo '/ru/buy/brand-bugatti/';
 						} else {
-							echo '/brands/bugatti/';
+							echo '/buy/brand-bugatti/';
 						}
 						?>" style="padding-top:5px">
 							<img width="100"  
@@ -176,12 +176,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/lotus/';
+							echo '/buy/brand-lotus/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/lotus/';
+							echo '/ru/buy/brand-lotus/';
 						} else {
-							echo '/brands/lotus/';
+							echo '/buy/brand-lotus/';
 						}
 						?>" style="padding-top:20px">
 							<img width="80"  
@@ -191,12 +191,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/lincoln/';
+							echo '/buy/brand-lincoln/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/lincoln/';
+							echo '/ru/buy/brand-lincoln/';
 						} else {
-							echo '/brands/lincoln/';
+							echo '/buy/brand-lincoln/';
 						}
 						?>" style="padding-top:17px">
 							<img width="80"  
@@ -206,12 +206,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/maserati/';
+							echo '/buy/brand-maserati/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/maserati/';
+							echo '/ru/buy/brand-maserati/';
 						} else {
-							echo '/brands/maserati/';
+							echo '/buy/brand-maserati/';
 						}
 						?>" style="padding-top:15px">
 							<img width="75"  
@@ -221,12 +221,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/corvette/';
+							echo '/buy/brand-corvette/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/corvette/';
+							echo '/ru/buy/brand-corvette/';
 						} else {
-							echo '/brands/corvette/';
+							echo '/buy/brand-corvette/';
 						}
 						?>" style="padding-top:16px">
 							<img width="100"  
@@ -236,12 +236,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/mini/';
+							echo '/buy/brand-mini/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/mini/';
+							echo '/ru/buy/brand-mini/';
 						} else {
-							echo '/brands/mini/';
+							echo '/buy/brand-mini/';
 						}
 						?>" style="padding-top:20px">
 							<img width="100"  
@@ -251,12 +251,12 @@
 						<a class="brand" href="<?php
 						$current_language = pll_current_language();
 						if ($current_language == 'en') {
-							echo '/brands/aston-martin/';
+							echo '/buy/brand-aston-martin/';
 
 						} elseif ($current_language == 'ru') {
-							echo '/ru/brands/aston-martin';
+							echo '/ru/buy/brand-aston-martin';
 						} else {
-							echo '/brands/aston-martin/';
+							echo '/buy/brand-aston-martin/';
 						}
 						?>" style="padding-top:18px">
 							<img width="120"  

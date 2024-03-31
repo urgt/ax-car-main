@@ -80,74 +80,12 @@
 
             </div>
 
-            <div class="filter_container">
-                <?php
-                if ($env == 'staging') {
-                    ?>
-                    <div style="order: 1">
-                        <?php echo do_shortcode('[fe_widget id="3447"]') ?>
-                    </div>
-                    <div style="order: 2">
-                        <?php echo do_shortcode('[fe_widget id="3451"]') ?>
-                    </div>
-                    <div style="order: 3">
-                        <?php echo do_shortcode('[fe_widget id="3412"]') ?>
-                    </div>
-                    <?php
-                }
-                ?>
-
-                <?php
-                if ($env == 'local') {
-                    ?>
-                    <div style="order: 1">
-                        <?php echo do_shortcode('[fe_widget id="3441"]') ?>
-                    </div>
-                    <div style="order: 2">
-                        <?php echo do_shortcode('[fe_widget id="3451"]') ?>
-                    </div>
-                    <div style="order: 3">
-                        <?php echo do_shortcode('[fe_widget id="3412"]') ?>
-                    </div>
-                    <?php
-                }
-                ?>
 
 
-            </div>
+            <?php get_template_part('views/filter', null, ['env' => $env]); ?>
 
-            <div id="main_page_catalog_cards">
-            <div class="main_page_catalog_cards" >
+            <?php get_template_part('views/catalog'); ?>
 
-                <?php
-                // проверяем есть ли посты в глобальном запросе - переменная $wp_query
-                    if (have_posts()) {
-                    // перебираем все имеющиеся посты и выводим их
-                        while (have_posts()) {
-                            the_post();
-                            ?>
-
-
-                            <?php get_template_part('views/card_component'); ?>
-
-                            <?php
-                        }
-                ?>
-            </div>
-            <div style="clear:both"></div>
-            <div class="navigation">
-                <?php if (function_exists('my_pagenavi')) {
-                    my_pagenavi();
-                } ?>
-            </div>
-
-                <?php
-                }
-                // постов нет
-                else {
-                    echo "<h2>Записей нет.</h2>";
-                }
-                ?>
         </div>
     </section>
 

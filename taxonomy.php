@@ -86,60 +86,60 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/porsche/';
+					echo '/buy/brand-porsche/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/porsche/';
+					echo '/ru/buy/brand-porsche/';
 				} else {
-					echo '/brands/porsche/';
+					echo '/buy/brand-porsche/';
 				}
 				?>"><img   src="<?php echo get_template_directory_uri(); ?>/img/Group.svg"
 						alt="Ax cars Porsche" /></a>
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/mercedes-benz/';
+					echo '/buy/brand-mercedes-benz/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/mercedes-benz/';
+					echo '/ru/buy/brand-mercedes-benz/';
 				} else {
-					echo '/brands/mercedes-benz/';
+					echo '/buy/brand-mercedes-benz/';
 				}
 				?>"><img   src="<?php echo get_template_directory_uri(); ?>/img/Vector.svg"
 						alt="Ax cars Mercedes Benz" /></a>
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/bentley/';
+					echo '/buy/brand-bentley/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/bentley/';
+					echo '/ru/buy/brand-bentley/';
 				} else {
-					echo '/brands/bentley/';
+					echo '/buy/brand-bentley/';
 				}
 				?>" style="padding-top:20px"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/bentley.svg" alt="Ax cars Bentley" /></a>
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/bmw/';
+					echo '/buy/brand-bmw/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/bmw/';
+					echo '/ru/buy/brand-bmw/';
 				} else {
-					echo '/brands/bmw/';
+					echo '/buy/brand-bmw/';
 				}
 				?>"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/Group 37565.svg" alt="Ax cars BMW" /></a>
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/lamborghini/';
+					echo '/buy/brand-lamborghini/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/lamborghini/';
+					echo '/ru/buy/brand-lamborghini/';
 				} else {
-					echo '/brands/lamborghini/';
+					echo '/buy/brand-lamborghini/';
 				}
 				?>"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/Lamborghini.svg"
@@ -147,12 +147,12 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/mclaren/';
+					echo '/buy/brand-mclaren/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/mclaren/';
+					echo '/ru/buy/brand-mclaren/';
 				} else {
-					echo '/brands/mclaren/';
+					echo '/buy/brand-mclaren/';
 				}
 				?>" style="padding-top:30px"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/telegram-cloud-document-2-5289586991954931989 1f.svg"
@@ -160,12 +160,12 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/ferrari/';
+					echo '/buy/brand-ferrari/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/ferrari/';
+					echo '/ru/buy/brand-ferrari/';
 				} else {
-					echo '/brands/ferrari/';
+					echo '/buy/brand-ferrari/';
 				}
 				?>" style="padding-top:10px"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/Group 26503f.svg"
@@ -173,12 +173,12 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/land-rover/';
+					echo '/buy/brand-land-rover/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/land-rover/';
+					echo '/ru/buy/brand-land-rover/';
 				} else {
-					echo '/brands/land-rover/';
+					echo '/buy/brand-land-rover/';
 				}
 				?>" style="padding-top:15px"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/telegram-cloud-document-2-5289586991954932021 1f.svg"
@@ -186,12 +186,12 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/cadillac/';
+					echo '/buy/brand-cadillac/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/cadillac/';
+					echo '/ru/buy/brand-cadillac/';
 				} else {
-					echo '/brands/cadillac/';
+					echo '/buy/brand-cadillac/';
 				}
 				?>" style="padding-top:25px"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/Mask groupf.svg"
@@ -199,12 +199,12 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/jaguar/';
+					echo '/buy/brand-jaguar/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/jaguar/';
+					echo '/ru/buy/brand-jaguar/';
 				} else {
-					echo '/brands/jaguar/';
+					echo '/buy/brand-jaguar/';
 				}
 				?>" style="padding-top:15px"><img  
 						src="<?php echo get_template_directory_uri(); ?>/img/telegram-cloud-document-2-5289586991954932026 1f.svg"
@@ -212,12 +212,12 @@
 				<a href="<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
-					echo '/brands/audi/';
+					echo '/buy/brand-audi/';
 
 				} elseif ($current_language == 'ru') {
-					echo '/ru/brands/audi/';
+					echo '/ru/buy/brand-audi/';
 				} else {
-					echo '/brands/audi/';
+					echo '/buy/brand-audi/';
 				}
 				?>" style="padding-top:10px">
 					<img  

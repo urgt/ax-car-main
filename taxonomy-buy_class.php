@@ -61,44 +61,12 @@
 			}
 			?>
 
-			<?php get_template_part('views/car_classes'); ?>
 
-			<?php get_template_part('views/post_count'); ?>
+            <?php get_template_part('views/filter', null, ['env' => $env]); ?>
 
-			<div class="main_page_catalog_cards" >
+            <?php get_template_part('views/post_count'); ?>
 
-				<?php
-				// проверяем есть ли посты в глобальном запросе - переменная $wp_query
-				if (have_posts()) {
-					// перебираем все имеющиеся посты и выводим их
-					while (have_posts()) {
-						the_post();
-						?>
-
-
-                        <?php get_template_part('views/card_component'); ?>
-
-						<?php
-					}
-					?>
-				</div>
-				<div style="clear:both"></div>
-				<div class="navigation">
-					<?php if (function_exists('my_pagenavi')) {
-						my_pagenavi();
-					} ?>
-					<!--
-		<div class="next-posts"><?php // next_posts_link(); ?></div>
-		<div class="prev-posts"><?php // previous_posts_link(); ?></div>-->
-				</div>
-
-				<?php
-				}
-				// постов нет
-				else {
-					echo "<h2>Записей нет.</h2>";
-				}
-				?>
+            <?php get_template_part('views/catalog'); ?>
 
 		</div>
 	</section>

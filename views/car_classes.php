@@ -31,12 +31,12 @@
                     <a href="<?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
-                        echo '/buy_class/business-class';
+                        echo '/buy/class-business-class';
 
                     } elseif ($current_language == 'ru') {
-                        echo '/ru/buy_class/business-class';
+                        echo '/ru/buy/class-business-class';
                     } else {
-                        echo '/buy_class/business-class';
+                        echo '/buy/class-business-class';
                     }
                     ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/bussines-class.svg"
@@ -59,12 +59,12 @@
                     <a href="<?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
-                        echo '/buy_class/middle-class';
+                        echo '/buy/class-middle-class';
 
                     } elseif ($current_language == 'ru') {
-                        echo '/ru/buy_class/middle-class';
+                        echo '/ru/buy/class-middle-class';
                     } else {
-                        echo '/buy_class/middle-class';
+                        echo '/buy/class-middle-class';
                     }
                     ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/middle-class.svg"
@@ -87,12 +87,12 @@
                     <a href="<?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
-                        echo '/buy_class/sport-cars';
+                        echo '/buy/class-sport-cars';
 
                     } elseif ($current_language == 'ru') {
-                        echo '/ru/buy_class/sport-cars';
+                        echo '/ru/buy/class-sport-cars';
                     } else {
-                        echo '/buy_class/sport-cars';
+                        echo '/buy/class-sport-cars';
                     }
                     ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/sport-cars.svg" alt="Sport cars" /><br>
@@ -114,12 +114,12 @@
                     <a href="<?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
-                        echo '/buy_class/moto';
+                        echo '/buy/class-moto';
 
                     } elseif ($current_language == 'ru') {
-                        echo '/ru/buy_class/moto';
+                        echo '/ru/buy/class-moto';
                     } else {
-                        echo '/buy_class/moto';
+                        echo '/buy/class-moto';
                     }
                     ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/moto_cat.png" alt="Motorcycles" class="moto_class"/><br>
