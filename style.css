@@ -2739,10 +2739,7 @@ span.select2-search.select2-search--dropdown {
   font-weight: 400;
 }
 .tab.active {
-  background: var(
-    --Main,
-    linear-gradient(90deg, #be6552 0%, #eca9a0 49.01%, #be6552 100%)
-  );
+  background: linear-gradient(90deg, #be6552 0%, #eca9a0 49.01%, #be6552 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
