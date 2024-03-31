@@ -2337,16 +2337,16 @@ button.button {
 
 /* BUYCAR DESCRIPTION */
 
-.main_page_catalog_inner .section_description {
+.buy-archive__main .main_page_catalog_inner .section_description {
     margin-bottom: 56px;
 }
 
-.main_page_catalog_inner .section_subtitle {
+.buy-archive__main .main_page_catalog_inner .section_subtitle {
     text-align: left;
     margin-bottom: 18px;
 }
 
-.main_page_catalog_inner .section_title {
+.buy-archive__main .main_page_catalog_inner .section_title {
     text-align: left;
     margin-bottom: 25px;
 }
@@ -2852,10 +2852,7 @@ body .wpc-filters-main-wrap li.wpc-term-item {
 }
 
 .tab.active {
-    background: var(
-            --Main,
-            linear-gradient(90deg, #be6552 0%, #eca9a0 49.01%, #be6552 100%)
-    );
+    background: linear-gradient(90deg, #be6552 0%, #eca9a0 49.01%, #be6552 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
