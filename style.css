@@ -2749,6 +2749,7 @@ span.select2-search.select2-search--dropdown {
 }
 .services__description {
   margin-bottom: 24px;
+  min-height: 150px;
 }
 .section_subtitle {
   font-weight: 400;
