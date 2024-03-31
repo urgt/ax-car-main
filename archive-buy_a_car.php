@@ -7,12 +7,12 @@
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo 'Buy a car';
+                    echo 'Buy';
 
                 } elseif ($current_language == 'ru') {
                     echo 'Купить авто';
                 } else {
-                    echo 'Buy a car';
+                    echo 'Buy';
                 }
                 ?>
 
@@ -22,14 +22,14 @@
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
                     echo '<span><a href="/">Home</a></span>
-              <span>Buy a car</span>';
+              <span>Buy</span>';
 
                 } elseif ($current_language == 'ru') {
                     echo '<span><a href="/ru/">Главная</a></span>
               <span>Купить авто</span>';
                 } else {
                     echo '<span>Home</span>
-              <span>Buy a car</span>';
+              <span>Buy</span>';
                 }
                 ?>
 
@@ -61,8 +61,9 @@
 				><h1>Buy a car in Dubai</div>
             <div class="section_description" 
 				 >
-             Our experienced team offers personalized consultations, guiding you through the process and helping you find the right vehicle to meet your specific requirements for your comfort.
-            </div>';
+             Our experienced team offers personalized consultations, guiding you through the process and
+             helping you find the right vehicle to meet your specific requirements for your comfort.
+             </div>';
             }
             ?>
 
@@ -70,12 +71,14 @@
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo 'Our team of automotive experts is dedicated to exceeding your expectations by providing personalized assistance throughout the entire car buying process.';
+                    echo 'Our experienced team offers personalized consultations, guiding you through the process and
+             helping you find the right vehicle to meet your specific requirements for your comfort.';
 
                 } elseif ($current_language == 'ru') {
                     echo 'Наша опытная команда предлагает индивидуальные консультации, сопровождая вас на протяжении всего процесса и помогая вам найти подходящий автомобиль, отвечающий вашим конкретным требованиям к вашему комфорту.';
                 } else {
-                    echo 'Our team of automotive experts is dedicated to exceeding your expectations by providing personalized assistance throughout the entire car buying process.';
+                    echo 'Our experienced team offers personalized consultations, guiding you through the process and
+             helping you find the right vehicle to meet your specific requirements for your comfort.';
                 } ?>
 
             </div>

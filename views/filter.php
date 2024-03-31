@@ -1,8 +1,11 @@
-<div class="filter_container">
+
+<?php
+$env = $args['env'];
+
+if (have_posts()) {
+    ?>
+    <div class="filter_container">
     <?php
-
-    $env = $args['env'];
-
     if ($env == 'staging') {
         ?>
         <div style="order: 1">
@@ -16,9 +19,7 @@
         </div>
         <?php
     }
-    ?>
 
-    <?php
     if ($env == 'local') {
         ?>
         <div style="order: 1">
@@ -33,6 +34,8 @@
         <?php
     }
     ?>
+    </div>
+    <?php
+}
+?>
 
-
-</div>

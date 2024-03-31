@@ -2339,6 +2339,9 @@ button.button {
 
 .buy-archive__main .main_page_catalog_inner .section_description {
     margin-bottom: 56px;
+    max-width: 850px;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 .buy-archive__main .main_page_catalog_inner .section_subtitle {
