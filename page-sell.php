@@ -37,24 +37,6 @@
         <div class="background_overlay"></div>
     </section>
 
-    <div class="section_description container sell_page"  >
-        <?php
-        $current_language = pll_current_language();
-        if ($current_language == 'en') {
-            $cars_fleet = get_field('page_description_en');
-            echo $cars_fleet;
-
-        } elseif ($current_language == 'ru') {
-            $cars_fleet = get_field('page_description_ru');
-            echo $cars_fleet;
-        } else {
-            $cars_fleet = get_field('page_description_en');
-            echo $cars_fleet; // Вывод значения по умолчанию
-        }
-        ?>
-    </div>
-
-
     <section class="buy_a_car_form container sell_page">
         <div class="sell_car_form_section">
             <div class="section_title" >
