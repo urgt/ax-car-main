@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<main class="homepage_main">
+    <main class="homepage_main">
 
     <section class="new_hero_section"
-        style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.jpg')">
+             style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.jpg')">
         <div class="new_hero_content container">
             <h1 class="new_hero_title" >
                 <?php the_title(); ?>
@@ -114,7 +114,7 @@
 
 
             <?php get_template_part('views/car_classes'); ?>
-            
+
         </div>
     </section>
 
@@ -123,16 +123,16 @@
 
         <div class="cta_section_left"  >
             <img src="<?php echo get_template_directory_uri(); ?>/img/leftauto.jpg" alt="<?php
-               $current_language = pll_current_language();
-               if ($current_language == 'en') {
-                   echo 'mercedes benz e class 2022 in Dubai';
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+                echo 'mercedes benz e class 2022 in Dubai';
 
-               } elseif ($current_language == 'ru') {
-                   echo 'mercedes benz e class 2022 в Дубае';
-               } else {
-                   echo 'mercedes benz e class 2022 in Dubai';
-               }
-               ?>" />
+            } elseif ($current_language == 'ru') {
+                echo 'mercedes benz e class 2022 в Дубае';
+            } else {
+                echo 'mercedes benz e class 2022 in Dubai';
+            }
+            ?>" />
         </div>
 
         <div class="cta_section_right">
@@ -194,59 +194,55 @@
                 <div class="tab-content">
                     <div class="content-tab active">
                         <?php
-                        $cars_fleet = get_field('our-service');
+                        $cars_fleet = get_field('our_service_buy');
                         if ($cars_fleet):
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
-                                echo $cars_fleet['our_service_buy_en'];
+                                echo get_field('our_service_buy');
 
                             } elseif ($current_language == 'ru') {
-                                echo $cars_fleet['our_service_buy_ru'];
+                                echo get_field('our_service_buy-ru');
                             } else {
-                                echo $cars_fleet['section_description_en'];
+                                echo get_field('our_service_buy');
                             }
                         endif;
                         ?>
                     </div>
                     <div class="content-tab">
                         <?php
-                        $cars_fleet = get_field('our-service');
+                        $cars_fleet = get_field('our_service_sell_en');
                         if ($cars_fleet):
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
-                                echo $cars_fleet['our_service_sell_en'];
+                                echo get_field('our_service_sell_en');
 
                             } elseif ($current_language == 'ru') {
-                                echo $cars_fleet['our_service_sell_ru'];
+                                echo get_field('our_service_sell_ru');
                             } else {
-                                echo $cars_fleet['section_description_en'];
+                                echo get_field('our_service_sell_en');
                             }
                         endif;
                         ?>
                     </div>
                     <div class="content-tab">
                         <?php
-                        $cars_fleet = get_field('our-service');
+                        $cars_fleet = get_field('our_service_trading_en');
                         if ($cars_fleet):
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
-                                echo $cars_fleet['our_service_trading_en'];
+                                echo get_field('our_service_trading_en');
 
                             } elseif ($current_language == 'ru') {
-                                echo $cars_fleet['our_service_trading_ru'];
+                                echo get_field('our_service_trading_ru');
                             } else {
-                                echo $cars_fleet['section_description_en'];
+                                echo get_field('our_service_trading_en');
                             }
                         endif;
                         ?>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 
@@ -756,25 +752,20 @@
 
         <div class="cta_two_section_right"  >
             <img src="<?php echo get_template_directory_uri(); ?>/img/Brokerage-Services.webp" alt="<?php
-               $current_language = pll_current_language();
-               if ($current_language == 'en') {
-                   echo 'mercedes benz e class 2022 in Dubai';
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+                echo 'mercedes benz e class 2022 in Dubai';
 
-               } elseif ($current_language == 'ru') {
-                   echo 'mercedes benz e class 2022 в Дубае';
-               } else {
-                   echo 'mercedes benz e class 2022 in Dubai';
-               }
-               ?>" />
+            } elseif ($current_language == 'ru') {
+                echo 'mercedes benz e class 2022 в Дубае';
+            } else {
+                echo 'mercedes benz e class 2022 in Dubai';
+            }
+            ?>" />
         </div>
 
 
     </section>
-
-
-
-
-
 
     <section class="reviews_section">
         <div class="reviews_inner container">
@@ -796,35 +787,11 @@
             </div>
             <div class="swiper review-swiper">
                 <div class="swiper-wrapper">
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="review_item"  >-->
-<!--                            <div class="review_author">-->
-<!---->
-<!--                                <div class="review_author_info">-->
-<!--                                    <div class="review_author_name">-->
-<!--                                        --><?php
-//                                        ?>
-<!--                                    </div>-->
-<!--                                    <div class="review_author_country">-->
-<!--                                        --><?php //?>
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <p class="review_text">-->
-<!--                                --><?php
-//
-//                                ?>
-<!--                            </p>-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-
                     <?php
-                    // Создаем новый экземпляр класса WP_Query
+
                     $query = new WP_Query( array(
-                        'post_type' => 'review', // Указываем тип поста
-                        'post_status' => 'publish', // Указываем статус "опубликован"
-                        // Дополнительные параметры по вашему усмотрению
+                        'post_type' => 'review',
+                        'post_status' => 'publish',
                     ) );
 
                     // Проверяем, есть ли посты
@@ -988,7 +955,7 @@
                 ?>
                 <a href="https://wa.me/+971585893990">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                        alt="contact us right now via whatsapp" />
+                         alt="contact us right now via whatsapp" />
                     <span class="luxury">WHATSAPP</span>
                 </a>
             </div>
@@ -996,4 +963,4 @@
         <div class="lux_line container" ></div>
     </section>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
