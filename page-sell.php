@@ -272,7 +272,7 @@
                         echo 'Mileage';
 
                     } elseif ($current_language == 'ru') {
-                        echo 'Год выпуска';
+                        echo 'Пробег';
                     } else {
                         echo 'Mileage';
                     }
