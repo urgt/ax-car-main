@@ -51,10 +51,10 @@ if ( ! defined('ABSPATH') ) {
                         <div class="wpc-filters-range-column wpc-filters-range-min-column">
                             <?php // if there are value in $_GET we have to put it into field ?>
                             <?php // attr step should be configured in options ?>
-                            <span>Min</span><input type="number" class="wpc-filters-range-min" name="<?php echo esc_attr( $minName ); ?>" pattern="[0-9]*" min="<?php echo  $min?>" max="<?php echo  $max?>" value="<?php echo esc_attr( $min ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-min="<?php echo esc_attr( $absMin ); ?>" />
+                            <span>Min</span><input type="number" class="wpc-filters-range-min" name="<?php echo esc_attr( $minName ); ?>" pattern="\d*" min="<?php echo  $min?>" max="<?php echo  $max?>" value="<?php echo esc_attr( $min ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-min="<?php echo esc_attr( $absMin ); ?>" />
                         </div>
                         <div class="wpc-filters-range-column wpc-filters-range-max-column">
-                            <span>Max</span><input type="number" class="wpc-filters-range-max" name="<?php echo esc_attr( $maxName ); ?>" pattern="[0-9]*" min="<?php echo  $min?>" max="<?php echo  $max?>" value="<?php echo esc_attr( $max ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-max="<?php echo esc_attr( $absMax ); ?>" />
+                            <span>Max</span><input type="number" class="wpc-filters-range-max" name="<?php echo esc_attr( $maxName ); ?>" pattern="\d*" min="<?php echo  $min?>" max="<?php echo  $max?>" value="<?php echo esc_attr( $max ); ?>" step="<?php echo esc_attr( $filter['step'] ); ?>" data-max="<?php echo esc_attr( $absMax ); ?>" />
                         </div>
                     </div>
                     <?php
@@ -86,3 +86,44 @@ if ( ! defined('ABSPATH') ) {
     </div>
 </div>
 
+<script>
+    jQuery(document).ready(function() {
+        // Выбираем все элементы input типа number и добавляем обработчик события input
+        jQuery('input[type="number"]').on('change', function () {
+            // Получаем значение из поля ввода
+            var inputValue = this.value;
+
+            if( this.min ){
+                console.log(this.min)
+            }
+
+
+            // Удаляем ведущие нули, оставляя только последовательность цифр и точек
+            var sanitizedValue = inputValue.replace(/^0+([0-9.]+)/, '$1');
+
+            // Удаляем все символы, кроме цифр, точек и десятичных запятых
+            sanitizedValue = sanitizedValue.replace(/[^\d.]/g, '');
+
+            // Проверяем, если значение изменилось после удаления запрещенных символов и ведущих нулей
+            if (inputValue !== sanitizedValue) {
+                // Если значение изменилось, устанавливаем новое отфильтрованное значение в поле ввода
+                this.value = sanitizedValue;
+            }
+
+            // Если поле ввода пустое, устанавливаем значение "0"
+            if (inputValue === '') {
+                this.value = '0';
+                return; // Прерываем выполнение функции
+            }
+            if (inputValue > this.max) {
+                this.value =  this.max;
+                return; // Прерываем выполнение функции
+            }
+
+            if (inputValue < this.min) {
+                this.value =  this.min;
+                return; // Прерываем выполнение функции
+            }
+        });
+    });
+</script>
