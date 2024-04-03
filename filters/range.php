@@ -88,42 +88,40 @@ if ( ! defined('ABSPATH') ) {
 
 <script>
     jQuery(document).ready(function() {
-        // Выбираем все элементы input типа number и добавляем обработчик события input
-        jQuery('input[type="number"]').on('change', function () {
-            // Получаем значение из поля ввода
-            var inputValue = this.value;
 
-            if( this.min ){
-                console.log(this.min)
+        jQuery('input[type="number"]').on('keypress', function (event) {
+            let keyCode = event.which ? event.which : event.keyCode;
+            if (keyCode < 48 || keyCode > 57) {
+                event.preventDefault();
             }
+        });
 
+        jQuery(document).ready(function() {
+            jQuery('input[type="number"]').on('change', function () {
+                var inputValue = this.value;
 
-            // Удаляем ведущие нули, оставляя только последовательность цифр и точек
-            var sanitizedValue = inputValue.replace(/^0+([0-9.]+)/, '$1');
+                var sanitizedValue = inputValue.replace(/^0+([0-9.]+)/, '$1');
 
-            // Удаляем все символы, кроме цифр, точек и десятичных запятых
-            sanitizedValue = sanitizedValue.replace(/[^\d.]/g, '');
+                sanitizedValue = sanitizedValue.replace(/[^\d.]/g, '');
 
-            // Проверяем, если значение изменилось после удаления запрещенных символов и ведущих нулей
-            if (inputValue !== sanitizedValue) {
-                // Если значение изменилось, устанавливаем новое отфильтрованное значение в поле ввода
-                this.value = sanitizedValue;
-            }
+                if (inputValue !== sanitizedValue) {
+                    this.value = sanitizedValue;
+                }
 
-            // Если поле ввода пустое, устанавливаем значение "0"
-            if (inputValue === '') {
-                this.value = '0';
-                return; // Прерываем выполнение функции
-            }
-            if (inputValue > this.max) {
-                this.value =  this.max;
-                return; // Прерываем выполнение функции
-            }
+                if (inputValue === '') {
+                    this.value = '0';
+                    return;
+                }
+                if (inputValue > this.max) {
+                    this.value =  this.max;
+                    return;
+                }
 
-            if (inputValue < this.min) {
-                this.value =  this.min;
-                return; // Прерываем выполнение функции
-            }
+                if (inputValue < this.min) {
+                    this.value =  this.min;
+                    return;
+                }
+            });
         });
     });
 </script>

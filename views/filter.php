@@ -1,10 +1,9 @@
-
 <?php
 $env = $args['env'];
 
-if (have_posts()) {
-    ?>
-    <div class="filter_container">
+
+?>
+<div class="filter_container">
     <?php
     if ($env == 'staging') {
         ?>
@@ -34,8 +33,8 @@ if (have_posts()) {
         <?php
     }
     ?>
-    </div>
-    <?php
-}
+</div>
+<?php
+
 ?>
 
