@@ -744,11 +744,30 @@ function motors_robots_txt(){
     die; // обрываем работу PHP
 }
 
+/**
+ * Checks if it is WordPress sitemap page.
+ *
+ * @return bool
+ */
+function is_sitemap_page(){
+    global $wp_version;
+
+    if( ! did_action( 'parse_request' ) ){
+        _doing_it_wrong( __FUNCTION__, 'Can`t be called before `parse_request` hook.', $wp_version );
+
+        return false;
+    }
+
+    return (bool) sanitize_text_field( get_query_var( 'sitemap' ) );
+}
+
 add_action( 'wp', function(){
 
     if( is_sitemap_page() ){
+        echo 122;
         function learn2smart_fix_wp_whitespace_issue($input) {
 
+            echo 122;
             $allowed = false;
             $found = false;
 
