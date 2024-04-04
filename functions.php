@@ -1,6 +1,7 @@
 <?php
-function learn2smart_fix_wp_whitespace_issue($input) {
+function fix_wp_whitespace_issue($input) {
 
+    var_dump(1);
     $allowed = false;
     $found = false;
 
@@ -22,7 +23,7 @@ function learn2smart_fix_wp_whitespace_issue($input) {
     }
 }
 
-add_action('init', 'learn2smart_fix_wp_whitespace_issue');
+add_action('init', 'fix_wp_whitespace_issue');
 
 
 if (home_url() == 'https://axmotors.ae') {
