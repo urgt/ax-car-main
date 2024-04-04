@@ -576,7 +576,7 @@ function pluralize($word) {
 
 require_once get_template_directory() .'/include/reviews.php';
 
-//add_action( 'do_robotstxt', 'motors_robots_txt' );
+add_action( 'do_robotstxt', 'motors_robots_txt' );
 
 function motors_robots_txt(){
 
