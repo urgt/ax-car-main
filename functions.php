@@ -1,5 +1,7 @@
 <?php
 
+flush_rewrite_rules();
+
 if (home_url() == 'https://axmotors.ae') {
     $env = 'prod';
 } elseif (home_url() == 'https://axmotors-test.axdev.cloud') {
