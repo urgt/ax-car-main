@@ -1,5 +1,5 @@
 <?php
-
+flush_rewrite_rules();
 function enqueue_custom_styles()
 {
 
