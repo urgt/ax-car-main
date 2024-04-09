@@ -140,18 +140,18 @@
             <div class="section_title"  >
                 <h2>
                     <?php
-                    $cars_fleet = get_field('our-service');
-                    if ($cars_fleet):
-                        $current_language = pll_current_language();
-                        if ($current_language == 'en') {
-                            echo $cars_fleet['our_service_title_en'];
+                    get_field('our_service_title_en');
+                    
+                    $current_language = pll_current_language();
+                    if ($current_language == 'en') {
+                        echo get_field('our_service_title_en');
 
-                        } elseif ($current_language == 'ru') {
-                            echo $cars_fleet['our_service_title_ru'];
-                        } else {
-                            echo $cars_fleet['section_title_en'];
-                        }
-                    endif;
+                    } elseif ($current_language == 'ru') {
+                        echo get_field('our_service_title_ru');
+                    } else {
+                        echo get_field('our_service_title_en');
+                    }
+
                     ?>
                 </h2>
             </div>
