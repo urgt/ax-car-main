@@ -452,11 +452,6 @@ if (carousel != null) {
   carousel.addEventListener("click", handleCarouselClick);
 }
 
-function handleCarouselClick(e) {
-  // Your code to handle the carousel click event
-  console.log("Carousel clicked!", e);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   let startX = 0;
   let startY = 0;

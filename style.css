@@ -11,7 +11,6 @@ Text Domain: axmotors
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Gilda+Display&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@200;400;500;600;700&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
-@import url("assets/fonts/alethiapro/stylesheet.css");
 
 html,
 body,
@@ -3822,6 +3821,4 @@ body .wpc-filters-main-wrap li.wpc-term-item, body .wpc-filters-main-wrap .wpc-t
     .wpc-filter-layout-submit-button {
         grid-column-start: 1;
     }
-}
-
 }
