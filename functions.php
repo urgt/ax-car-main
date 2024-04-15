@@ -41,7 +41,9 @@ function enqueue_custom_scripts()
         wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/libs/metro/metro.js', array('jquery'), null, true);
     }
 
-    wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), null, true);
+    wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), array('strategy' => 'async'));
+
+    //), true);
 
     // Подключение скрипта для accordion
     wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/libs/accordion.js', array('jquery', 'swiper-script'), null, true);
@@ -57,31 +59,6 @@ function enqueue_custom_scripts()
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 
-function add_async_attribute($tag, $handle)
-{
-    if ('google-recaptcha' === $handle) {
-        $tag = str_replace(' src', 'defer async src', $tag);
-    }
-    return $tag;
-}
-
-add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
-
-
-function modify_filter_button($string)
-{
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        return 'SEARCH';
-
-    } elseif ($current_language == 'ru') {
-        return 'ПОИСК';
-    } else {
-        return 'SEARCH';
-    }
-}
-
-add_filter('beautiful_filters_apply_button', 'modify_filter_button', 10, 1);
 
 function book_shortcode()
 {
@@ -428,8 +405,6 @@ function display_converted_price()
     echo 'Цена в EUR: ' . $price_eur;
 }
 
-update_option('blogname', 'AX MOTORS');
-
 
 // sell_car_form_handler()
 function sell_car_form_handler()
@@ -590,157 +565,4 @@ function pluralize($word)
 }
 
 require_once get_template_directory() . '/include/reviews.php';
-
-add_action( 'do_robotstxt', 'motors_robots_txt' );
-
-function motors_robots_txt(){
-
-    $lines = [
-        'User-agent: *',
-        'Disallow: /wp-admin/',
-        'Disallow: /cgi-bin',
-        'Disallow: /about-us/',
-        'Disallow: */?s=*',
-        'Disallow: *?s=*',
-        'Disallow: *&s=*',
-        'Disallow: */?max_*',
-        'Disallow: *?max_*',
-        'Disallow: *&max_*',
-        'Disallow: */page/*',
-        'Disallow: */brand*',
-        'Disallow: */class*',
-        'Disallow: */model*',
-        'Disallow: */transmission*',
-        'Disallow: */colour*',
-        'Disallow: */drive_unit*',
-        'Allow: *.jpg',
-        'Allow: *.jpeg',
-        'Allow: *.png',
-        'Allow: *.webp',
-        'Allow: *.svg',
-        '',
-        'Sitemap: https://axmotors.ae/sitemap.html',
-        '',
-        'User-agent: Yandex',
-        'Disallow: /wp-admin/',
-        'Disallow: /cgi-bin',
-        'Disallow: /about-us/',
-        'Disallow: */?s=*',
-        'Disallow: *?s=*',
-        'Disallow: *&s=*',
-        'Disallow: */?max_*',
-        'Disallow: *?max_*',
-        'Disallow: *&max_*',
-        'Disallow: */page/*',
-        'Disallow: */brand*',
-        'Disallow: */class*',
-        'Disallow: */model*',
-        'Disallow: */transmission*',
-        'Disallow: */colour*',
-        'Disallow: */drive_unit*',
-        'Allow: *.jpg',
-        'Allow: *.jpeg',
-        'Allow: *.png',
-        'Allow: *.webp',
-        'Allow: *.svg',
-        '',
-        'Sitemap: https://axmotors.ae/sitemap.html',
-        '',
-        'User-agent: GoogleBot',
-        'Disallow: /wp-admin/',
-        'Disallow: /cgi-bin',
-        'Disallow: /about-us/',
-        'Disallow: */?s=*',
-        'Disallow: *?s=*',
-        'Disallow: *&s=*',
-        'Disallow: */?max_*',
-        'Disallow: *?max_*',
-        'Disallow: *&max_*',
-        'Disallow: */page/*',
-        'Disallow: */brand*',
-        'Disallow: */class*',
-        'Disallow: */model*',
-        'Disallow: */transmission*',
-        'Disallow: */colour*',
-        'Disallow: */drive_unit*',
-        'Allow: *.jpg',
-        'Allow: *.jpeg',
-        'Allow: *.png',
-        'Allow: *.webp',
-        'Allow: *.svg',
-        '',
-        'Sitemap: https://axmotors.ae/sitemap.html',
-        '',
-        'User-agent: Applebot',
-        'Allow: /',
-        '',
-        '# Block crawling software',
-        'User-agent: sitecheck.internetseer.com',
-        'Disallow: /',
-        '',
-        'User-agent: Zealbot',
-        'Disallow: /',
-        '',
-        'User-agent: MSIECrawler',
-        'Disallow: /',
-        '',
-        'User-agent: SiteSnagger',
-        'Disallow: /',
-        '',
-        'User-agent: WebStripper',
-        'Disallow: /',
-        '',
-        'User-agent: WebCopier',
-        'Disallow: /',
-        '',
-        'User-agent: Fetch',
-        'Disallow: /',
-        '',
-        'User-agent: Offline Explorer',
-        'Disallow: /',
-        '',
-        'User-agent: Teleport',
-        'Disallow: /',
-        '',
-        'User-agent: TeleportPro',
-        'Disallow: /',
-        '',
-        'User-agent: WebZIP',
-        'Disallow: /',
-        '',
-        'User-agent: linko',
-        'Disallow: /',
-        '',
-        'User-agent: HTTrack',
-        'Disallow: /',
-        '',
-        'User-agent: Microsoft.URL.Control',
-        'Disallow: /',
-        '',
-        'User-agent: Xenu',
-        'Disallow: /',
-        '',
-        'User-agent: larbin',
-        'Disallow: /',
-        '',
-        'User-agent: libwww',
-        'Disallow: /',
-        '',
-        'User-agent: ZyBORG',
-        'Disallow: /',
-        '',
-        'User-agent: Download Ninja',
-        'Disallow: /',
-        '',
-        'User-agent: WebReaper',
-        'Disallow: /',
-        '',
-        'User-agent: Screaming Frog SEO Spider',
-        'Disallow: /'
-    ];
-
-    echo implode( "\r\n", $lines );
-
-    die; // обрываем работу PHP
-}
 

@@ -3524,6 +3524,7 @@ body > div.wrapper > main > section.main_page_catalog > div > div.container > di
     display: none;
 }
 
+.wpc-filter-set-4250 .wpc-filters-widget-wrapper,
 .wpc-filter-set-3441 .wpc-filters-widget-wrapper,
 .wpc-filter-set-3447 .wpc-filters-widget-wrapper {
     display: grid;
@@ -3531,12 +3532,14 @@ body > div.wrapper > main > section.main_page_catalog > div > div.container > di
     column-gap: 10px;
 }
 
+.wpc-filter-set-4254 .wpc-filters-widget-wrapper,
 .wpc-filter-set-3451 .wpc-filters-widget-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
 }
 
+.wpc-filter-set-4259 .wpc-filters-widget-wrapper,
 .wpc-filter-set-3412 .wpc-filters-widget-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -3779,7 +3782,9 @@ body .wpc-filters-main-wrap li.wpc-term-item, body .wpc-filters-main-wrap .wpc-t
     transition: unset;
 }
 
+.wpc-filters-section-4250.wpc-filter-layout-submit-button,
 .wpc-filters-section-3447.wpc-filter-layout-submit-button,
+.wpc-filters-section-4254.wpc-filter-layout-submit-button,
 .wpc-filters-section-3451.wpc-filter-layout-submit-button{
     display: none;
 }
@@ -3796,7 +3801,9 @@ body .wpc-filters-main-wrap li.wpc-term-item, body .wpc-filters-main-wrap .wpc-t
         visibility: visible;
     }
 
+    .wpc-filter-set-4254 .wpc-filters-widget-wrapper,
     .wpc-filter-set-3451 .wpc-filters-widget-wrapper,
+    .wpc-filter-set-4259 .wpc-filters-widget-wrapper,
     .wpc-filter-set-3412 .wpc-filters-widget-wrapper {
         grid-template-columns: 1fr 1fr;
     }
@@ -3811,6 +3818,7 @@ body .wpc-filters-main-wrap li.wpc-term-item, body .wpc-filters-main-wrap .wpc-t
         padding: 0 !important;
     }
 
+    .wpc-filter-set-4250 .wpc-filters-widget-wrapper,
     .wpc-filter-set-3441 .wpc-filters-widget-wrapper,
     .wpc-filter-set-3447 .wpc-filters-widget-wrapper {
         grid-template-columns: 1fr;
@@ -3818,7 +3826,9 @@ body .wpc-filters-main-wrap li.wpc-term-item, body .wpc-filters-main-wrap .wpc-t
 }
 
 @media (max-width: 640px) {
+    .wpc-filter-set-4254 .wpc-filters-widget-wrapper,
     .wpc-filter-set-3451 .wpc-filters-widget-wrapper,
+    .wpc-filter-set-4259 .wpc-filters-widget-wrapper,
     .wpc-filter-set-3412 .wpc-filters-widget-wrapper {
         grid-template-columns: 1fr;
     }
