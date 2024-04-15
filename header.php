@@ -6,42 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-  <?php 
-  if($env == 'prod'){
+  <?php
+  if ($env == 'prod') {
 
     ?>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MX8TL6TV');</script>
+    <!-- End Google Tag Manager -->
+
+    2. Вставьте этот код сразу же после открывающего тега :
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8TL6TV" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) {
-                if (document.scripts[j].src === r) {
-                    return;
-                }
-            }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(96867058, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
+      ym(96867058, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+      });
     </script>
     <noscript>
-        <div><img src="https://mc.yandex.ru/watch/96867058" style="position:absolute; left:-9999px;" alt=""/></div>
+      <div><img src="https://mc.yandex.ru/watch/96867058" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
     <?php
 
   }
   ?>
-    
+
 
   <!--<meta name="viewport" content="width=500">-->
 
@@ -69,10 +85,10 @@
       } else {
         echo '/';
       }
-      ?>"><img style="width:100px" 
-          src="/wp-content/uploads/2023/12/AX_MOTORS_Logo-e1702210136781.png" alt="AX MOTORS" /></a>
+      ?>"><img style="width:100px" src="/wp-content/uploads/2023/12/AX_MOTORS_Logo-e1702210136781.png"
+          alt="AX MOTORS" /></a>
 
-      <nav class="header_nav " >
+      <nav class="header_nav ">
         <ul class="nav">
           <?php
           $current_language = pll_current_language();
@@ -103,7 +119,7 @@
         </ul>
       </nav>
 
-      <div class="header_right " >
+      <div class="header_right ">
         <ul class="social-links ">
           <li class="header-search">
             <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
@@ -158,6 +174,6 @@
         </a>
       </div>
     </header>
-    <div class="mobile_search" >
+    <div class="mobile_search">
       <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
     </div>
