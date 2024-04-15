@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-    <main class="buy-archive__main">
+<main class="buy-archive__main">
     <section class="page_title"
-             style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Buy-a-car.webp)">
+        style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Buy-a-car.webp)">
         <div class="page_title_block">
             <h1 class="page_title_text">
                 <?php
@@ -83,9 +83,16 @@
 
             </div>
 
+            <?php if ($env == 'prod') {
+                get_template_part('views/car_classes_no_filter', null, []);
+                get_template_part('views/car_brands_no_filter', null, []);
+
+            } else {
+                get_template_part('views/filter', null, ['env' => $env]);
+            }
+            ?>
 
 
-            <?php get_template_part('views/filter', null, ['env' => $env]); ?>
 
             <?php get_template_part('views/catalog'); ?>
 
@@ -145,7 +152,7 @@
                 } else {
                     echo 'First Name';
                 }
-                ?>"/>
+                ?>" />
                 <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -156,7 +163,7 @@
                 } else {
                     echo 'Last Name';
                 }
-                ?>"/>
+                ?>" />
                 <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -167,7 +174,7 @@
                 } else {
                     echo 'Phone Number';
                 }
-                ?>"/>
+                ?>" />
                 <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -178,7 +185,7 @@
                 } else {
                     echo 'Email';
                 }
-                ?>"/>
+                ?>" />
 
                 <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
                 <button class="button new">
@@ -209,7 +216,7 @@
                 ?>
                 <a href="https://wa.me/+971585893990">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                         alt="contact us right now via whatsapp"/>
+                        alt="contact us right now via whatsapp" />
                     <span class="luxury">WHATSAPP</span>
                 </a>
             </div>
@@ -246,7 +253,7 @@
 
         <div class="info_cards">
             <div class="info_cards_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Location (1).svg" alt="Quick response"/>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Location (1).svg" alt="Quick response" />
                 <div class="info_cards_card_title">
                     <?php
                     $current_language = pll_current_language();
@@ -275,7 +282,7 @@
                 </p>
             </div>
             <div class="info_cards_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Location (2).svg" alt="Quick response"/>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Location (2).svg" alt="Quick response" />
                 <div class="info_cards_card_title">
                     <?php
                     $current_language = pll_current_language();
@@ -304,7 +311,7 @@
                 </p>
             </div>
             <div class="info_cards_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Locationono.svg" alt="Quick response"/>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Locationono.svg" alt="Quick response" />
                 <div class="info_cards_card_title">
                     <?php
                     $current_language = pll_current_language();
@@ -425,7 +432,7 @@
                         ?>
                     </p>
                 </div>
-                <hr/>
+                <hr />
                 <div class="section_description">
                     <?php
                     $top_cars = get_field('how_it_works');
@@ -463,7 +470,7 @@
                         ?>
                     </p>
                 </div>
-                <hr/>
+                <hr />
                 <div class="section_description">
                     <?php
                     $top_cars = get_field('how_it_works');
@@ -484,4 +491,4 @@
         </div>
     </section>
 
-<?php get_footer() ?>
+    <?php get_footer() ?>
