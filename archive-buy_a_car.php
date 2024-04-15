@@ -84,7 +84,6 @@
             </div>
 
             <?php 
-                echo home_url();
                 if ($env == 'prod') {                    
                     get_template_part('views/car_classes_no_filter', null, []);
                     get_template_part('views/car_brands_no_filter', null, []);
