@@ -198,12 +198,12 @@
                         
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
-                                echo get_field('our_service_buy');
+                                echo get_field('our_service_buyen');
 
                             } elseif ($current_language == 'ru') {
-                                echo get_field('our_service_buy-ru');
+                                echo get_field('our_service_buyru');
                             } else {
-                                echo get_field('our_service_buy');
+                                echo get_field('our_service_buyen');
                             }
                         
                         ?>
