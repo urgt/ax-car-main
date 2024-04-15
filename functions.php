@@ -144,7 +144,7 @@ function book_shortcode()
             } else {
                 echo 'First Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -155,7 +155,7 @@ function book_shortcode()
             } else {
                 echo 'Last Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -166,7 +166,7 @@ function book_shortcode()
             } else {
                 echo 'Phone Number';
             }
-            ?>"/>
+            ?>" />
             <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -177,7 +177,7 @@ function book_shortcode()
             } else {
                 echo 'Email';
             }
-            ?>"/>
+            ?>" />
             <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
             <button class="button new">
                 <?php
@@ -207,7 +207,7 @@ function book_shortcode()
             ?>
             <a href="https://wa.me/+971585893990">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                     alt="contact us right now via whatsapp"/>
+                    alt="contact us right now via whatsapp" />
                 <span class="luxury">WHATSAPP</span>
             </a>
         </div>
@@ -287,7 +287,7 @@ function rent_shortcode()
             } else {
                 echo 'First Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -298,7 +298,7 @@ function rent_shortcode()
             } else {
                 echo 'Last Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -309,7 +309,7 @@ function rent_shortcode()
             } else {
                 echo 'Phone Number';
             }
-            ?>"/>
+            ?>" />
             <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -320,7 +320,7 @@ function rent_shortcode()
             } else {
                 echo 'Email';
             }
-            ?>"/>
+            ?>" />
             <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
 
             <button class="button new">
@@ -351,7 +351,7 @@ function rent_shortcode()
             ?>
             <a href="https://wa.me/+971585893990">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                     alt="contact us right now via whatsapp"/>
+                    alt="contact us right now via whatsapp" />
                 <span class="luxury">WHATSAPP</span>
             </a>
         </div>
@@ -591,156 +591,41 @@ function pluralize($word)
 
 require_once get_template_directory() . '/include/reviews.php';
 
-add_action( 'do_robotstxt', 'motors_robots_txt' );
+add_action('wp_ajax_search_posts', 'search_posts');
+add_action('wp_ajax_nopriv_search_posts', 'search_posts');
 
-function motors_robots_txt(){
+function search_posts() {
+    $search_term = isset($_POST['searchTerm']) ? sanitize_text_field($_POST['searchTerm']) : '';
 
-    $lines = [
-        'User-agent: *',
-        'Disallow: /wp-admin/',
-        'Disallow: /cgi-bin',
-        'Disallow: /about-us/',
-        'Disallow: */?s=*',
-        'Disallow: *?s=*',
-        'Disallow: *&s=*',
-        'Disallow: */?max_*',
-        'Disallow: *?max_*',
-        'Disallow: *&max_*',
-        'Disallow: */page/*',
-        'Disallow: */brand*',
-        'Disallow: */class*',
-        'Disallow: */model*',
-        'Disallow: */transmission*',
-        'Disallow: */colour*',
-        'Disallow: */drive_unit*',
-        'Allow: *.jpg',
-        'Allow: *.jpeg',
-        'Allow: *.png',
-        'Allow: *.webp',
-        'Allow: *.svg',
-        '',
-        'Sitemap: https://axmotors.ae/sitemap.html',
-        '',
-        'User-agent: Yandex',
-        'Disallow: /wp-admin/',
-        'Disallow: /cgi-bin',
-        'Disallow: /about-us/',
-        'Disallow: */?s=*',
-        'Disallow: *?s=*',
-        'Disallow: *&s=*',
-        'Disallow: */?max_*',
-        'Disallow: *?max_*',
-        'Disallow: *&max_*',
-        'Disallow: */page/*',
-        'Disallow: */brand*',
-        'Disallow: */class*',
-        'Disallow: */model*',
-        'Disallow: */transmission*',
-        'Disallow: */colour*',
-        'Disallow: */drive_unit*',
-        'Allow: *.jpg',
-        'Allow: *.jpeg',
-        'Allow: *.png',
-        'Allow: *.webp',
-        'Allow: *.svg',
-        '',
-        'Sitemap: https://axmotors.ae/sitemap.html',
-        '',
-        'User-agent: GoogleBot',
-        'Disallow: /wp-admin/',
-        'Disallow: /cgi-bin',
-        'Disallow: /about-us/',
-        'Disallow: */?s=*',
-        'Disallow: *?s=*',
-        'Disallow: *&s=*',
-        'Disallow: */?max_*',
-        'Disallow: *?max_*',
-        'Disallow: *&max_*',
-        'Disallow: */page/*',
-        'Disallow: */brand*',
-        'Disallow: */class*',
-        'Disallow: */model*',
-        'Disallow: */transmission*',
-        'Disallow: */colour*',
-        'Disallow: */drive_unit*',
-        'Allow: *.jpg',
-        'Allow: *.jpeg',
-        'Allow: *.png',
-        'Allow: *.webp',
-        'Allow: *.svg',
-        '',
-        'Sitemap: https://axmotors.ae/sitemap.html',
-        '',
-        'User-agent: Applebot',
-        'Allow: /',
-        '',
-        '# Block crawling software',
-        'User-agent: sitecheck.internetseer.com',
-        'Disallow: /',
-        '',
-        'User-agent: Zealbot',
-        'Disallow: /',
-        '',
-        'User-agent: MSIECrawler',
-        'Disallow: /',
-        '',
-        'User-agent: SiteSnagger',
-        'Disallow: /',
-        '',
-        'User-agent: WebStripper',
-        'Disallow: /',
-        '',
-        'User-agent: WebCopier',
-        'Disallow: /',
-        '',
-        'User-agent: Fetch',
-        'Disallow: /',
-        '',
-        'User-agent: Offline Explorer',
-        'Disallow: /',
-        '',
-        'User-agent: Teleport',
-        'Disallow: /',
-        '',
-        'User-agent: TeleportPro',
-        'Disallow: /',
-        '',
-        'User-agent: WebZIP',
-        'Disallow: /',
-        '',
-        'User-agent: linko',
-        'Disallow: /',
-        '',
-        'User-agent: HTTrack',
-        'Disallow: /',
-        '',
-        'User-agent: Microsoft.URL.Control',
-        'Disallow: /',
-        '',
-        'User-agent: Xenu',
-        'Disallow: /',
-        '',
-        'User-agent: larbin',
-        'Disallow: /',
-        '',
-        'User-agent: libwww',
-        'Disallow: /',
-        '',
-        'User-agent: ZyBORG',
-        'Disallow: /',
-        '',
-        'User-agent: Download Ninja',
-        'Disallow: /',
-        '',
-        'User-agent: WebReaper',
-        'Disallow: /',
-        '',
-        'User-agent: Screaming Frog SEO Spider',
-        'Disallow: /'
-    ];
+    $args = array(
+        's' => $search_term,
+        'post_type' => 'buy_a_car', // Или другой тип записей, по которому вы хотите выполнить поиск
+        'posts_per_page' => -1
+    );
 
-    echo implode( "\r\n", $lines );
+    $query = new WP_Query($args);
 
-    die; // обрываем работу PHP
+    $posts = array();
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $posts[] = array(
+                'id' => get_the_ID(),
+                'title' => array(
+                    'rendered' => get_the_title()
+                ),
+                'link' => get_permalink(),
+            );
+        }
+    }
+
+    wp_reset_postdata();
+
+    // Отправьте результаты поиска в формате JSON
+    wp_send_json($posts);
 }
+
+
+
 

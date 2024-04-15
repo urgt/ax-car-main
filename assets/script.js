@@ -1,6 +1,8 @@
-var onloadCallback = function() {
+import './components/index'
+
+var onloadCallback = function () {
   grecaptcha.render('form-captcha', {
-    'sitekey' : '6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq'
+    'sitekey': '6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq'
   });
 };
 
@@ -14,7 +16,7 @@ function toggleMenu() {
   }
 }
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   const $container = $('.car_details_sidebar_gallery_imgs');
   if ($container != null) {
     const imagesToShow = 4;
@@ -517,7 +519,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const carousel = document.querySelector(".logos_section.brands");
 
-  if (carousel != null){
+  if (carousel != null) {
     carousel.addEventListener("mousedown", (e) => {
       startX = e.pageX;
       startY = e.pageY;
@@ -527,7 +529,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentX = e.pageX;
       const currentY = e.pageY;
       const distance = Math.sqrt(
-          Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
+        Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
       );
 
       if (distance > 5) {
@@ -546,30 +548,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const classesCarousel = document.querySelector(".logos_section.classes");
 
-    if (classesCarousel != null){
-      classesCarousel.addEventListener("mousedown", (e) => {
-        startX = e.pageX;
-        startY = e.pageY;
-      });
+  if (classesCarousel != null) {
+    classesCarousel.addEventListener("mousedown", (e) => {
+      startX = e.pageX;
+      startY = e.pageY;
+    });
 
-      classesCarousel.addEventListener("click", (e) => {
-        const targetElement = e.target;
-        if (
-            targetElement.tagName === "A" &&
-            targetElement.parentElement.tagName === "DIV"
-        ) {
-          const currentX = e.pageX;
-          const currentY = e.pageY;
-          const distance = Math.sqrt(
-              Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
-          );
+    classesCarousel.addEventListener("click", (e) => {
+      const targetElement = e.target;
+      if (
+        targetElement.tagName === "A" &&
+        targetElement.parentElement.tagName === "DIV"
+      ) {
+        const currentX = e.pageX;
+        const currentY = e.pageY;
+        const distance = Math.sqrt(
+          Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2)
+        );
 
-          if (distance > 5) {
-            e.preventDefault();
-            e.stopPropagation();
-          }
+        if (distance > 5) {
+          e.preventDefault();
+          e.stopPropagation();
         }
-      });
-    }
+      }
+    });
+  }
 
 });
