@@ -194,8 +194,8 @@
                 <div class="tab-content">
                     <div class="content-tab active">
                         <?php
-                        $cars_fleet = get_field('our_service_buy');
-                        if ($cars_fleet):
+                        
+                        
                             $current_language = pll_current_language();
                             if ($current_language == 'en') {
                                 echo get_field('our_service_buy');
@@ -205,7 +205,7 @@
                             } else {
                                 echo get_field('our_service_buy');
                             }
-                        endif;
+                        
                         ?>
                     </div>
                     <div class="content-tab">
