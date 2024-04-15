@@ -38,6 +38,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
+  <?php 
+  if($env == 'prod'){
+
+    ?>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -65,6 +69,11 @@
         <div><img src="https://mc.yandex.ru/watch/96867058" style="position:absolute; left:-9999px;" alt=""/></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+    <?php
+
+  }
+  ?>
+    
 
     <!--<meta name="viewport" content="width=500">-->
     <!--<meta name="viewport" content="width=500">-->
