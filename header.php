@@ -67,12 +67,15 @@
     <!-- /Yandex.Metrika counter -->
 
     <!--<meta name="viewport" content="width=500">-->
+    <!--<meta name="viewport" content="width=500">-->
 
+    <?php wp_head(); ?>
     <?php wp_head(); ?>
 
 </head>
 
 <body>
+<div class="wrapper">
 <div class="wrapper">
     <header class="header container">
         <div class="menu_toggle">
@@ -86,7 +89,25 @@
         $current_language = pll_current_language();
         if ($current_language == 'en') {
             echo '/';
+        <div class="menu_toggle">
+            <input type="checkbox" id="checkbox"/>
+            <label for="checkbox" class="toggle" onclick="toggleMenu()">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+        </div>
+        <a href="<?php
+        $current_language = pll_current_language();
+        if ($current_language == 'en') {
+            echo '/';
 
+        } elseif ($current_language == 'ru') {
+            echo '/ru';
+        } else {
+            echo '/';
+        }
+        ?>"><img style="width:100px"
+                 src="/wp-content/uploads/2023/12/AX_MOTORS_Logo-e1702210136781.png" alt="AX MOTORS"/></a>
         } elseif ($current_language == 'ru') {
             echo '/ru';
         } else {
@@ -116,6 +137,8 @@
             <li><a href="/ru/contact-us" class="nav_link">Контакты</a></li>';
                 } else {
                     echo '
+                } else {
+                    echo '
             <li><a href="/buy" class="nav_link">Buy a car</a></li>
             <li><a href="/sell" class="nav_link">Sell a car</a></li>   
             <li><a href="/conditions" class="nav_link">Conditions</a></li>
@@ -125,7 +148,19 @@
                 ?>
             </ul>
         </nav>
+                }
+                ?>
+            </ul>
+        </nav>
 
+        <div class="header_right ">
+            <ul class="social-links ">
+                <li class="header-search">
+                    <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
+                    <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/ic-search.svg" alt=""> -->
+                </li>
+                <li>
+                    <img class="ic-account" src="<?php echo get_template_directory_uri(); ?>/img/ic-account.svg" alt="">
         <div class="header_right ">
             <ul class="social-links ">
                 <li class="header-search">
@@ -144,10 +179,33 @@
                             // add "raw" key and save data to variable
 
                             $langs_array = pll_the_languages(array('dropdown' => 1, 'hide_current' => 1, 'raw' => 1));
+                </li>
+                <li>
+                    <div>
+                        <div id="lang-form">
+                            <?php //pll_the_languages( array( 'dropdown' => 1 ) ); ?>
+                            <?php
+                            // add "raw" key and save data to variable
 
+                            $langs_array = pll_the_languages(array('dropdown' => 1, 'hide_current' => 1, 'raw' => 1));
+
+                            ?>
                             ?>
 
 
+                            <?php if ($langs_array): ?>
+                                <div class="drop-block lang">
+                                    <?php foreach ($langs_array as $lang): ?>
+                                        <a href="<?php echo $lang['url']; ?>" class="drop-block__link">
+                                            <?php echo $lang['slug']; ?>
+                                        </a>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </li>
+            </ul>
                             <?php if ($langs_array): ?>
                                 <div class="drop-block lang">
                                     <?php foreach ($langs_array as $lang): ?>
@@ -166,21 +224,32 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/Vector 2.svg" alt="Call us"
                      class="header_call_icon"/>
                 <span>
+            <a href="tel:+971585893990" class="button">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Vector 2.svg" alt="Call us"
+                     class="header_call_icon"/>
+                <span>
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo 'Call us';
+                echo 'Call us';
 
             } elseif ($current_language == 'ru') {
                 echo 'Позвонить';
+                echo 'Позвонить';
             } else {
+                echo 'Call us';
                 echo 'Call us';
             }
             ?>
           </span>
             </a>
         </div>
+            </a>
+        </div>
     </header>
+    <div class="mobile_search">
+        <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
     <div class="mobile_search">
         <?php echo do_shortcode('[ivory-search id="3228" title="Search"]') ?>
     </div>
