@@ -72,7 +72,6 @@
       ?>"><img style="width:100px" 
           src="/wp-content/uploads/2023/12/AX_MOTORS_Logo-e1702210136781.png" alt="AX MOTORS" /></a>
 
-<<<<<<< HEAD
       <nav class="header_nav " >
         <ul class="nav">
           <?php
@@ -81,31 +80,14 @@
             echo '
             <li><a href="/buy" class="nav_link">Buy</a></li>
             <li><a href="/sell" class="nav_link">Sell</a> </li>   
-=======
-        <nav class="header_nav ">
-            <ul class="nav">
-                <?php
-                $current_language = pll_current_language();
-                if ($current_language == 'en') {
-                    echo '
-            <li><a href="/buy" class="nav_link">Buy a car</a></li>
-            <li><a href="/sell" class="nav_link">Sell a car</a> </li>   
->>>>>>> 161c0ed3812f6e9be060a75317500859db1cc428
             <li><a href="/conditions" class="nav_link">Conditions</a> </li>   
             <li><a href="/about-us" class="nav_link">About</a></li>
             <li><a href="/contact-us" class="nav_link">Contact us</a></li>';
 
-<<<<<<< HEAD
           } elseif ($current_language == 'ru') {
             echo '
             <li><a href="/ru/buy" class="nav_link">Купить</a></li>
             <li><a href="/ru/sell" class="nav_link">Продать</a></li>
-=======
-                } elseif ($current_language == 'ru') {
-                    echo '
-            <li><a href="/ru/buy" class="nav_link">Купить авто</a></li>
-            <li><a href="/ru/sell" class="nav_link">Продать авто</a></li>
->>>>>>> 161c0ed3812f6e9be060a75317500859db1cc428
             <li><a href="/ru/conditions" class="nav_link">Условия</a></li>
             <li><a href="/ru/about-us" class="nav_link">О нас</a></li>
             <li><a href="/ru/contact-us" class="nav_link">Контакты</a></li>';
