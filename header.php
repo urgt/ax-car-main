@@ -21,11 +21,6 @@
       })(window, document, 'script', 'dataLayer', 'GTM-MX8TL6TV');</script>
     <!-- End Google Tag Manager -->
 
-    2. Вставьте этот код сразу же после открывающего тега :
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8TL6TV" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -66,6 +61,14 @@
 </head>
 
 <body>
+  <?php if ($env == 'prod') {
+    ?>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8TL6TV" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <?php
+  } ?>
   <div class="wrapper">
     <header class="header container">
       <div class="menu_toggle">
