@@ -113,9 +113,9 @@
 
 
             <?php if ($env == 'prod') {
-                get_template_part('views/car_classes_no_filter');
+                get_template_part('views/car_classes_no_filter', null, []);
             } else {
-                get_template_part('views/car_classes');
+                get_template_part('views/car_classes', null, []);
             }
             ?>
 
@@ -427,9 +427,9 @@
 
 
     <?php if ($env == 'prod') {
-        get_template_part('views/all_car_brands_no_filter');
+        get_template_part('views/all_car_brands_no_filter', null, []);
     } else {
-        get_template_part('views/all_car_brands');
+        get_template_part('views/all_car_brands', null, []);
     }
     ?>
 
