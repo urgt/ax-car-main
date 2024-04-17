@@ -1,7 +1,8 @@
 <?php get_header(); ?>
-<section class="page_title" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/About-us.webp)">
+<section class="page_title"
+    style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/About-us.webp)">
     <div class="page_title_block">
-        <h1 class="page_title_text" >
+        <h1 class="page_title_text">
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -14,7 +15,7 @@
             }
             ?>
         </h1>
-        <div class="breadcrums"  >
+        <div class="breadcrums">
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -42,7 +43,7 @@
 
 
 <section class="how_it_works container">
-    <div class="section_subtitle luxury" >
+    <div class="section_subtitle luxury">
         <?php
         $top_cars = get_field('why_choose_us');
 
@@ -59,7 +60,7 @@
         endif;
         ?>
     </div>
-    <div class="section_title"  >
+    <div class="section_title">
         <?php
         $top_cars = get_field('why_choose_us');
         if ($top_cars):
@@ -75,7 +76,7 @@
         endif;
         ?>
     </div>
-    <div class="section_description"  >
+    <div class="section_description">
         <?php
         $top_cars = get_field('why_choose_us');
         if ($top_cars):
@@ -91,7 +92,7 @@
         endif;
         ?>
     </div>
-    <div class="info_cards"  >
+    <div class="info_cards">
         <div class="info_cards_card">
             <img src="<?php echo get_template_directory_uri(); ?>/img/3-1.svg" alt="Comprehensive Services" />
             <div class="info_cards_card_title">
@@ -307,7 +308,7 @@
 
 <section class="cta_section container">
 
-    <div class="cta_section_left"  >
+    <div class="cta_section_left">
         <img src="<?php echo get_template_directory_uri(); ?>/img/leftauto.jpg" alt="<?php
            $current_language = pll_current_language();
            if ($current_language == 'en') {
@@ -323,7 +324,7 @@
 
     <div class="cta_section_right">
 
-        <div class="section_title"  >
+        <div class="section_title">
             <h2>
                 <?php
                 $cars_fleet = get_field('our-service');
@@ -341,7 +342,7 @@
                 ?>
             </h2>
         </div>
-        <div class="section_description" >
+        <div class="section_description">
 
 
             <div class="tabs">
@@ -413,7 +414,7 @@
         } else {
             echo '/buy-a-car';
         }
-        ?>" class="button"  >
+        ?>" class="button">
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -436,7 +437,7 @@
 
     <div class="cta_two_section_left">
 
-        <div class="section_title"  >
+        <div class="section_title">
             <h2>
                 <?php
                 $cars_fleet = get_field('brokerage_services');
@@ -454,7 +455,7 @@
                 ?>
             </h2>
         </div>
-        <div class="section_description" >
+        <div class="section_description">
 
 
             <?php
@@ -484,7 +485,7 @@
         } else {
             echo '/buy-a-car';
         }
-        ?>" class="button"  >
+        ?>" class="button">
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -502,7 +503,7 @@
     </div>
 
 
-    <div class="cta_two_section_right"  >
+    <div class="cta_two_section_right">
         <img src="<?php echo get_template_directory_uri(); ?>/img/man.jpg" alt="<?php
            $current_language = pll_current_language();
            if ($current_language == 'en') {
@@ -518,258 +519,17 @@
 </section>
 
 
-<section class="logos_section brands" id="brands">
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-porsche/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-porsche/';
-    } else {
-        echo '/buy/brand-porsche/';
-    }
-    ?>"><img width="100" style="padding-top:2px;"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Porsche11.svg" alt="Ax cars Porsche" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-mercedes-benz/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-mercedes-benz/';
-    } else {
-        echo '/buy/brand-mercedes-benz/';
-    }
-    ?>"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Mercedes11.svg" alt="Ax cars Mercedes Benz" /></a>
-    <a class="brand" class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-bentley/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-bentley/';
-    } else {
-        echo '/buy/brand-bentley/';
-    }
-    ?>" style="padding-top:10px"><img width="150"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Bentley11.svg" alt="Ax cars Bentley" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-bmw/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-bmw/';
-    } else {
-        echo '/buy/brand-bmw/';
-    }
-    ?>"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/BMW11.svg" alt="Ax cars BMW" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-lamborghini/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-lamborghini/';
-    } else {
-        echo '/buy/brand-lamborghini/';
-    }
-    ?>"><img width="75" style="padding-top:15px"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Lamborghini.svg" alt="Ax cars Lamborghini" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-mclaren/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-mclaren/';
-    } else {
-        echo '/buy/brand-mclaren/';
-    }
-    ?>" style="padding-top:2px"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Mclaren22.svg" alt="Ax cars Mclaren" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-rolls-royce/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-rolls-royce/';
-    } else {
-        echo '/buy/brand-rolls-royce/';
-    }
-    ?>" style="padding-top:5px;"><img width="75"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Rolls Royce11.svg" alt="Ax cars Rolls Roys" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-ferrari/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-ferrari/';
-    } else {
-        echo '/buy/brand-ferrari/';
-    }
-    ?>" style="padding-top:3px"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Ferrari11.svg" alt="Ax cars Ferrari" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-land-rover/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-land-rover/';
-    } else {
-        echo '/buy/brand-land-rover/';
-    }
-    ?>" style="padding-top:12px"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Land Rover11.svg" alt="Ax cars Land Rover" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-cadillac/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-cadillac/';
-    } else {
-        echo '/buy/brand-cadillac/';
-    }
-    ?>" style="padding-top:7px"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Cadillac22.svg" alt="Ax cars Cadillac" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-jaguar/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-jaguar/';
-    } else {
-        echo '/buy/brand-jaguar/';
-    }
-    ?>" style="padding-top:15px"><img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Jaguar11.svg" alt="Jaguar" /></a>
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-audi/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-audi/';
-    } else {
-        echo '/buy/brand-audi/';
-    }
-    ?>" style="padding-top:13px">
-        <img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Audi11.svg" alt="Ax cars Audi" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-bugatti/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-bugatti/';
-    } else {
-        echo '/buy/brand-bugatti/';
-    }
-    ?>" style="padding-top:5px">
-        <img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Bugatti11 (1).svg" alt="Ax cars Bugatti" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-lotus/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-lotus/';
-    } else {
-        echo '/buy/brand-lotus/';
-    }
-    ?>" style="padding-top:20px">
-        <img width="80"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Lotus11.svg" alt="Ax cars Lotus" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-lincoln/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-lincoln/';
-    } else {
-        echo '/buy/brand-lincoln/';
-    }
-    ?>" style="padding-top:17px">
-        <img width="80"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Lincoln11.svg" alt="Ax cars Lincoln" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-maserati/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-maserati/';
-    } else {
-        echo '/buy/brand-maserati/';
-    }
-    ?>" style="padding-top:15px">
-        <img width="75"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Layer_17 (3).svg" alt="Ax cars Maserati" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-corvette/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-corvette/';
-    } else {
-        echo '/buy/brand-corvette/';
-    }
-    ?>" style="padding-top:16px">
-        <img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Corvette11.svg" alt="Ax cars Corvette" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-mini/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-mini/';
-    } else {
-        echo '/buy/brand-mini/';
-    }
-    ?>" style="padding-top:20px">
-        <img width="100"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Mini11.svg" alt="Ax cars Mini" /></a>
-
-    <a class="brand" href="<?php
-    $current_language = pll_current_language();
-    if ($current_language == 'en') {
-        echo '/buy/brand-aston-martin/';
-
-    } elseif ($current_language == 'ru') {
-        echo '/ru/buy/brand-aston-martin';
-    } else {
-        echo '/buy/brand-aston-martin/';
-    }
-    ?>" style="padding-top:18px">
-        <img width="120"  
-            src="<?php echo get_template_directory_uri(); ?>/img/Aston Martin11.svg" alt="Aston Martin" /></a>
-
-</section>
+<?php
+if ($env == 'prod') {
+    get_template_part('views/all_car_brands_no_filter', null, []);
+} else {
+    get_template_part('views/all_car_brands', null, []);
+}
+?>
 
 <section class="reviews_section">
     <div class="reviews_inner container">
-        <div class="section_title"  >
+        <div class="section_title">
             <?php
             $cars_fleet = get_field('reviews');
             if ($cars_fleet):
@@ -788,7 +548,7 @@
         <div class="swiper review-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="review_item"  >
+                    <div class="review_item">
                         <div class="review_author">
 
                             <div class="review_author_info">
@@ -846,7 +606,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="review_item"  >
+                    <div class="review_item">
                         <div class="review_author">
 
                             <div class="review_author_info">
@@ -904,7 +664,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="review_item"  >
+                    <div class="review_item">
                         <div class="review_author">
 
                             <div class="review_author_info">
@@ -963,7 +723,7 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="review_item"  >
+                    <div class="review_item">
                         <div class="review_author">
 
                             <div class="review_author_info">
@@ -1023,8 +783,8 @@
 
             </div>
             <div class="swiper-pag">
-                <a  class="swiper-prev">PREV</a>
-                <a  class="swiper-next">NEXT</a>
+                <a class="swiper-prev">PREV</a>
+                <a class="swiper-next">NEXT</a>
             </div>
         </div>
 
