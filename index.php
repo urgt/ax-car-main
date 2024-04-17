@@ -112,8 +112,12 @@
             </div>
 
 
-
-            <?php get_template_part('views/car_classes'); ?>
+            <?php if ($env == 'prod') {
+                get_template_part('views/car_classes_no_filter');
+            } else {
+                get_template_part('views/car_classes');
+            }
+            ?>
 
         </div>
     </section>
