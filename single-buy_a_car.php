@@ -1,103 +1,120 @@
 <?php get_header(); ?>
-    <main>
-    <div class="car_details container">
-        <div class="car_details_inner">
-            <div class="car_details_content">
+<main>
+  <div class="car_details container">
+    <div class="car_details_inner">
+      <div class="car_details_content">
 
-                <div class="car_slider">
-                    <!-- Swiper -->
-                    <div style="
+        <div class="car_slider">
+          <!-- Swiper -->
+          <div style="
                     --swiper-navigation-color: #fff;
                     --swiper-pagination-color: #fff;
                   " class="swiper mySwiper2">
-                        <div class="swiper-wrapper">
+            <div class="swiper-wrapper">
 
-                          <?php
-                          $images = get_field('buy_gallery');
-                          if ($images): ?>
-                            <?php foreach ($images as $image): ?>
-                                  <div class="swiper-slide">
-                                      <a href="<?php echo esc_url($image['url']); ?>" class="foobox" rel="gallery">
-                                          <img loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php
-                                          $current_language = pll_current_language();
-                                          if ($current_language == 'en') {
-                                            echo 'Buy';
+              <?php
+              $images = get_field('buy_gallery');
+              if ($images): ?>
+                <?php foreach ($images as $image): ?>
+                  <div class="swiper-slide">
+                    <a data-fslightbox="first-lightbox" data-alt="<?php
+                    $current_language = pll_current_language();
+                    if ($current_language == 'en') {
+                      echo 'Buy';
 
-                                          } elseif ($current_language == 'ru') {
-                                            echo 'Купить';
-                                          } else {
-                                            echo 'Buy';
-                                          }
-                                          ?> <?php the_title(); ?> <?php
-                                          $terms = get_the_terms($post->ID, 'buy_colors');
-                                          $colors = array();
-                                          foreach ($terms as $term) {
-                                            $colors[] = $term->name;
-                                          }
-                                          echo implode(', ', $colors);
-                                          ?>" />
-                                      </a>
-                                  </div>
-                            <?php endforeach; ?>
-                          <?php endif; ?>
+                    } elseif ($current_language == 'ru') {
+                      echo 'Купить';
+                    } else {
+                      echo 'Buy';
+                    }
+                    ?> <?php the_title(); ?> <?php
+                        $terms = get_the_terms($post->ID, 'buy_colors');
+                        $colors = array();
+                        foreach ($terms as $term) {
+                          $colors[] = $term->name;
+                        }
+                        echo implode(', ', $colors);
+                        ?>" href="<?php echo esc_url($image['url']); ?>">
+                      <img loading="lazy" src="<?php echo esc_url($image['url']); ?>" alt="<?php
+                         $current_language = pll_current_language();
+                         if ($current_language == 'en') {
+                           echo 'Buy';
 
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <div thumbsSlider="" class="swiper mySwiper">
-                        <div class="swiper-wrapper">
+                         } elseif ($current_language == 'ru') {
+                           echo 'Купить';
+                         } else {
+                           echo 'Buy';
+                         }
+                         ?> <?php the_title(); ?> <?php
+                             $terms = get_the_terms($post->ID, 'buy_colors');
+                             $colors = array();
+                             foreach ($terms as $term) {
+                               $colors[] = $term->name;
+                             }
+                             echo implode(', ', $colors);
+                             ?>" />
+                    </a>
+                  </div>
+                <?php endforeach; ?>
+              <?php endif; ?>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="car_details_price">
-                    <div class="car_details_title">
-                      <?php the_title(); ?>
-                    </div>
-                    <div class="car_details_cost"><span class="car_details_pricee">
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+            </div>
+          </div>
+        </div>
+        <div class="car_details_price">
+          <div class="car_details_title">
+            <?php the_title(); ?>
+          </div>
+          <div class="car_details_cost"><span class="car_details_pricee">
               <?php
               $terms = get_the_terms($post->ID, 'buy_price');
               echo number_format($terms[0]->name, 0, '.', ' ');
 
               ?>
             </span> <span>AED</span>
-                      <?php
-                      $current_language = pll_current_language();
-                      if ($current_language == 'en') {
-                        echo '';
+            <?php
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+              echo '';
 
-                      } elseif ($current_language == 'ru') {
-                        echo '';
-                      } else {
-                        echo '';
-                      }
-                      ?>
-                    </div>
-                </div>
-                <hr />
-                <div class="car_details_info">
-                    <div class="block_title">
-                      <?php
-                      $current_language = pll_current_language();
-                      if ($current_language == 'en') {
-                        echo 'Car Information';
+            } elseif ($current_language == 'ru') {
+              echo '';
+            } else {
+              echo '';
+            }
+            ?>
+          </div>
+        </div>
+        <hr />
+        <div class="car_details_info">
+          <div class="block_title">
+            <?php
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+              echo 'Car Information';
 
-                      } elseif ($current_language == 'ru') {
-                        echo 'Детальная информация';
-                      } else {
-                        echo 'Car Information';
-                      }
-                      ?>
-                    </div>
+            } elseif ($current_language == 'ru') {
+              echo 'Детальная информация';
+            } else {
+              echo 'Car Information';
+            }
+            ?>
+          </div>
 
-                    <div class="car_details_info_items">
-                        <div class="car_details_items_wrapper">
-                            <ul class="car_details_info_property_names">
-                              <?php
-                              $current_language = pll_current_language();
-                              if ($current_language == 'en') {
-                                echo '
+          <div class="car_details_info_items">
+            <div class="car_details_items_wrapper">
+              <ul class="car_details_info_property_names">
+                <?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                  echo '
                       <li>
                         <span>Class</span>
                       </li>
@@ -114,8 +131,8 @@
                       </li>
 					  ';
 
-                              } elseif ($current_language == 'ru') {
-                                echo '
+                } elseif ($current_language == 'ru') {
+                  echo '
                       <li>
                         <span>Класс</span>
                       </li>
@@ -131,8 +148,8 @@
                         <span>Топливо</span>
                       </li>
                       ';
-                              } else {
-                                echo '
+                } else {
+                  echo '
                       <li>
                         <span>Class</span>
                       </li>
@@ -146,11 +163,11 @@
                         <span>Engine</span>
                       </li>
                       ';
-                              }
-                              ?>
-                            </ul>
-                            <ul class="car_details_info_property_values">
-                                <li>
+                }
+                ?>
+              </ul>
+              <ul class="car_details_info_property_values">
+                <li>
                   <span>
                     <?php
                     $terms = get_the_terms($post->ID, 'buy_class');
@@ -159,14 +176,14 @@
                     }
                     ?>
                   </span>
-                                </li>
-                                <li>
+                </li>
+                <li>
                   <span>
                     <?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
                       $cars_fleet = get_field('buy_mileage');
-                      echo $cars_fleet.'kms';
+                      echo $cars_fleet . 'kms';
 
                     } elseif ($current_language == 'ru') {
                       $cars_fleet = get_field('buy_mileage_ru');
@@ -177,10 +194,10 @@
                     }
                     ?>
                   </span>
-                                </li>
+                </li>
 
 
-                                <li>
+                <li>
                   <span>
                     <?php
                     $current_language = pll_current_language();
@@ -197,9 +214,9 @@
                     }
                     ?>
                   </span>
-                                </li>
+                </li>
 
-                                <li>
+                <li>
                   <span>
                     <?php
                     $current_language = pll_current_language();
@@ -216,17 +233,17 @@
                     }
                     ?>
                   </span>
-                                </li>
+                </li>
 
 
-                            </ul>
-                        </div>
-                        <div class="car_details_items_wrapper">
-                            <ul class="car_details_info_property_names">
-                              <?php
-                              $current_language = pll_current_language();
-                              if ($current_language == 'en') {
-                                echo '<li>
+              </ul>
+            </div>
+            <div class="car_details_items_wrapper">
+              <ul class="car_details_info_property_names">
+                <?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                  echo '<li>
                         <span>Engine</span>
                       </li>
                      <li>
@@ -240,8 +257,8 @@
                       </li>
 					  ';
 
-                              } elseif ($current_language == 'ru') {
-                                echo '<li>
+                } elseif ($current_language == 'ru') {
+                  echo '<li>
                         <span>Двигатель</span>
                       </li>
                       
@@ -252,8 +269,8 @@
                         <span>Коробка передач</span>
                       </li>
 					 ';
-                              } else {
-                                echo '<li>
+                } else {
+                  echo '<li>
                         <span>Year</span>
                       </li>
                       <li>
@@ -265,12 +282,12 @@
                       <li>
                         <span>Doors</span>
                       </li>';
-                              }
-                              ?>
+                }
+                ?>
 
-                            </ul>
-                            <ul class="car_details_info_property_values">
-                                <li>
+              </ul>
+              <ul class="car_details_info_property_values">
+                <li>
                   <span>
                     <?php
                     $current_language = pll_current_language();
@@ -279,10 +296,9 @@
                       $engine = get_field('buy_engine');
                       $engine_power = get_field('engine_power_hp');
                       if ($capacity == 0) {
-                        $cars_fleet = $engine . ' ' .  $engine_power . 'hp';
-                      }
-                      else {
-                        $cars_fleet = $capacity . 'L ' . $engine . ' ' .  $engine_power . 'hp';
+                        $cars_fleet = $engine . ' ' . $engine_power . 'hp';
+                      } else {
+                        $cars_fleet = $capacity . 'L ' . $engine . ' ' . $engine_power . 'hp';
                       }
                       echo $cars_fleet;
 
@@ -295,9 +311,9 @@
                     }
                     ?>
                   </span>
-                                </li>
+                </li>
 
-                                <li>
+                <li>
                   <span>
                     <?php
                     $terms = get_the_terms($post->ID, 'buy_colors');
@@ -308,8 +324,8 @@
                     echo implode(', ', $colors);
                     ?>
                   </span>
-                                </li>
-                                <li>
+                </li>
+                <li>
                   <span>
                     <?php
                     $current_language = pll_current_language();
@@ -326,8 +342,8 @@
                     }
                     ?>
                   </span>
-                                </li>
-                                <li>
+                </li>
+                <li>
                   <span>
                     <?php
                     $current_language = pll_current_language();
@@ -345,33 +361,33 @@
                     //                    }
                     ?>
                   </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="car_details_desc">
-                    <div class="block_title">
-                      <?php
-                      $current_language = pll_current_language();
-                      if ($current_language == 'en') {
-                        echo 'Car Description';
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="car_details_desc">
+          <div class="block_title">
+            <?php
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+              echo 'Car Description';
 
-                      } elseif ($current_language == 'ru') {
-                        echo 'Описание авто';
-                      } else {
-                        echo 'Car Description';
-                      }
-                      ?>
-                    </div>
-                    <p>
-                      <?php the_content(); ?>
-                    </p>
-                    <p>
-                      <?php // display_converted_price(); ?>
-                    </p>
-                    <a  class="button mainform">
+            } elseif ($current_language == 'ru') {
+              echo 'Описание авто';
+            } else {
+              echo 'Car Description';
+            }
+            ?>
+          </div>
+          <p>
+            <?php the_content(); ?>
+          </p>
+          <p>
+            <?php // display_converted_price(); ?>
+          </p>
+          <a class="button mainform">
             <span>
               <?php
               $current_language = pll_current_language();
@@ -385,93 +401,111 @@
               }
               ?>
             </span>
-                    </a>
-                </div>
+          </a>
+        </div>
+      </div>
+      <div class="car_details_sidebar">
+        <div class="car_details_sidebar_gallery">
+          <div class="block_title">
+            <?php
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+              echo 'Car Information';
+
+            } elseif ($current_language == 'ru') {
+              echo 'Информация об авто';
+            } else {
+              echo 'Car Information';
+            }
+            ?>
+          </div>
+          <div class="car_details_sidebar_gallery_imgs">
+            <?php
+            $images = get_field('buy_gallery');
+            if ($images): ?>
+              <?php foreach ($images as $image): ?>
+                <a data-fslightbox="second-lightbox" data-alt="<?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                  echo 'Buy';
+
+                } elseif ($current_language == 'ru') {
+                  echo 'Купить';
+                } else {
+                  echo 'Buy';
+                }
+                ?> <?php the_title(); ?> <?php
+                    $terms = get_the_terms($post->ID, 'buy_colors');
+                    $colors = array();
+                    foreach ($terms as $term) {
+                      $colors[] = $term->name;
+                    }
+                    echo implode(', ', $colors);
+                    ?>"
+                href=" <?php echo esc_url($image['url']); ?>">
+                  <img loading="lazy" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" />
+                </a>
+              <?php endforeach; ?>
+
+            <?php endif; ?>
+          </div>
+          <a id="load-more-img" class="button">
+            <span>
+              <?php
+              $current_language = pll_current_language();
+              if ($current_language == 'en') {
+                echo 'Show more';
+
+              } elseif ($current_language == 'ru') {
+                echo 'Показать ещё';
+              } else {
+                echo 'Show more';
+              }
+              ?>
+            </span>
+          </a>
+          <a id="hide-img-btn" class="button">
+            <span>
+              <?php
+              $current_language = pll_current_language();
+              if ($current_language == 'en') {
+                echo 'Show less';
+
+              } elseif ($current_language == 'ru') {
+                echo 'Показать меньше';
+              } else {
+                echo 'Show less';
+              }
+              ?>
+            </span>
+          </a>
+        </div>
+        <div class="car_details_sidebar_consultant">
+          <div class="consultant_info">
+            <?php if (get_field('buy_consultant_photo')): ?>
+              <img src="<?php the_field('buy_consultant_photo'); ?>" />
+            <?php endif; ?>
+            <div class="consiltant_info_name">
+              <p>
+                <?php
+                $current_language = pll_current_language();
+                if ($current_language == 'en') {
+                  $cars_fleet = get_field('buy_consultant');
+                  echo $cars_fleet;
+
+                } elseif ($current_language == 'ru') {
+                  $cars_fleet = get_field('buy_consultant_ru');
+                  echo $cars_fleet;
+                } else {
+                  $cars_fleet = get_field('buy_consultant');
+                  echo $cars_fleet; // Вывод значения по умолчанию
+                }
+                ?>
+
             </div>
-            <div class="car_details_sidebar">
-                <div class="car_details_sidebar_gallery">
-                    <div class="block_title">
-                      <?php
-                      $current_language = pll_current_language();
-                      if ($current_language == 'en') {
-                        echo 'Car Information';
-
-                      } elseif ($current_language == 'ru') {
-                        echo 'Информация об авто';
-                      } else {
-                        echo 'Car Information';
-                      }
-                      ?>
-                    </div>
-                    <div class="car_details_sidebar_gallery_imgs">
-                      <?php
-                      $images = get_field('buy_gallery');
-                      if ($images): ?>
-                        <?php foreach ($images as $image): ?>
-                              <a href="<?php echo esc_url($image['url']); ?>" class="foobox" rel="gallery">
-                                  <img loading="lazy" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" />
-                              </a>
-                        <?php endforeach; ?>
-
-                      <?php endif; ?>
-                    </div>
-                    <a id="load-more-img" class="button">
-              <span>
-                <?php
-                $current_language = pll_current_language();
-                if ($current_language == 'en') {
-                  echo 'Show more';
-
-                } elseif ($current_language == 'ru') {
-                  echo 'Показать ещё';
-                } else {
-                  echo 'Show more';
-                }
-                ?>
-              </span>
-                    </a>
-                    <a id="hide-img-btn" class="button">
-              <span>
-                <?php
-                $current_language = pll_current_language();
-                if ($current_language == 'en') {
-                  echo 'Show less';
-
-                } elseif ($current_language == 'ru') {
-                  echo 'Показать меньше';
-                } else {
-                  echo 'Show less';
-                }
-                ?>
-              </span>
-                    </a>
-                </div>
-                <div class="car_details_sidebar_consultant">
-                    <div class="consultant_info">
-                      <?php if (get_field('buy_consultant_photo')): ?>
-                          <img src="<?php the_field('buy_consultant_photo'); ?>" />
-                      <?php endif; ?>
-                        <div class="consiltant_info_name">
-                            <p>
-                              <?php
-                              $current_language = pll_current_language();
-                              if ($current_language == 'en') {
-                                $cars_fleet = get_field('buy_consultant');
-                                echo $cars_fleet;
-
-                              } elseif ($current_language == 'ru') {
-                                $cars_fleet = get_field('buy_consultant_ru');
-                                echo $cars_fleet;
-                              } else {
-                                $cars_fleet = get_field('buy_consultant');
-                                echo $cars_fleet; // Вывод значения по умолчанию
-                              }
-                              ?>
-
-                        </div>
-                    </div>
-                    <div class="consultant_buttons">
-                        <a href="tel:+971585893990" class="button">
+          </div>
+          <div class="consultant_buttons">
+            <a href="tel:+971585893990" class="button">
               <span>
                 <?php
                 $current_language = pll_current_language();
@@ -485,8 +519,8 @@
                 }
                 ?>
               </span>
-                        </a>
-                        <a class="mainform button">
+            </a>
+            <a class="mainform button">
               <span>
                 <?php
                 $current_language = pll_current_language();
@@ -500,29 +534,29 @@
                 }
                 ?>
               </span>
-                        </a>
-                    </div>
+            </a>
+          </div>
 
-                    <div class="contact_whatsapp">
-                      <?php
-                      $current_language = pll_current_language();
-                      if ($current_language == 'en') {
-                        echo 'Or get availability via';
+          <div class="contact_whatsapp">
+            <?php
+            $current_language = pll_current_language();
+            if ($current_language == 'en') {
+              echo 'Or get availability via';
 
-                      } elseif ($current_language == 'ru') {
-                        echo 'Свяжитесь с нами через';
-                      } else {
-                        echo 'Or get availability via';
-                      }
-                      ?>
-                        <a href="https://wa.me/+971585893990">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                                 alt="contact us right now via whatsapp" />
-                            <span class="luxury">WHATSAPP</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            } elseif ($current_language == 'ru') {
+              echo 'Свяжитесь с нами через';
+            } else {
+              echo 'Or get availability via';
+            }
+            ?>
+            <a href="https://wa.me/+971585893990">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
+                alt="contact us right now via whatsapp" />
+              <span class="luxury">WHATSAPP</span>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-<?php get_footer() ?>
+  </div>
+  <?php get_footer() ?>

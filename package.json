@@ -6,7 +6,7 @@
   "scripts": {
     "prod": "npx mix --production",
     "watch": "npx mix watch",
-    "dev" : "npx mix"
+    "dev": "npx mix"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,8 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.74.1",
     "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "fslightbox": "^3.4.1"
   }
 }
