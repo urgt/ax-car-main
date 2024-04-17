@@ -138,7 +138,7 @@
                 echo home_url('/mailer');
 
             } elseif ($current_language == 'ru') {
-                echo 'https://axluxurycars.ae/ru/mailer';
+                echo 'https://axmotors.ae/ru/mailer';
             } else {
                 echo home_url('/mailer');
             }
