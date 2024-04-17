@@ -1,13 +1,13 @@
 <?php get_header(); ?>
-    <main class="homepage_main">
+<main class="homepage_main">
 
     <section class="new_hero_section"
-             style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.jpg')">
+        style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.jpg')">
         <div class="new_hero_content container">
-            <h1 class="new_hero_title" >
+            <h1 class="new_hero_title">
                 <?php the_title(); ?>
             </h1>
-            <div class="hero_subtitle" >
+            <div class="hero_subtitle">
                 <?php the_content(); ?>
             </div>
 
@@ -24,7 +24,7 @@
                 } else {
                     echo '/buy';
                 }
-                ?>" class="button"  >
+                ?>" class="button">
                     <?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
@@ -48,7 +48,7 @@
                 } else {
                     echo '/sell';
                 }
-                ?>" class="button"   style="">
+                ?>" class="button" style="">
                     <?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
@@ -75,7 +75,7 @@
 
     <section class="main_page_catalog">
         <div class="main_page_catalog_inner">
-            <div class="section_title container" >
+            <div class="section_title container">
                 <h2>
                     <?php
                     $cars_fleet = get_field('cars_fleet');
@@ -93,7 +93,7 @@
                     ?>
                 </h2>
             </div>
-            <div class="section_description container" >
+            <div class="section_description container">
                 <?php
                 $cars_fleet = get_field('cars_fleet');
                 if ($cars_fleet):
@@ -121,27 +121,27 @@
 
     <section class="cta_section container">
 
-        <div class="cta_section_left"  >
+        <div class="cta_section_left">
             <img src="<?php echo get_template_directory_uri(); ?>/img/leftauto.jpg" alt="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'mercedes benz e class 2022 in Dubai';
+               $current_language = pll_current_language();
+               if ($current_language == 'en') {
+                   echo 'mercedes benz e class 2022 in Dubai';
 
-            } elseif ($current_language == 'ru') {
-                echo 'mercedes benz e class 2022 в Дубае';
-            } else {
-                echo 'mercedes benz e class 2022 in Dubai';
-            }
-            ?>" />
+               } elseif ($current_language == 'ru') {
+                   echo 'mercedes benz e class 2022 в Дубае';
+               } else {
+                   echo 'mercedes benz e class 2022 in Dubai';
+               }
+               ?>" />
         </div>
 
         <div class="cta_section_right">
 
-            <div class="section_title"  >
+            <div class="section_title">
                 <h2>
                     <?php
                     get_field('our_service_title_en');
-                    
+
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
                         echo get_field('our_service_title_en');
@@ -155,7 +155,7 @@
                     ?>
                 </h2>
             </div>
-            <div class="section_description" >
+            <div class="section_description">
 
 
                 <div class="tabs">
@@ -194,18 +194,18 @@
                 <div class="tab-content">
                     <div class="content-tab active">
                         <?php
-                        
-                        
-                            $current_language = pll_current_language();
-                            if ($current_language == 'en') {
-                                echo get_field('main_buy_field');
 
-                            } elseif ($current_language == 'ru') {
-                                echo get_field('main_buy_field_ru');
-                            } else {
-                                echo get_field('main_buy_field');
-                            }
-                        
+
+                        $current_language = pll_current_language();
+                        if ($current_language == 'en') {
+                            echo get_field('main_buy_field');
+
+                        } elseif ($current_language == 'ru') {
+                            echo get_field('main_buy_field_ru');
+                        } else {
+                            echo get_field('main_buy_field');
+                        }
+
                         ?>
                     </div>
                     <div class="content-tab">
@@ -247,7 +247,7 @@
 
 
     <section class="how_it_works container">
-        <div class="section_subtitle luxury" >
+        <div class="section_subtitle luxury">
 
 
             <?php
@@ -265,7 +265,7 @@
             endif;
             ?>
         </div>
-        <div class="section_title" >
+        <div class="section_title">
             <h2>
                 <?php
                 $cars_fleet = get_field('how_it_works');
@@ -285,7 +285,7 @@
         </div>
 
         <div class="info_cards">
-            <div class="info_cards_card" >
+            <div class="info_cards_card">
                 <div class="info_cards_card_title top">
                     <a href="<?php
                     $translated_post_id = pll_get_post(get_page_by_path('conditions')->ID, pll_current_language());
@@ -331,7 +331,7 @@
                     ?>
                 </p>
             </div>
-            <div class="info_cards_card"  >
+            <div class="info_cards_card">
 
                 <div class="info_cards_card_title top">
 
@@ -379,7 +379,7 @@
                     ?>
                 </p>
             </div>
-            <div class="info_cards_card"  >
+            <div class="info_cards_card">
                 <div class="info_cards_card_title top">
 
                     <a class="mainform">
@@ -422,11 +422,17 @@
     </section>
 
 
-    <?php get_template_part('views/all_car_brands'); ?>
+    <?php if ($env == 'prod') {
+        get_template_part('views/all_car_brands_no_filter');
+    } else {
+        get_template_part('views/all_car_brands');
+    }
+    ?>
+
 
 
     <section class="how_it_works container">
-        <div class="section_subtitle luxury" >
+        <div class="section_subtitle luxury">
             <?php
             $top_cars = get_field('why_choose_us');
             if ($top_cars):
@@ -442,7 +448,7 @@
             endif;
             ?>
         </div>
-        <div class="section_title"  >
+        <div class="section_title">
             <?php
             $top_cars = get_field('why_choose_us');
             if ($top_cars):
@@ -458,7 +464,7 @@
             endif;
             ?>
         </div>
-        <div class="section_description"  >
+        <div class="section_description">
             <?php
             $top_cars = get_field('why_choose_us');
             if ($top_cars):
@@ -474,7 +480,7 @@
             endif;
             ?>
         </div>
-        <div class="info_cards"  >
+        <div class="info_cards">
             <div class="info_cards_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/3-1.svg" alt="Comprehensive Services" />
                 <div class="info_cards_card_title">
@@ -694,7 +700,7 @@
 
         <div class="cta_two_section_left">
 
-            <div class="section_title"  >
+            <div class="section_title">
                 <h2>
                     <?php
                     $cars_fleet = get_field('brokerage_services');
@@ -712,7 +718,7 @@
                     ?>
                 </h2>
             </div>
-            <div class="section_description" >
+            <div class="section_description">
 
 
                 <?php
@@ -732,7 +738,7 @@
 
 
             </div>
-            <a class="mainform button"  >
+            <a class="mainform button">
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -750,18 +756,18 @@
         </div>
 
 
-        <div class="cta_two_section_right"  >
+        <div class="cta_two_section_right">
             <img src="<?php echo get_template_directory_uri(); ?>/img/Brokerage-Services.webp" alt="<?php
-            $current_language = pll_current_language();
-            if ($current_language == 'en') {
-                echo 'mercedes benz e class 2022 in Dubai';
+               $current_language = pll_current_language();
+               if ($current_language == 'en') {
+                   echo 'mercedes benz e class 2022 in Dubai';
 
-            } elseif ($current_language == 'ru') {
-                echo 'mercedes benz e class 2022 в Дубае';
-            } else {
-                echo 'mercedes benz e class 2022 in Dubai';
-            }
-            ?>" />
+               } elseif ($current_language == 'ru') {
+                   echo 'mercedes benz e class 2022 в Дубае';
+               } else {
+                   echo 'mercedes benz e class 2022 in Dubai';
+               }
+               ?>" />
         </div>
 
 
@@ -769,7 +775,7 @@
 
     <section class="reviews_section">
         <div class="reviews_inner container">
-            <div class="section_title"  >
+            <div class="section_title">
                 <?php
                 $cars_fleet = get_field('reviews');
                 if ($cars_fleet):
@@ -789,15 +795,17 @@
                 <div class="swiper-wrapper">
                     <?php
 
-                    $query = new WP_Query( array(
-                        'post_type' => 'review',
-                        'post_status' => 'publish',
-                    ) );
+                    $query = new WP_Query(
+                        array(
+                            'post_type' => 'review',
+                            'post_status' => 'publish',
+                        )
+                    );
 
                     // Проверяем, есть ли посты
-                    if ( $query->have_posts() ) {
+                    if ($query->have_posts()) {
                         // Начинаем цикл
-                        while ( $query->have_posts() ) {
+                        while ($query->have_posts()) {
                             $query->the_post();
                             ?>
                             <div class="swiper-slide">
@@ -808,12 +816,12 @@
                                                 <?php the_title(); ?>
                                             </div>
                                             <div class="review_author_country">
-                                                <?php echo get_post_meta( get_the_ID(), 'review_country', true ); ?>
+                                                <?php echo get_post_meta(get_the_ID(), 'review_country', true); ?>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="review_text">
-                                        <?php echo get_post_meta( get_the_ID(), 'review_text', true ); ?>
+                                        <?php echo get_post_meta(get_the_ID(), 'review_text', true); ?>
                                     </p>
                                 </div>
                             </div>
@@ -855,7 +863,7 @@
 
     <section class="get_consultation container">
         <div class="get_consultation_inner">
-            <div class="section_title"  >
+            <div class="section_title">
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -868,7 +876,7 @@
                 }
                 ?>
             </div>
-            <div class="section_description" >
+            <div class="section_description">
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -881,7 +889,7 @@
                 }
                 ?>
             </div>
-            <form  method="POST" action="<?php
+            <form method="POST" action="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo home_url('/mailer');
@@ -891,7 +899,7 @@
             } else {
                 echo home_url('/mailer');
             }
-            ?>" class="get_consultation_form"  >
+            ?>" class="get_consultation_form">
                 <input required name="yourname" type="text" class="get_consultation_full_name" placeholder="<?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -941,7 +949,7 @@
                     ?>
                 </button>
             </form>
-            <div class="contact_whatsapp"  >
+            <div class="contact_whatsapp">
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -955,12 +963,12 @@
                 ?>
                 <a href="https://wa.me/+971585893990">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                         alt="contact us right now via whatsapp" />
+                        alt="contact us right now via whatsapp" />
                     <span class="luxury">WHATSAPP</span>
                 </a>
             </div>
         </div>
-        <div class="lux_line container" ></div>
+        <div class="lux_line container"></div>
     </section>
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
