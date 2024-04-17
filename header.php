@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
+  <!--<meta name="viewport" content="width=500">-->
+
+  <?php wp_head(); ?>
+
   <?php
   if ($env == 'prod') {
 
@@ -52,11 +56,6 @@
 
   }
   ?>
-
-
-  <!--<meta name="viewport" content="width=500">-->
-
-  <?php wp_head(); ?>
 
 </head>
 
