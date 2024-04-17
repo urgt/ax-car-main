@@ -14,7 +14,7 @@ function enqueue_custom_styles()
 
     if (is_page('sell')) {
         wp_enqueue_style('metro-style', get_template_directory_uri() . '/assets/libs/metro/metro.css', array(), null);
-        wp_enqueue_style('metro-icons-style', get_template_directory_uri() . '/assetslibs//metro/icons.css', array(), null);
+        wp_enqueue_style('metro-icons-style', get_template_directory_uri() . '/assets/libs/metro/icons.css', array(), null);
         wp_enqueue_style('select2-style', get_template_directory_uri() . '/assets/libs/select2/select2.css', array(), null);
     }
 
