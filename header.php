@@ -18,6 +18,7 @@
   } else {
     $env = 'local';
   }
+
   if ($env == 'prod') {
 
     ?>
@@ -81,7 +82,7 @@
     <header class="header container">
       <div class="menu_toggle">
         <input type="checkbox" id="checkbox" />
-        <label for="checkbox" class="toggle" onclick="toggleMenu()">
+        <label for="checkbox" id="toggle_menu_click" class="toggle">
           <div class="bars" id="bar1"></div>
           <div class="bars" id="bar3"></div>
         </label>
@@ -120,8 +121,8 @@
             <li><a href="/ru/contact-us" class="nav_link">Контакты</a></li>';
           } else {
             echo '
-            <li><a href="/buy" class="nav_link">Buy a car</a></li>
-            <li><a href="/sell" class="nav_link">Sell a car</a></li>   
+            <li><a href="/buy" class="nav_link">Buy</a></li>
+            <li><a href="/sell" class="nav_link">Sell</a></li>   
             <li><a href="/conditions" class="nav_link">Conditions</a></li>
             <li><a href="/about-us" class="nav_link">About</a></li>
             <li><a href="/contact-us" class="nav_link">Contact us</a></li>';
@@ -129,7 +130,6 @@
           ?>
         </ul>
       </nav>
-
       <div class="header_right ">
         <ul class="social-links ">
           <li class="header-search">

@@ -24,7 +24,7 @@ function enqueue_custom_styles()
     // Подключение остальных стилей
     wp_enqueue_style('ax-car-main-form-style', get_template_directory_uri() . '/assets/libs/formstyle.css', array(), null);
     wp_enqueue_style('ax-car-main-accordion-style', get_template_directory_uri() . '/assets/libs/accordion.css', array(), null);
-    wp_enqueue_style('ax-car-main-style', get_template_directory_uri() . '/dist/css/style.css', array('swiper-style', 'ax-car-main-form-style', 'ax-car-main-accordion-style'), null);
+    wp_enqueue_style('ax-car-main-style', get_template_directory_uri() . '/dist/css/style.css', array('swiper-style', 'ax-car-main-form-style', 'ax-car-main-accordion-style'));
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
@@ -50,7 +50,7 @@ function enqueue_custom_scripts()
 
     wp_enqueue_script('select2-script', get_template_directory_uri() . '/assets/libs/select2/select2.full.js', array('jquery'), null, true);
     // Подключение скрипта для ax-car-main
-    wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/dist/js/script.js', array('jquery', 'google-recaptcha', 'select2-script', 'swiper-script', 'accordion-script'), null, true);
+    wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/dist/js/script.js', array('jquery', 'google-recaptcha', 'select2-script', 'swiper-script', 'accordion-script'), 'defer', true);
 
 
 }

@@ -5,16 +5,29 @@ var onloadCallback = function() {
     'sitekey' : '6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq'
   });
 };
+jQuery(document).ready(function($) {
+  // Определяем функцию toggleMenu
+  function toggleMenu() {
+    const headerNav = document.querySelector(".header_nav");
+    const nav = document.querySelector(".nav");
 
-function toggleMenu() {
-  if (!document.querySelector(".header_nav").classList.contains("active")) {
-    document.querySelector(".header_nav").classList.add("active");
-    document.querySelector(".nav").classList.add("active");
-  } else {
-    document.querySelector(".header_nav").classList.remove("active");
-    document.querySelector(".nav").classList.remove("active");
+    if (!headerNav.classList.contains("active")) {
+      headerNav.classList.add("active");
+      nav.classList.add("active");
+    } else {
+      headerNav.classList.remove("active");
+      nav.classList.remove("active");
+    }
   }
-}
+
+  // Добавляем Event Listener для клика по элементу
+  const labelElement = document.querySelector("#toggle_menu_click"); // Замените селектор на нужный вам
+
+  if (labelElement) {
+    labelElement.addEventListener("click", toggleMenu);
+  }
+});
+
 
 jQuery(document).ready(function($) {
   const $container = $('.car_details_sidebar_gallery_imgs');
