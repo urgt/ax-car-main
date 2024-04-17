@@ -61,7 +61,9 @@
 </head>
 
 <body>
-  <?php if ($env == 'prod') {
+  <?php 
+  var_dump(home_url(), $env);
+  if ($env == 'prod') {
     ?>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8TL6TV" height="0" width="0"
