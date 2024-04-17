@@ -11,6 +11,13 @@
   <?php wp_head(); ?>
 
   <?php
+  if (home_url() == 'http://axmotors.ae' || home_url() == 'https://axmotors.ae') {
+    $env = 'prod';
+  } elseif (home_url() == 'https://axmotors-test.axdev.cloud' || home_url() == 'http://axmotors-test.axdev.cloud') {
+    $env = 'staging';
+  } else {
+    $env = 'local';
+  }
   if ($env == 'prod') {
 
     ?>
@@ -60,7 +67,7 @@
 </head>
 
 <body>
-  <?php 
+  <?php
   var_dump(home_url(), $env);
   if ($env == 'prod') {
     ?>
