@@ -68,7 +68,7 @@
 
 <body>
   <?php
-  var_dump(home_url(), $env);
+  
   if ($env == 'prod') {
     ?>
     <!-- Google Tag Manager (noscript) -->
