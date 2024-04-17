@@ -113,7 +113,6 @@
 
 
             <?php 
-            var_dump($env);
             if ($env == 'prod') {
                 get_template_part('views/car_classes_nofilter', null, []);
             } else {
