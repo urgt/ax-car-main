@@ -2,13 +2,13 @@
 
 flush_rewrite_rules();
 
-if (home_url() == 'http://axmotors.ae') {
+if (home_url() == 'http://axmotors.ae' || home_url() == 'https://axmotors.ae') {
     $env = 'prod';
-} elseif (home_url() == 'https://axmotors-test.axdev.cloud') {
+  } elseif (home_url() == 'https://axmotors-test.axdev.cloud' || home_url() == 'http://axmotors-test.axdev.cloud') {
     $env = 'staging';
-} else {
+  } else {
     $env = 'local';
-}
+  }
 function enqueue_custom_styles()
 {
 
