@@ -32,23 +32,23 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 function enqueue_custom_scripts()
 {
     // Подключение jQuery
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/libs/jquery.js', array(), null, true);
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/libs/jquery.js', array(), false, array('strategy' => 'defer'));
 
     // Подключение скрипта для swiper
-    wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/libs/swiper.js', array('jquery'), null, true);
+    wp_enqueue_script('swiper-script', get_template_directory_uri() . '/assets/libs/swiper.js', array('jquery'), false, array('strategy' => 'defer'));
 
     if (is_page('sell')) {
-        wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/libs/metro/metro.js', array('jquery'), null, true);
+        wp_enqueue_script('metro-script', get_template_directory_uri() . '/assets/libs/metro/metro.js', array('jquery'), false, array('strategy' => 'defer'));
     }
 
     wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, array('strategy' => 'defer'));
 
     // Подключение скрипта для accordion
-    wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/libs/accordion.js', array('jquery', 'swiper-script'), null, true);
+    wp_enqueue_script('accordion-script', get_template_directory_uri() . '/assets/libs/accordion.js', array('jquery', 'swiper-script'), false, array('strategy' => 'defer'));
 
-    wp_enqueue_script('select2-script', get_template_directory_uri() . '/assets/libs/select2/select2.full.js', array('jquery'), null, true);
+    wp_enqueue_script('select2-script', get_template_directory_uri() . '/assets/libs/select2/select2.full.js', array('jquery'), false, array('strategy' => 'defer'));
     // Подключение скрипта для ax-car-main
-    wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/dist/js/script.js', array('jquery', 'google-recaptcha', 'select2-script', 'swiper-script', 'accordion-script'), false, true);
+    wp_enqueue_script('ax-car-main-script', get_template_directory_uri() . '/dist/js/script.js', array('jquery', 'google-recaptcha', 'select2-script', 'swiper-script', 'accordion-script'), false, array('strategy' => 'defer'));
 
 
 }
