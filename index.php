@@ -2,7 +2,7 @@
 <main class="homepage_main">
 
     <section class="new_hero_section"
-        style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.jpg')">
+        style="background-image : url('<?php echo get_template_directory_uri(); ?>/img/hsection.webp')">
         <div class="new_hero_content container">
             <h1 class="new_hero_title">
                 <?php the_title(); ?>
@@ -127,7 +127,7 @@
     <section class="cta_section container">
 
         <div class="cta_section_left">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/leftauto.jpg" alt="<?php
+            <img src="<?php echo get_template_directory_uri(); ?>/img/leftauto.webp" alt="<?php
                $current_language = pll_current_language();
                if ($current_language == 'en') {
                    echo 'mercedes benz e class 2022 in Dubai';

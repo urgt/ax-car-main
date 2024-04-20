@@ -70,7 +70,7 @@
       } else {
         echo '/';
       }
-      ?>"><img style="width:100px" src="/wp-content/uploads/2023/12/AX_MOTORS_Logo-e1702210136781.png"
+      ?>"><img style="width:100px" src="<?php echo get_template_directory_uri(); ?>/img/AX_MOTORS.webp"
           alt="AX MOTORS" /></a>
 
       <nav class="header_nav ">
