@@ -3789,6 +3789,11 @@ body .wpc-filters-main-wrap li.wpc-term-item, body .wpc-filters-main-wrap .wpc-t
     display: none;
 }
 
+.clicked{
+    opacity: 1!important;
+    visibility: visible!important;
+}
+
 @media (max-width: 1200px) {
 
     .wpc-filter-content:hover {
