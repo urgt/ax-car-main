@@ -5,6 +5,7 @@ var onloadCallback = function() {
     'sitekey' : '6LcTFGQpAAAAAK85QJgi7K0HqqFPEmssoY5a39Aq'
   });
 };
+
 jQuery(document).ready(function($) {
   // Определяем функцию toggleMenu
   function toggleMenu() {
