@@ -102,7 +102,6 @@ if (!defined('ABSPATH')) {
 <script>
     jQuery(document).ready(function () {
 
-        console.log('reload');
         jQuery(".wpc-filters-range-slider-wrapper").on("mousedown", function (event) {
             jQuery(this).addClass("clicked");
         });
