@@ -2862,7 +2862,7 @@ body .wpc-filters-main-wrap li.wpc-term-item {
 
 .services__description {
     margin-bottom: 24px;
-    height: 150px;
+    min-height: 150px;
 }
 
 .section_subtitle {
