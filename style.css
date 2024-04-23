@@ -1075,25 +1075,35 @@ button.button {
 .breadcrums {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   justify-content: center;
+}
+
+.breadcrums a{
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.breadcrums a:hover{
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
 }
 
 .breadcrums span {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .breadcrums span::after {
   content: "";
   display: block;
-  width: 10px;
-  height: 10px;
-  background: var(
-    --main,
-    linear-gradient(90deg, #be6552 0%, #eca9a0 49.01%, #be6552 100%)
-  );
+  width: 7px;
+  height: 12px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDcgMTMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02LjczMTQzIDUuODE4NTVMMC45NzYyNzcgMC4zMzQ5OTJDMC44ODAyNDkgMC4yNDM0NSAwLjc1MjY3IDAuMTkyMzgzIDAuNjIgMC4xOTIzODNDMC40ODczMyAwLjE5MjM4MyAwLjM1OTc1MiAwLjI0MzQ0OSAwLjI2MzcyNSAwLjMzNDk5MkwwLjI1NzUyOCAwLjM0MTE4OEMwLjIxMDgxNCAwLjM4NTU2NiAwLjE3MzYxNyAwLjQzODk4MyAwLjE0ODE5OSAwLjQ5ODE5QzAuMTIyNzgxIDAuNTU3Mzk3IDAuMTA5NjczIDAuNjIxMTU2IDAuMTA5NjczIDAuNjg1NTg4QzAuMTA5NjczIDAuNzUwMDIxIDAuMTIyNzgxIDAuODEzNzggMC4xNDgxOTkgMC44NzI5ODdDMC4xNzM2MTcgMC45MzIxOTQgMC4yMTA4MTQgMC45ODU2MTEgMC4yNTc1MjggMS4wMjk5OUw1LjY3NzA2IDYuMTkzNDJMMC4yNTc1MjcgMTEuMzU0OEMwLjIxMDgxNCAxMS4zOTkyIDAuMTczNjE3IDExLjQ1MjYgMC4xNDgxOTkgMTEuNTExOEMwLjEyMjc4IDExLjU3MSAwLjEwOTY3MyAxMS42MzQ3IDAuMTA5NjczIDExLjY5OTJDMC4xMDk2NzMgMTEuNzYzNiAwLjEyMjc4IDExLjgyNzQgMC4xNDgxOTkgMTEuODg2NkMwLjE3MzYxNyAxMS45NDU4IDAuMjEwODE0IDExLjk5OTIgMC4yNTc1MjcgMTIuMDQzNkwwLjI2MzcyNCAxMi4wNDk4QzAuMzU5NzUyIDEyLjE0MTMgMC40ODczMyAxMi4xOTI0IDAuNjIgMTIuMTkyNEMwLjc1MjY2OSAxMi4xOTI0IDAuODgwMjQ5IDEyLjE0MTMgMC45NzYyNzYgMTIuMDQ5OEw2LjczMTQzIDYuNTY2MjFDNi43ODIwNSA2LjUxNzk5IDYuODIyMzQgNi40NTk5OSA2Ljg0OTg3IDYuMzk1NzNDNi44Nzc0IDYuMzMxNDcgNi44OTE2IDYuMjYyMjkgNi44OTE2IDYuMTkyMzhDNi44OTE2IDYuMTIyNDcgNi44Nzc0IDYuMDUzMjkgNi44NDk4NyA1Ljk4OTAzQzYuODIyMzQgNS45MjQ3NyA2Ljc4MjA1IDUuODY2NzcgNi43MzE0MyA1LjgxODU1WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
   border-radius: 100%;
 }
 
@@ -3346,9 +3356,6 @@ div#classes div a {
 
 /* Breadcrumbs */
 
-.breadcrums a {
-  text-decoration: underline;
-}
 
 /* hero section */
 @media (min-width: 1060px) {
