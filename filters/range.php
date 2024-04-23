@@ -133,15 +133,7 @@ if (!defined('ABSPATH')) {
                     this.value = '0';
                     return;
                 }
-                if (inputValue > this.max) {
-                    this.value = this.max;
-                    return;
-                }
-
-                if (inputValue < this.min) {
-                    this.value = this.min;
-                    return;
-                }
+                
             });
         });
     });
