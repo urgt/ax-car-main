@@ -2006,6 +2006,10 @@ button.button {
   line-height: 24px; /* 171.429% */
 }
 
+.active .nav_link{
+  color: #ecac83;
+}
+
 .nav_link:hover {
   color: #ebc0a6;
 }

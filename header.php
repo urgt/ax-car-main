@@ -73,7 +73,39 @@
       ?>"><img style="width:100px" src="<?php echo get_template_directory_uri(); ?>/img/AX_MOTORS.webp"
           alt="AX MOTORS" /></a>
 
-      <nav class="header_nav ">
+          <nav class="header_nav">
+    <ul class="nav">
+        <?php
+        $current_language = pll_current_language();
+        $current_url = $_SERVER['REQUEST_URI'];
+
+        $links = [
+            'en' => [
+                '/buy/' => 'Buy',
+                '/sell/' => 'Sell',
+                '/conditions/' => 'Conditions',
+                '/about-us/' => 'About',
+                '/contact-us/' => 'Contact us'
+            ],
+            'ru' => [
+                '/ru/buy/' => 'Купить',
+                '/ru/sell/' => 'Продать',
+                '/ru/conditions/' => 'Условия',
+                '/ru/about-us/' => 'О нас',
+                '/ru/contact-us/' => 'Контакты'
+            ]
+        ];
+
+        foreach ($links[$current_language] as $url => $label) {
+
+            $class = ($current_url == $url) ? 'active' : '';
+            echo '<li class="' . $class . '"><a href="' . $url . '" class="nav_link">' . $label . '</a></li>';
+        }
+        ?>
+    </ul>
+</nav>
+
+      <!-- <nav class="header_nav ">
         <ul class="nav">
           <?php
           $current_language = pll_current_language();
@@ -102,7 +134,7 @@
           }
           ?>
         </ul>
-      </nav>
+      </nav> -->
       <div class="header_right ">
         <ul class="social-links ">
           <li class="header-search">

@@ -160,7 +160,8 @@ const swiper3 = new Swiper(".sample-slider", {
 
 function handleScrolling(elemId) {
   const elem = document.getElementById(elemId);
-  if(elem.scrollLeft == 0){
+  
+  if(elem && elem.scrollLeft == 0){
     elem.classList.remove("pause-scroll");
   }
 
