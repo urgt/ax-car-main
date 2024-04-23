@@ -21,14 +21,14 @@
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo '<span>Home</span>
+                    echo '<span><a href="/">Home</a></span>
               <span>Sell</span>';
 
                 } elseif ($current_language == 'ru') {
-                    echo '<span>Главная</span>
+                    echo '<span><a href="/">Главная</a></span>
               <span>Продать</span>';
                 } else {
-                    echo '<span>Home</span>
+                    echo '<span><a href="/">Home</a></span>
               <span>Sell</span>';
                 }
                 ?>
