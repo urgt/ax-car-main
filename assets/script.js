@@ -158,185 +158,98 @@ const swiper3 = new Swiper(".sample-slider", {
   },
 });
 
-/* Brands scrolling */
+function handleScrolling(elemId) {
+  const elem = document.getElementById(elemId);
+  if(elem.scrollLeft == 0){
+    elem.classList.remove("pause-scroll");
+  }
 
-function scrollRight() {
-  const elem = document.getElementById("brands");
-  if (!elem.classList.contains("pause-scroll")) {
-    elem.scrollLeft += 1;
-    if (elem.scrollLeft >= elem.scrollWidth - elem.clientWidth) {
-      elem.scrollLeft = 0;
-      elem.addEventListener("transitionend", () => {
-        elem.classList.remove("pause-scroll");
-      });
-      elem.classList.add("pause-scroll");
+  function scrollRight() {
+    if (!elem.classList.contains("pause-scroll")) {
+      elem.scrollLeft += 1;
+      if (elem.scrollLeft >= elem.scrollWidth - elem.clientWidth) {
+        resetScroll(elem);
+        
+      }
     }
   }
-}
 
-const elem = document.getElementById("brands");
-if (elem) {
-  elem.addEventListener("mouseover", () => {
-    if (!isTouchDevice()) {
-      elem.classList.add("pause-scroll");
-    }
-  });
-
-  elem.addEventListener("mouseout", () => {
-    if (!isTouchDevice()) {
+  function resetScroll(elem) {
+    
+    elem.scrollLeft = 0;
+    elem.addEventListener("transitionend", () => {
       elem.classList.remove("pause-scroll");
-    }
-  });
+    });
+    elem.classList.add("pause-scroll");
+  }
+  
+  if (elem) {
+    elem.addEventListener("mouseover", handleMouseOverOut);
+    elem.addEventListener("mouseout", handleMouseOverOut);
+    elem.addEventListener("touchstart", handleTouchStartMoveEnd);
+    elem.addEventListener("touchmove", handleTouchStartMoveEnd);
+    elem.addEventListener("touchend", handleTouchEnd);
 
-  elem.addEventListener("touchstart", () => {
+    setInterval(scrollRight, 50);
+  }
+
+  function handleMouseOverOut() {
+    if (!isTouchDevice()) {
+      elem.classList.toggle("pause-scroll");
+    }
+  }
+
+  function handleTouchStartMoveEnd() {
     if (!elem.classList.contains("pause-scroll")) {
       elem.classList.add("pause-scroll");
       elem.style.scrollBehavior = "auto";
     }
-  });
+  }
 
-  elem.addEventListener("touchmove", () => {
-    if (!elem.classList.contains("pause-scroll")) {
-      elem.classList.add("pause-scroll");
-      elem.style.scrollBehavior = "auto";
-    }
-  });
-
-  elem.addEventListener("touchend", () => {
+  function handleTouchEnd() {
     if (elem.classList.contains("pause-scroll")) {
       elem.style.scrollBehavior = "smooth";
       window.setTimeout(() => {
         elem.classList.remove("pause-scroll");
-      }, 250);
-    }
-  });
-
-  setInterval(scrollRight, 50);
-
-  function isTouchDevice() {
-    return "ontouchstart" in window || navigator.msMaxTouchPoints;
-  }
-}
-
-jQuery(document).ready(function (jQuery) {
-  var addsWrap = jQuery("#brands");
-  var isDragging = false;
-  var startX;
-  var scrollLeft;
-
-  addsWrap.on("mousedown", function (e) {
-    // Проверяем, что нажатие произошло на элементе addsWrap
-    if (!jQuery(e.target).closest(addsWrap).length) return;
-
-    // Предотвращаем переход по ссылке при начале драга
-    e.preventDefault();
-
-    isDragging = true;
-    startX = e.pageX;
-    scrollLeft = addsWrap.scrollLeft();
-    addsWrap.css("scroll-behavior", "initial"); // Отключаем плавность прокрутки
-  });
-
-  jQuery(document).on("mouseup", function () {
-    isDragging = false;
-    addsWrap.css("scroll-behavior", ""); // Восстанавливаем плавность прокрутки
-  });
-
-  addsWrap.on("mousemove", function (e) {
-    if (!isDragging) return;
-
-    e.preventDefault(); // Отменяем выделение элементов
-
-    var diffX = e.pageX - startX;
-    addsWrap.scrollLeft(scrollLeft - diffX);
-  });
-});
-
-/* CLASSES SCROLLING */
-
-function scrollRightForClasses() {
-  const elem = document.getElementById("classes");
-  if (!elem.classList.contains("pause-scroll")) {
-    elem.scrollLeft += 1;
-    if (elem.scrollLeft >= elem.scrollWidth - elem.clientWidth) {
-      elem.scrollLeft = 0;
-      elem.addEventListener("transitionend", () => {
-        elem.classList.remove("pause-scroll");
-      });
-      elem.classList.add("pause-scroll");
+      }, 3000);
     }
   }
 }
 
-const elemClasses = document.getElementById("classes");
-
-if (elemClasses) {
-  elemClasses.addEventListener("mouseover", () => {
-    if (!isTouchDevice()) {
-      elemClasses.classList.add("pause-scroll");
-    }
-  });
-
-  elemClasses.addEventListener("mouseout", () => {
-    if (!isTouchDevice()) {
-      elemClasses.classList.remove("pause-scroll");
-    }
-  });
-
-  elemClasses.addEventListener("touchstart", () => {
-    if (!elemClasses.classList.contains("pause-scroll")) {
-      elemClasses.classList.add("pause-scroll");
-      elemClasses.style.scrollBehavior = "auto";
-    }
-  });
-
-  elemClasses.addEventListener("touchmove", () => {
-    if (!elemClasses.classList.contains("pause-scroll")) {
-      elemClasses.classList.add("pause-scroll");
-      elemClasses.style.scrollBehavior = "auto";
-    }
-  });
-
-  elemClasses.addEventListener("touchend", () => {
-    if (elemClasses.classList.contains("pause-scroll")) {
-      elemClasses.style.scrollBehavior = "smooth";
-      window.setTimeout(() => {
-        elemClasses.classList.remove("pause-scroll");
-      }, 250);
-    }
-  });
-
-  setInterval(scrollRightForClasses, 50);
-} else {
-  console.log("Элемент classes не найден на странице");
-}
+handleScrolling("brands");
+handleScrolling("classes");
 
 jQuery(document).ready(function (jQuery) {
-  var addsWrapClasses = jQuery("#classes");
-  var isDraggingClasses = false;
-  var startXClasses;
-  var scrollLeftClasses;
+  function handleDragScroll(elemSelector) {
+    var addsWrap = jQuery(elemSelector);
+    var isDragging = false;
+    var startX;
+    var scrollLeft;
 
-  addsWrapClasses.on("mousedown", function (e) {
-    if (!jQuery(e.target).closest(addsWrapClasses).length) return;
-    e.preventDefault();
-    isDraggingClasses = true;
-    startXClasses = e.pageX;
-    scrollLeftClasses = addsWrapClasses.scrollLeft();
-    addsWrapClasses.css("scroll-behavior", "initial");
-  });
+    addsWrap.on("mousedown", function (e) {
+      if (!jQuery(e.target).closest(addsWrap).length) return;
+      e.preventDefault();
+      isDragging = true;
+      startX = e.pageX;
+      scrollLeft = addsWrap.scrollLeft();
+      addsWrap.css("scroll-behavior", "initial");
+    });
 
-  jQuery(document).on("mouseup", function () {
-    isDraggingClasses = false;
-    addsWrapClasses.css("scroll-behavior", "");
-  });
+    jQuery(document).on("mouseup", function () {
+      isDragging = false;
+      addsWrap.css("scroll-behavior", "");
+    });
 
-  addsWrapClasses.on("mousemove", function (e) {
-    if (!isDraggingClasses) return;
-    e.preventDefault();
-    var diffXClasses = e.pageX - startXClasses;
-    addsWrapClasses.scrollLeft(scrollLeftClasses - diffXClasses);
-  });
+    addsWrap.on("mousemove", function (e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      var diffX = e.pageX - startX;
+      addsWrap.scrollLeft(scrollLeft - diffX);
+    });
+  }
+
+  handleDragScroll("#brands");
+  handleDragScroll("#classes");
 });
 
 function isTouchDevice() {
