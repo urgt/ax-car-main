@@ -10,7 +10,7 @@
                     echo 'Buy';
 
                 } elseif ($current_language == 'ru') {
-                    echo 'Купить авто';
+                    echo 'Купить';
                 } else {
                     echo 'Buy';
                 }
@@ -26,7 +26,7 @@
 
                 } elseif ($current_language == 'ru') {
                     echo '<span><a href="/ru/">Главная</a></span>
-              <span>Купить авто</span>';
+              <span>Купить</span>';
                 } else {
                     echo '<span>Home</span>
               <span>Buy</span>';
