@@ -6,12 +6,12 @@
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
-                echo 'About us';
+                echo 'About';
 
             } elseif ($current_language == 'ru') {
                 echo 'О нас';
             } else {
-                echo 'About us';
+                echo 'About';
             }
             ?>
         </h1>
@@ -20,7 +20,7 @@
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo '<span><a href="/">Home</a></span>
-              <span>About us</span>';
+              <span>About</span>';
 
             } elseif ($current_language == 'ru') {
                 echo '<span><a href="/ru/">Главная</a></span>

@@ -11,7 +11,7 @@
                     echo 'SELL';
 
                 } elseif ($current_language == 'ru') {
-                    echo 'Продать авто';
+                    echo 'Продать';
                 } else {
                     echo 'SELL';
                 }
@@ -26,10 +26,10 @@
 
                 } elseif ($current_language == 'ru') {
                     echo '<span>Главная</span>
-              <span>Продать авто</span>';
+              <span>Продать</span>';
                 } else {
                     echo '<span>Home</span>
-              <span>Sell a car</span>';
+              <span>Sell</span>';
                 }
                 ?>
             </div>

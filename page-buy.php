@@ -7,12 +7,12 @@
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo 'Buy a car';
+                    echo 'Buy';
 
                 } elseif ($current_language == 'ru') {
-                    echo 'Купить авто';
+                    echo 'Купить';
                 } else {
-                    echo 'Buy a car';
+                    echo 'Buy';
                 }
                 ?>
             </div>
@@ -21,14 +21,14 @@
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
                     echo '<span>Home</span>
-              <span>Buy a car</span>';
+              <span>Buy</span>';
 
                 } elseif ($current_language == 'ru') {
                     echo '<span>Главная</span>
-              <span>Купить авто</span>';
+              <span>Купить</span>';
                 } else {
                     echo '<span>Home</span>
-              <span>Buy a car</span>';
+              <span>Buy</span>';
                 }
                 ?>
             </div>
