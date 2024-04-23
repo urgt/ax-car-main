@@ -7,12 +7,11 @@
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
-                    echo 'RESULTS FOR: ' . $_GET['s'];
+                    echo 'RESULTS FOR: ' . '<span class="search_title">' . $_GET['s'] . '</span>';
 
                 } elseif ($current_language == 'ru') {
-                    echo 'РЕЗУЛЬТАТЫ ДЛЯ: ' . $_GET['s'];
-                } else {
-                    echo 'RESULTS FOR:' . $_GET['s'];
+                    echo 'РЕЗУЛЬТАТЫ ДЛЯ: ' . '<span class="search_title">' . $_GET['s'] . '</span>';
+                    echo 'RESULTS FOR:' . '<span class="search_title">' . $_GET['s'] . '</span>';
                 }
                 ?>
 

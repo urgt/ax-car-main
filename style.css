@@ -1972,6 +1972,14 @@ button.button {
   display: none;
 }
 
+.search_title{
+  display: block;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 544px;
+}
+
 @media (max-width: 650px) {
   .social-links li.header-search {
     display: none;
