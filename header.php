@@ -129,7 +129,7 @@
                   <div class="drop-block lang">
                     <?php foreach ($langs_array as $lang): ?>
                       <a href="<?php echo $lang['url']; ?>" class="drop-block__link">
-                        <?php echo $lang['slug']; ?>
+                        <?php echo pll_current_language(); ?>
                       </a>
                     <?php endforeach; ?>
                   </div>
