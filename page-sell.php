@@ -424,7 +424,7 @@
                     $answer = $row['answer'];
 
                     echo '<div class="frame">
-                <div class="heading">' . esc_html($question) . '</div>
+                <div class="heading">' . '<span>' . esc_html($question) . '</span>' . '</div>
                 <div class="content">
                     <div class="p-2">' . esc_html($answer) . '.</div>
                 </div>
