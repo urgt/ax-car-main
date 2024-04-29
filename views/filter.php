@@ -5,6 +5,7 @@ $current_language = pll_current_language();
 
 
 ?>
+</div>
 <div class="filter_container">
     <?php
     if ($env == 'prod') {
@@ -83,6 +84,7 @@ $current_language = pll_current_language();
     }
     ?>
 </div>
+<div class="main_page_catalog_inner container">
 <?php
 
 ?>

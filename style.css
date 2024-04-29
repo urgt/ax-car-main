@@ -3601,9 +3601,12 @@ body
   background: #0d0d0d;
   border-radius: 10px;
   padding: 30px;
-  margin-bottom: 35px;
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  margin: auto;
+  margin-bottom: 35px;
+  box-sizing: border-box;
 }
 
 .wpc-instead-of-posts-found {
@@ -3949,6 +3952,11 @@ body .wpc-filters-main-wrap .wpc-term-item-content-wrapper,
   .wpc-filter-set-3510 .wpc-filters-widget-wrapper,
   .wpc-filter-set-3412 .wpc-filters-widget-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .filter_container
+  {
+    padding: 16px;
   }
 
   .wpc-filter-layout-submit-button {
