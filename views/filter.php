@@ -17,13 +17,21 @@ $current_language = pll_current_language();
             <div style="order: 2" class="second">
                 <?php echo do_shortcode('[fe_widget id="4254"]') ?>
             </div>
-            <div style="order: 3" class="third"class="third">
+            <div style="order: 3" class="third" class="third">
                 <?php echo do_shortcode('[fe_widget id="4259"]') ?>
             </div>
             <?php
         } else if ($current_language == 'ru') {
             ?>
-
+                <div style="order: 1" class="first">
+                <?php echo do_shortcode('[fe_widget id="4250"]') ?>
+                </div>
+                <div style="order: 2" class="second">
+                <?php echo do_shortcode('[fe_widget id="4254"]') ?>
+                </div>
+                <div style="order: 3" class="third" class="third">
+                <?php echo do_shortcode('[fe_widget id="4259"]') ?>
+                </div>
             <?php
         }
     }
@@ -42,15 +50,15 @@ $current_language = pll_current_language();
             <?php
         } else if ($current_language == 'ru') {
             ?>
-             <div style="order: 1" class="first">
+                <div style="order: 1" class="first">
                 <?php echo do_shortcode('[fe_widget id="3497"]') ?>
-            </div>
-            <div style="order: 2" class="second">
+                </div>
+                <div style="order: 2" class="second">
                 <?php echo do_shortcode('[fe_widget id="3501"]') ?>
-            </div>
-            <div style="order: 3" class="third">
+                </div>
+                <div style="order: 3" class="third">
                 <?php echo do_shortcode('[fe_widget id="3510"]') ?>
-            </div>
+                </div>
             <?php
         }
     }
@@ -70,21 +78,21 @@ $current_language = pll_current_language();
             <?php
         } else if ($current_language == 'ru') {
             ?>
-             <div style="order: 1" class="first">
+                <div style="order: 1" class="first">
                 <?php echo do_shortcode('[fe_widget id="3497"]') ?>
-            </div>
-            <div style="order: 2" class="second">
+                </div>
+                <div style="order: 2" class="second">
                 <?php echo do_shortcode('[fe_widget id="3501"]') ?>
-            </div>
-            <div style="order: 3" class="third">
+                </div>
+                <div style="order: 3" class="third">
                 <?php echo do_shortcode('[fe_widget id="3510"]') ?>
-            </div>
+                </div>
             <?php
         }
     }
     ?>
 </div>
 <div class="main_page_catalog_inner container">
-<?php
+    <?php
 
-?>
+    ?>
