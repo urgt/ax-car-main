@@ -73,7 +73,7 @@ $current_language = pll_current_language();
              <div style="order: 1" class="first">
                 <?php echo do_shortcode('[fe_widget id="3497"]') ?>
             </div>
-            <div style="order: 2">
+            <div style="order: 2" class="second">
                 <?php echo do_shortcode('[fe_widget id="3501"]') ?>
             </div>
             <div style="order: 3" class="third">
