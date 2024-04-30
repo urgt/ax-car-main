@@ -13,21 +13,17 @@ if (home_url() == 'http://axmotors.ae' || home_url() == 'https://axmotors.ae') {
 
 function remove_duplicates($text)
 {
-    // Строка, которую мы хотим удалить
+    
     $search_string = "axmotors.ae/";
 
-    // Находим количество вхождений строки в текст
     $count = substr_count($text, $search_string);
 
-    // Если количество больше 1, удаляем первое вхождение
     if ($count > 1) {
         $cleaned_text = preg_replace('/' . preg_quote($search_string, '/') . '/', '', $text, 1);
     } else {
-        // Если дубликатов нет или только одно вхождение, возвращаем исходный текст
         $cleaned_text = $text;
     }
 
-    // Возвращаем очищенный текст
     return $cleaned_text;
 }
 
