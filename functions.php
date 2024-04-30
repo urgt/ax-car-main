@@ -11,20 +11,15 @@ if (home_url() == 'http://axmotors.ae' || home_url() == 'https://axmotors.ae') {
 }
 
 
-function remove_duplicates($text)
+function remove_duplicates($url)
 {
     
-    $search_string = "axmotors.ae/";
-
-    $count = substr_count($text, $search_string);
-
-    if ($count > 1) {
-        $cleaned_text = preg_replace('/' . preg_quote($search_string, '/') . '/', '', $text, 1);
+    if (strpos($url, "http://axmotors.ae/") === 0) {
+        $url = str_replace("http://axmotors.ae/", "", $url);
+        return $url;
     } else {
-        $cleaned_text = $text;
+        return $url;
     }
-
-    return $cleaned_text;
 }
 
 function enqueue_custom_styles()
