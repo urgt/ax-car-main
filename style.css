@@ -3613,36 +3613,26 @@ body
   display: none;
 }
 
-.wpc-filter-set-4250 .wpc-filters-widget-wrapper,
-.wpc-filter-set-3441 .wpc-filters-widget-wrapper,
-.wpc-filter-set-3447 .wpc-filters-widget-wrapper {
+.first .wpc-filters-main-wrap .wpc-filters-widget-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
 }
 
-/* ru version of filter */
-
-.wpc-filter-set-3497 .wpc-filters-widget-wrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10px;
-}
-
-.wpc-filter-set-4254 .wpc-filters-widget-wrapper,
-.wpc-filter-set-3501 .wpc-filters-widget-wrapper,
-.wpc-filter-set-3451 .wpc-filters-widget-wrapper {
+.second .wpc-filters-main-wrap .wpc-filters-widget-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
 }
 
-.wpc-filter-set-4259 .wpc-filters-widget-wrapper,
-.wpc-filter-set-3510 .wpc-filters-widget-wrapper,
-.wpc-filter-set-3412 .wpc-filters-widget-wrapper {
+.third .wpc-filters-main-wrap .wpc-filters-widget-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
+}
+
+.wpc-filters-main-wrap:{
+  background-color: #fff;
 }
 
 .select2-results__options::-webkit-scrollbar {
@@ -3767,7 +3757,7 @@ html .wpc-filters-range-inputs .ui-button.ui-state-disabled:hover {
   text-align: right;
 }
 
-.wpc-filters-list-3439 {
+.wpc-filters-ul-list .wpc-filters-radio {
   display: flex;
 }
 
@@ -3802,7 +3792,7 @@ input[type="number"] {
   -moz-appearance: textfield !important;
 }
 
-.wpc-filters-section input[type="radio"] + label {
+.wpc-filters-ul-list.wpc-filters-radio input[type="radio"] + label {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-feature-settings: "pnum" on, "lnum" on;
@@ -3821,7 +3811,7 @@ input[type="number"] {
   border-radius: 5px;
 }
 
-.wpc-filters-section-3439 input[type="radio"]:checked + label {
+.wpc-filters-ul-list.wpc-filters-radio input[type="radio"]:checked + label {
   background: #d3a188;
   color: #fff !important;
 }
@@ -3895,14 +3885,17 @@ body .wpc-filters-main-wrap .wpc-term-item-content-wrapper,
   display: none!important;
 }
 
-.wpc-filter-set-3510 .wpc-filter-layout-submit-button,
-.wpc-filter-set-3412 .wpc-filter-layout-submit-button {
+.third .wpc-filter-layout-submit-button {
   display: flex!important;
 }
 
 .clicked {
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+.select2-container--classic .select2-results>.select2-results__options, .select2-container--default .select2-results>.select2-results__options{
+  background-color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -3916,12 +3909,8 @@ body .wpc-filters-main-wrap .wpc-term-item-content-wrapper,
     visibility: visible;
   }
 
-  .wpc-filter-set-4254 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3451 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3501 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3510 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-4259 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3412 .wpc-filters-widget-wrapper {
+  .second .wpc-filters-main-wrap .wpc-filters-widget-wrapper,
+  .third .wpc-filters-main-wrap .wpc-filters-widget-wrapper {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -3936,21 +3925,14 @@ body .wpc-filters-main-wrap .wpc-term-item-content-wrapper,
     padding: 0 !important;
   }
 
-  .wpc-filter-set-4250 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3441 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3447 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3497 .wpc-filters-widget-wrapper {
+  .first .wpc-filters-main-wrap .wpc-filters-widget-wrapper {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .wpc-filter-set-4254 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3451 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3501 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-4259 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3510 .wpc-filters-widget-wrapper,
-  .wpc-filter-set-3412 .wpc-filters-widget-wrapper {
+  .second .wpc-filters-main-wrap .wpc-filters-widget-wrapper, 
+  .third .wpc-filters-main-wrap .wpc-filters-widget-wrapper {
     grid-template-columns: 1fr;
   }
 
