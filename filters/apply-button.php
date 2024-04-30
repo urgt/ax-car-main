@@ -14,7 +14,6 @@ if (!defined('ABSPATH')) {
 $set_id = isset($set['ID']) ? esc_html($set['ID']) : 0;
 ?>
 <div class="wpc-filters-section wpc-filters-section-<?php echo $set_id; ?> wpc-filter-layout-submit-button">
-<?php var_dump(remove_duplicates(esc_url($apply_url))); ?>
     <a class="wpc-filters-submit-button" href="<?php echo esc_url($apply_url); ?>"><?php
          $button_text = isset($set['apply_button_text']['value']) ? esc_html($set['apply_button_text']['value']) : esc_html__('Apply', 'filter-everything');
          echo $button_text;
