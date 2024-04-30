@@ -93,7 +93,7 @@
                 }
             ?>
 
-
+               <?php get_template_part('views/filter', null, ['env' => $env]); ?>
 
             <?php get_template_part('views/catalog'); ?>
 
