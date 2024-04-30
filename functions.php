@@ -4,11 +4,33 @@ flush_rewrite_rules();
 
 if (home_url() == 'http://axmotors.ae' || home_url() == 'https://axmotors.ae') {
     $env = 'prod';
-  } elseif (home_url() == 'https://axmotors-test.axdev.cloud' || home_url() == 'http://axmotors-test.axdev.cloud') {
+} elseif (home_url() == 'https://axmotors-test.axdev.cloud' || home_url() == 'http://axmotors-test.axdev.cloud') {
     $env = 'staging';
-  } else {
+} else {
     $env = 'local';
-  }
+}
+
+
+function remove_duplicates($text)
+{
+    // Строка, которую мы хотим удалить
+    $search_string = "axmotors.ae/";
+
+    // Находим количество вхождений строки в текст
+    $count = substr_count($text, $search_string);
+
+    // Если количество больше 1, удаляем первое вхождение
+    if ($count > 1) {
+        $cleaned_text = preg_replace('/' . preg_quote($search_string, '/') . '/', '', $text, 1);
+    } else {
+        // Если дубликатов нет или только одно вхождение, возвращаем исходный текст
+        $cleaned_text = $text;
+    }
+
+    // Возвращаем очищенный текст
+    return $cleaned_text;
+}
+
 function enqueue_custom_styles()
 {
 
@@ -119,7 +141,7 @@ function book_shortcode()
             } else {
                 echo 'First Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -130,7 +152,7 @@ function book_shortcode()
             } else {
                 echo 'Last Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -141,7 +163,7 @@ function book_shortcode()
             } else {
                 echo 'Phone Number';
             }
-            ?>"/>
+            ?>" />
             <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -152,7 +174,7 @@ function book_shortcode()
             } else {
                 echo 'Email';
             }
-            ?>"/>
+            ?>" />
             <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
             <button class="button new">
                 <?php
@@ -182,7 +204,7 @@ function book_shortcode()
             ?>
             <a href="https://wa.me/+971585893990">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                     alt="contact us right now via whatsapp"/>
+                    alt="contact us right now via whatsapp" />
                 <span class="luxury">WHATSAPP</span>
             </a>
         </div>
@@ -262,7 +284,7 @@ function rent_shortcode()
             } else {
                 echo 'First Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="lastname" type="text" class="get_consultation_last_name" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -273,7 +295,7 @@ function rent_shortcode()
             } else {
                 echo 'Last Name';
             }
-            ?>"/>
+            ?>" />
             <input required name="number" type="tel" class="get_consultation_phone_number" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -284,7 +306,7 @@ function rent_shortcode()
             } else {
                 echo 'Phone Number';
             }
-            ?>"/>
+            ?>" />
             <input required name="email" type="email" class="get_consultation_email" placeholder="<?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
@@ -295,7 +317,7 @@ function rent_shortcode()
             } else {
                 echo 'Email';
             }
-            ?>"/>
+            ?>" />
             <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
 
             <button class="button new">
@@ -326,7 +348,7 @@ function rent_shortcode()
             ?>
             <a href="https://wa.me/+971585893990">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/akar-icons_whatsapp-fill.svg"
-                     alt="contact us right now via whatsapp"/>
+                    alt="contact us right now via whatsapp" />
                 <span class="luxury">WHATSAPP</span>
             </a>
         </div>
