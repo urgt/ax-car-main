@@ -520,11 +520,13 @@
 
 
 <?php
-if ($env == 'prod') {
-    get_template_part('views/all_car_brands_no_filter', null, []);
-} else {
-    get_template_part('views/all_car_brands', null, []);
-}
+// if ($env == 'prod') {
+//     get_template_part('views/all_car_brands_no_filter', null, []);
+// } else {
+//     get_template_part('views/all_car_brands', null, []);
+// }
+
+get_template_part('views/all_car_brands', null, []);
 ?>
 
 <section class="reviews_section">
