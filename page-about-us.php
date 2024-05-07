@@ -489,7 +489,7 @@
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
-                echo 'GET CONSULTATION';
+                echo 'DISCOVER MORE';
 
             } elseif ($current_language == 'ru') {
                 echo 'УЗНАТЬ БОЛЬШЕ';

@@ -64,13 +64,15 @@
 
             <?php if ($env == 'prod') {
 
-                get_template_part('views/car_classes_nofilter', null, []);
-                get_template_part('views/car_brands_no_filter', null, []);
+            //     get_template_part('views/car_classes_nofilter', null, []);
+            //     get_template_part('views/car_brands_no_filter', null, []);
 
-            } else {
-                get_template_part('views/filter', null, ['env' => $env]);
-            }
+            // } else {
+            //     get_template_part('views/filter', null, ['env' => $env]);
+            // }
             ?>
+
+			<?php  get_template_part('views/filter', null, ['env' => $env]); ?>
 
             <?php get_template_part('views/post_count'); ?>
 

@@ -113,11 +113,13 @@
 
 
             <?php 
-            if ($env == 'prod') {
-                get_template_part('views/car_classes_nofilter', null, []);
-            } else {
-                get_template_part('views/car_classes', null, []);
-            }
+            // if ($env == 'prod') {
+            //     get_template_part('views/car_classes_nofilter', null, []);
+            // } else {
+            //    
+            // }
+
+            get_template_part('views/car_classes', null, []);
             ?>
 
         </div>
