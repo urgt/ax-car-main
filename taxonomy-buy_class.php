@@ -3,13 +3,13 @@
 	<section class="page_title"
 		style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Section-minl.jpg)">
 		<div class="page_title_block">
-			<div class="page_title_text"  >
+			<div class="page_title_text">
 				<?php
-					echo single_term_title('', false);
+				echo single_term_title('', false);
 				?>
 
 			</div>
-			<div class="breadcrums" >
+			<div class="breadcrums">
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
@@ -62,17 +62,20 @@
 			?>
 
 
-			<?php  get_template_part('views/filter', null, ['env' => $env]); ?>
+			<?php
+				get_template_part('views/car_classes_nofilter', null, []);
+				get_template_part('views/car_brands_no_filter', null, []);
+			?>
 
-            <?php get_template_part('views/post_count'); ?>
+			<?php get_template_part('views/post_count'); ?>
 
-            <?php get_template_part('views/catalog'); ?>
+			<?php get_template_part('views/catalog'); ?>
 
 		</div>
 	</section>
 
 	<section class="buy_a_car_form container">
-		<div class="section_title" >
+		<div class="section_title">
 			<h2>
 				<?php
 				$current_language = pll_current_language();
@@ -87,7 +90,7 @@
 				?>
 			</h2>
 		</div>
-		<div class="section_description"  >
+		<div class="section_description">
 			<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
@@ -102,7 +105,7 @@
 		</div>
 		<div class="buy_a_car_form_wrapper">
 
-			<form  class="get_consultation_form"   method="POST" action="<?php
+			<form class="get_consultation_form" method="POST" action="<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
 				echo home_url('/mailer');
@@ -157,9 +160,9 @@
 					echo 'Email';
 				}
 				?>" />
-                <div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
+				<div class="g-recaptcha" data-sitekey="6Lc_PWUpAAAAAEU1bdD82P_ezQPDXhK8rhT1HrBW"></div>
 
-                <button class="button new">
+				<button class="button new">
 					<?php
 					$current_language = pll_current_language();
 					if ($current_language == 'en') {
@@ -173,7 +176,7 @@
 					?>
 				</button>
 			</form>
-			<div class="contact_whatsapp"  >
+			<div class="contact_whatsapp">
 				<?php
 				$current_language = pll_current_language();
 				if ($current_language == 'en') {
@@ -195,7 +198,7 @@
 	</section>
 
 	<section class="how_it_works container">
-		<div class="section_subtitle luxury" >
+		<div class="section_subtitle luxury">
 			<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
@@ -208,7 +211,7 @@
 			}
 			?>
 		</div>
-		<div class="section_title"  >
+		<div class="section_title">
 			<?php
 			$current_language = pll_current_language();
 			if ($current_language == 'en') {
@@ -222,7 +225,7 @@
 			?>
 		</div>
 
-		<div class="info_cards"  >
+		<div class="info_cards">
 			<div class="info_cards_card">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/Location (1).svg" alt="Quick response" />
 				<div class="info_cards_card_title">
@@ -315,7 +318,7 @@
 
 
 	<section class="steps_buy_car container" style="display:none;">
-		<div class="section_subtitle luxury" >
+		<div class="section_subtitle luxury">
 			<?php
 			$top_cars = get_field('how_it_works');
 			if ($top_cars):
@@ -331,7 +334,7 @@
 			endif;
 			?>
 		</div>
-		<div class="section_title"  >
+		<div class="section_title">
 			<?php
 			$top_cars = get_field('how_it_works');
 			if ($top_cars):
@@ -348,7 +351,7 @@
 			?>
 		</div>
 
-		<div class="steps_text"  >
+		<div class="steps_text">
 			<div class="steps_text_block">
 				<div class="section_title">
 					<?php
