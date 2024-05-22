@@ -260,11 +260,11 @@ if (tabs.length) {
 
 var swiper4 = new Swiper(".review-swiper", {
   loop: true,
-  loopedSlides: "auto",
-  // добавлено
-  pauseOnMouseEnter: true,
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev"
+  },
   grabCursor: true,
-  autoplay: false,
   speed: 1000,
   slidesPerView: 1,
   // значение для мобильных устройств
@@ -275,19 +275,21 @@ var swiper4 = new Swiper(".review-swiper", {
   }
 });
 
-// Получите элементы кнопок по классам
-var prevButton = document.querySelector(".swiper-prev");
-var nextButton = document.querySelector(".swiper-next");
+// // Получите элементы кнопок по классам
+// const prevButton = document.querySelector(".swiper-prev");
+// const nextButton = document.querySelector(".swiper-next");
 
-// Добавьте обработчики событий на клик для кнопок
-if (prevButton || nextButton) {
-  prevButton.addEventListener("click", function () {
-    swiper4.slidePrev();
-  });
-  nextButton.addEventListener("click", function () {
-    swiper4.slideNext();
-  });
-}
+// // Добавьте обработчики событий на клик для кнопок
+// if (prevButton || nextButton) {
+//   prevButton.addEventListener("click", function () {
+//     swiper4.slidePrev();
+//   });
+
+//   nextButton.addEventListener("click", function () {
+//     swiper4.slideNext();
+//   });
+// }
+
 document.addEventListener("DOMContentLoaded", function () {
   var textContainers = document.querySelectorAll(".buy_car_title");
   if (textContainers) {
