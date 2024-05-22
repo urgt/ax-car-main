@@ -64,14 +64,14 @@
 		if ($current_language == 'en') {
 			echo '<div><a href="/buy" class="nav_link">Buy</a></div>
 			<div><a href="/sell" class="nav_link">Sell</a></div>
-            <div><a href="/conditions" class="nav_link">Conditions</a></div> 
+            <div><a href="/conditions" class="nav_link">Our process</a></div> 
             <div><a href="/about-us" class="nav_link">About</a></div>
             <div><a href="/contact-us" class="nav_link">Contact us</a></div>';
 
 		} elseif ($current_language == 'ru') {
 			echo '<div><a href="/ru/buy" class="nav_link">Купить</a></div>
 			<div><a href="/ru/sell" class="nav_link">Продать</a></div>
-            <div><a href="/ru/conditions" class="nav_link">Условия</a></div>
+            <div><a href="/ru/conditions" class="nav_link">Нащи процессы</a></div>
             <div><a href="/ru/about-us" class="nav_link">О нас</a></div>
             <div><a href="/ru/contact-us" class="nav_link">Контакты</a></div>';
 		} else {
