@@ -5,10 +5,10 @@
             <?php
             $current_language = pll_current_language();
             if ($current_language == 'en') {
-                echo 'Conditions';
+                echo 'Our Process';
 
             } elseif ($current_language == 'ru') {
-                echo 'Условия';
+                echo 'Наши процессы';
             } else {
                 echo 'Conditions';
             }
@@ -19,11 +19,11 @@
             $current_language = pll_current_language();
             if ($current_language == 'en') {
                 echo '<span><a href="/">Home</a></span>
-              <span>Conditions</span>';
+              <span>Our Process</span>';
 
             } elseif ($current_language == 'ru') {
                 echo '<span><a href="/ru/">Главная</a></span>
-              <span>Условия</span>';
+              <span>Наши процессы</span>';
             } else {
                 echo '<span>Home</span>
               <span>Conditions</span>';

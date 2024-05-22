@@ -4,7 +4,7 @@
     <section class="page_title"
         style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Sell.webp)">
         <div class="page_title_block">
-            <h1 class="page_title_text" >
+            <h2 class="page_title_text" >
                 <?php
                 $current_language = pll_current_language();
                 if ($current_language == 'en') {
@@ -16,7 +16,7 @@
                     echo 'SELL';
                 }
                 ?>
-            </h1>
+            </h2>
             <div class="breadcrums"  >
                 <?php
                 $current_language = pll_current_language();
@@ -40,7 +40,7 @@
     <section class="buy_a_car_form container sell_page">
         <div class="sell_car_form_section">
             <div class="section_title" >
-                <h2>
+                <h1>
                     <?php
                     $current_language = pll_current_language();
                     if ($current_language == 'en') {
@@ -55,7 +55,7 @@
                         echo $cars_fleet; // Вывод значения по умолчанию
                     }
                     ?>
-                </h2>
+                </h1>
             </div>
             <div class="section_description"  >
                 <?php
