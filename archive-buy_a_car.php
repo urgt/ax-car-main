@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<title><?php wp_title(); ?> – <?php bloginfo( 'name' ); ?></title>
 <main class="buy-archive__main">
     <section class="page_title"
         style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/Buy-a-car.webp)">
@@ -45,20 +46,20 @@
                 echo '<div class="section_subtitle luxury" 
 				 >Our Collection</div>
             <div class="section_title" 
-				><h1>Buy a car in Dubai</h1></div>
+				><h1>Buy new and used luxury cars in Dubai</h1></div>
             ';
 
             } elseif ($current_language == 'ru') {
                 echo '<div class="section_subtitle luxury" 
 				 >Наша коллекция</div>
             <div class="section_title" 
-				><h1>Элитные автомобили в Дубае</h1></div>
+				><h1>Купить новые авто и автомобили с пробегом в Дубае</h1></div>
             ';
             } else {
                 echo '<div class="section_subtitle luxury" 
 				 >Our Collection</div>
             <div class="section_title" 
-				><h1>Buy a car in Dubai</div>
+				><h1>Buy new and used luxury cars in Dubai</div>
             <div class="section_description" 
 				 >
              Our experienced team offers personalized consultations, guiding you through the process and

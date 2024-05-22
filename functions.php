@@ -72,6 +72,37 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 // Добавляем поддержку особенного изображения для типа записи 'car'
 add_theme_support( 'post-thumbnails' );
+
+function custom_post_type_archive_title($title) {
+    $current_language = pll_current_language();
+    
+    if (is_post_type_archive('buy_a_car')) {
+        if ($current_language == 'en') {
+            $title = 'Buy new or used luxury car in Dubai, UAE | AX MOTORS';
+      
+          } else {
+            $title = 'Продажа элитных авто в Дубае, ОАЭ | Премиальное авто в Дубае | AX MOTORS';
+          }
+    }
+    return $title;
+}
+add_filter('wpseo_title', 'custom_post_type_archive_title');
+
+function custom_post_type_archive_description($description) {
+    $current_language = pll_current_language();
+    if (is_post_type_archive('buy_a_car')) {
+        if ($current_language == 'en') {
+            $description = 'Receive expert guidance from our knowledgeable team to help you find the perfect car that aligns with your preferences, budget, and lifestyle | AX MOTORS';
+      
+          } else {
+            $description = 'Получите экспертные рекомендации от нашей опытной команды, которая поможет вам найти идеальный автомобиль, соответствующий вашим предпочтениям, бюджету и образу жизни | AX MOTORS';
+          }
+
+    }
+    return $description;
+}
+add_filter('wpseo_metadesc', 'custom_post_type_archive_description');
+
 function book_shortcode()
 {
     ?>
